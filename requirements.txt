@@ -1,0 +1,5 @@
+selenium==4.20.0
+webdriver-manager==4.0.1
+schedule==1.2.1
+pdfplumber==0.11.0
+pypdf==4.2.0
