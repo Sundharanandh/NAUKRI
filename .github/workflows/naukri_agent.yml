@@ -44,8 +44,8 @@ jobs:
               "notice_period_days":  30
             },
             "job_search": {
-              "keywords":   ["Software Developer", "Software Engineer", "Backend Developer", "Full Stack Developer",Frontend Developer],
-              "skills":     ["Angular","AngularJs" "Java", "JavaScript", "SQL", "Git","Spring","SpringBoot","System Design","Microservices"],
+              "keywords":   ["Software Developer", "Software Engineer", "Backend Developer", "Full Stack Developer","Frontend Developer"],
+              "skills":     ["Angular","AngularJs" ,"Java", "JavaScript", "SQL", "Git","Spring","SpringBoot","System Design","Microservices"],
               "experience_min": 1,
               "experience_max": 3,
               "max_applications_per_day": 15
