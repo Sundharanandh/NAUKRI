@@ -1,0 +1,100 @@
+name: Naukri Daily Agent 🤖
+
+on:
+  schedule:
+    - cron: "0 3 * * *"     # 9:00 AM IST
+    - cron: "30 7 * * *"    # 1:00 PM IST
+    - cron: "30 12 * * *"   # 6:00 PM IST
+
+  # Manual trigger from GitHub website OR dashboard button
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Why are you running manually?'
+        required: false
+        default: 'Manual trigger from dashboard'
+
+permissions:
+  contents: write
+
+jobs:
+  run-naukri-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 🌐 Install Google Chrome
+        run: |
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable
+          google-chrome --version
+
+      - name: 📦 Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: 🔐 Create config.json
+        run: |
+          cat > config.json << 'CONFIGEOF'
+          {
+            "naukri_email":    "${{ secrets.NAUKRI_EMAIL }}",
+            "naukri_password": "${{ secrets.NAUKRI_PASSWORD }}",
+            "agent_start_date": "${{ secrets.AGENT_START_DATE }}",
+            "profile": {
+              "current_role":        "Software Developer",
+              "experience_years":    2,
+              "current_location":    "Bangalore",
+              "preferred_locations": ["Bangalore", "Chennai", "Hyderabad", "Remote"],
+              "expected_salary_lpa": 6,
+              "notice_period_days":  30
+            },
+            "job_search": {
+              "keywords":   ["Java Developer", "Software Developer", "Microservices Developer", "Software Engineer", "Backend Developer","Backend Developer","Full Stack Developer", "Java"],
+              "skills":     ["Java", "SpringBoot", "Microservices", "REST API", "API", "Kafka", "JavaScript", "SQL", "Git", "React", "Angular"],
+              "experience_min": 1,
+              "experience_max": 3,
+              "max_applications_per_day": 20
+            },
+            "resume_path": "resume.pdf",
+            "notifications": {
+              "email":              "${{ secrets.NOTIFY_EMAIL }}",
+              "gmail_app_password": "${{ secrets.GMAIL_APP_PASSWORD }}"
+            },
+            "schedule_time": "09:00",
+            "log_file": "logs/agent_log.txt"
+          }
+          CONFIGEOF
+
+      - name: 📄 Check resume PDF
+        run: |
+          if [ -f "resume.pdf" ]; then
+            echo "✅ resume.pdf found"
+          else
+            echo "❌ resume.pdf not found!"
+            exit 1
+          fi
+
+      - name: 🚀 Run Naukri Agent
+        env:
+          GEMINI_API_KEY:   ${{ secrets.GEMINI_API_KEY }}
+          TEST_ALL_PHASES:  ${{ secrets.TEST_ALL_PHASES }}
+          AGENT_START_DATE: ${{ secrets.AGENT_START_DATE }}
+        run: python agent_cloud.py
+
+      - name: 📋 Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: naukri-logs-${{ github.run_number }}
+          path: logs/
+          retention-days: 30

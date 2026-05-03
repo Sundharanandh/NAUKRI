@@ -1,0 +1,8 @@
+﻿config.json
+resume_base64.txt
+*.zip
+*.txt
+logs/
+__pycache__/
+*.pyc
+.env
