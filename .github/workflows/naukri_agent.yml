@@ -2,8 +2,20 @@ name: Naukri Daily Agent 🤖
 
 on:
   schedule:
-    - cron: "0 3 * * *"    # 9:00 AM IST every day
-  workflow_dispatch:         # Manual trigger from GitHub website
+    - cron: "0 3 * * *"     # 9:00 AM IST
+    - cron: "30 7 * * *"    # 1:00 PM IST
+    - cron: "30 12 * * *"   # 6:00 PM IST
+
+  # Manual trigger from GitHub website OR dashboard button
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Why are you running manually?'
+        required: false
+        default: 'Manual trigger from dashboard'
+
+permissions:
+  contents: write
 
 jobs:
   run-naukri-agent:
@@ -12,6 +24,8 @@ jobs:
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Setup Python 3.11
         uses: actions/setup-python@v5
@@ -31,24 +45,25 @@ jobs:
 
       - name: 🔐 Create config.json
         run: |
-          cat > config.json << 'EOF'
+          cat > config.json << 'CONFIGEOF'
           {
             "naukri_email":    "${{ secrets.NAUKRI_EMAIL }}",
             "naukri_password": "${{ secrets.NAUKRI_PASSWORD }}",
+            "agent_start_date": "${{ secrets.AGENT_START_DATE }}",
             "profile": {
               "current_role":        "Software Developer",
               "experience_years":    2,
-              "current_location":    "Chennai",
-              "preferred_locations": ["Chennai", "Bangalore", "Hyderabad", "Remote"],
-              "expected_salary_lpa": 7,
+              "current_location":    "Bangalore",
+              "preferred_locations": ["Bangalore", "Chennai", "Hyderabad", "Remote"],
+              "expected_salary_lpa": 6,
               "notice_period_days":  30
             },
             "job_search": {
-              "keywords":   ["Software Developer", "Software Engineer", "Backend Developer", "Full Stack Developer","Frontend Developer"],
-              "skills":     ["Angular","AngularJs" ,"Java", "JavaScript", "SQL", "Git","Spring","SpringBoot","System Design","Microservices"],
+              "keywords":   ["Java Developer", "Software Developer", "Microservices Developer", "Software Engineer", "Backend Developer","Backend Developer","Full Stack Developer", "Java"],
+              "skills":     ["Java", "SpringBoot", "Microservices", "REST API", "API", "Kafka", "JavaScript", "SQL", "Git", "React", "Angular"],
               "experience_min": 1,
               "experience_max": 3,
-              "max_applications_per_day": 15
+              "max_applications_per_day": 20
             },
             "resume_path": "resume.pdf",
             "notifications": {
@@ -58,21 +73,22 @@ jobs:
             "schedule_time": "09:00",
             "log_file": "logs/agent_log.txt"
           }
-          EOF
+          CONFIGEOF
 
-      - name: 📄 Restore resume PDF
+      - name: 📄 Check resume PDF
         run: |
           if [ -f "resume.pdf" ]; then
-            echo "✅ resume.pdf found in repository"
+            echo "✅ resume.pdf found"
           else
-            echo "❌ resume.pdf not found! Please add it to the repo."
+            echo "❌ resume.pdf not found!"
             exit 1
           fi
 
       - name: 🚀 Run Naukri Agent
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          TEST_ALL_PHASES: ${{ secrets.TEST_ALL_PHASES }}
+          GEMINI_API_KEY:   ${{ secrets.GEMINI_API_KEY }}
+          TEST_ALL_PHASES:  ${{ secrets.TEST_ALL_PHASES }}
+          AGENT_START_DATE: ${{ secrets.AGENT_START_DATE }}
         run: python agent_cloud.py
 
       - name: 📋 Upload logs
