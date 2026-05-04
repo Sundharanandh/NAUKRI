@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-04 06:00",
+  "last_updated": "2026-05-04 14:46",
   "total_applied": 14,
-  "total_manual": 21,
+  "total_manual": 22,
   "applied_jobs": [
     {
       "id": 1,
@@ -545,6 +545,22 @@
       "url": "https://www.naukri.com/job-listings-java-backend-professional-vision-beyond-resources-india-private-limited-hyderabad-1-to-4-years-040526500172",
       "found_on": "2026-05-04",
       "found_at": "2026-05-04 06:00",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 22,
+      "title": "Fullstack Developer",
+      "company": "Novel Office",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Good English CommunicationResponsive UiRestfull ApiCSSGithubJavascriptHTMLFrappe Framework",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-fullstack-developer-novel-office-bengaluru-1-to-2-years-170326043636",
+      "found_on": "2026-05-04",
+      "found_at": "2026-05-04 14:46",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
