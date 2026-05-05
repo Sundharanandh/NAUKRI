@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-05 09:39",
+  "last_updated": "2026-05-05 16:05",
   "total_applied": 14,
-  "total_manual": 24,
+  "total_manual": 27,
   "applied_jobs": [
     {
       "id": 1,
@@ -593,6 +593,54 @@
       "url": "https://www.naukri.com/job-listings-ui-developer-capgemini-hyderabad-chennai-delhi-ncr-1-to-6-years-021225014639",
       "found_on": "2026-05-05",
       "found_at": "2026-05-05 09:39",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 25,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Software EngineerRoot Cause AnalysisJavaComplianceApisDebuggingSql ServerProgramming",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-050526925176",
+      "found_on": "2026-05-05",
+      "found_at": "2026-05-05 16:04",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 26,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Software EngineerRoot Cause AnalysisJavaComplianceApisDebuggingSql ServerProgramming",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-050526925207",
+      "found_on": "2026-05-05",
+      "found_at": "2026-05-05 16:04",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 27,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Software EngineerRoot Cause AnalysisJavaComplianceApisDebuggingSql ServerProgramming",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-050526925142",
+      "found_on": "2026-05-05",
+      "found_at": "2026-05-05 16:05",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
