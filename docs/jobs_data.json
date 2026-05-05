@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-04 14:46",
+  "last_updated": "2026-05-05 05:40",
   "total_applied": 14,
-  "total_manual": 22,
+  "total_manual": 23,
   "applied_jobs": [
     {
       "id": 1,
@@ -561,6 +561,22 @@
       "url": "https://www.naukri.com/job-listings-fullstack-developer-novel-office-bengaluru-1-to-2-years-170326043636",
       "found_on": "2026-05-04",
       "found_at": "2026-05-04 14:46",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 23,
+      "title": "Software Development Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "microservicesrestrest api designnosqlspring bootcsshibernatecloud technologies",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-development-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-4-years-040526924039",
+      "found_on": "2026-05-05",
+      "found_at": "2026-05-05 05:40",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
