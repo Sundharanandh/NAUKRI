@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-05 05:40",
+  "last_updated": "2026-05-05 09:39",
   "total_applied": 14,
-  "total_manual": 23,
+  "total_manual": 24,
   "applied_jobs": [
     {
       "id": 1,
@@ -577,6 +577,22 @@
       "url": "https://www.naukri.com/job-listings-software-development-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-4-years-040526924039",
       "found_on": "2026-05-05",
       "found_at": "2026-05-05 05:40",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 24,
+      "title": "Ui Developer",
+      "company": "Capgemini",
+      "location": "Hybrid - Chennai, Hyderabad, Delhi / NCR",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "UI DevelopmentJavascriptHTMLReact.JsAngular UiFrontend DevelopmentAngularFront end",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-ui-developer-capgemini-hyderabad-chennai-delhi-ncr-1-to-6-years-021225014639",
+      "found_on": "2026-05-05",
+      "found_at": "2026-05-05 09:39",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
