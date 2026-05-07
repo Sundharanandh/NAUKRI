@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-06 10:05",
+  "last_updated": "2026-05-07 10:09",
   "total_applied": 14,
-  "total_manual": 29,
+  "total_manual": 30,
   "applied_jobs": [
     {
       "id": 1,
@@ -673,6 +673,22 @@
       "url": "https://www.naukri.com/job-listings-java-full-stack-developer-cgi-information-systems-and-management-consultants-chennai-0-to-5-years-060526500282",
       "found_on": "2026-05-06",
       "found_at": "2026-05-06 10:05",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 30,
+      "title": "Java Developer",
+      "company": "Hire mentor",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "Java DevelopmentCore Java ProgrammingSQLSQL QueriesRest Api ServicesSDLC Life CycleMicroservicesDevelopment",
+      "score": 80,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-iconic-homes-bhubaneswar-chennai-1-to-4-years-070526017093",
+      "found_on": "2026-05-07",
+      "found_at": "2026-05-07 10:09",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
