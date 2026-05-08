@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-07 15:25",
+  "last_updated": "2026-05-08 14:32",
   "total_applied": 14,
-  "total_manual": 31,
+  "total_manual": 32,
   "applied_jobs": [
     {
       "id": 1,
@@ -705,6 +705,22 @@
       "url": "https://www.naukri.com/job-listings-associate-software-engineer-opentext-technologies-india-pvt-ltd-bengaluru-1-to-3-years-070526501845",
       "found_on": "2026-05-07",
       "found_at": "2026-05-07 15:25",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 32,
+      "title": "Software Engineer",
+      "company": "Visa Consolidated Support Services India",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "software engineerkubernetesapi developmentdata pipelineshibernatesqldockerjava",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-visa-consolidated-support-services-india-pvt-ltd-bengaluru-1-to-6-years-080526926303",
+      "found_on": "2026-05-08",
+      "found_at": "2026-05-08 14:32",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
