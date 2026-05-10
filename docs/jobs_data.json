@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-08 14:32",
+  "last_updated": "2026-05-10 06:01",
   "total_applied": 14,
-  "total_manual": 32,
+  "total_manual": 33,
   "applied_jobs": [
     {
       "id": 1,
@@ -721,6 +721,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-visa-consolidated-support-services-india-pvt-ltd-bengaluru-1-to-6-years-080526926303",
       "found_on": "2026-05-08",
       "found_at": "2026-05-08 14:32",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 33,
+      "title": "Full Stack Software Engineer (Java & React)",
+      "company": "Talentrouters",
+      "location": "Remote",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavaMySQLRest APISpringbootReact.JSCSSGITPostgresql",
+      "score": 90,
+      "reason": "Keyword match: 7 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-software-engineer-java-react-talentrouters-bengaluru-0-to-1-years-090526009001",
+      "found_on": "2026-05-10",
+      "found_at": "2026-05-10 06:01",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
