@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-14 15:14",
+  "last_updated": "2026-05-15 15:09",
   "total_applied": 14,
-  "total_manual": 54,
+  "total_manual": 55,
   "applied_jobs": [
     {
       "id": 1,
@@ -1073,6 +1073,22 @@
       "url": "https://www.naukri.com/job-listings-backend-developer-cubesolutionsdata-bengaluru-1-to-2-years-140526504124",
       "found_on": "2026-05-14",
       "found_at": "2026-05-14 15:14",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 55,
+      "title": "Software Engineer 1-2",
+      "company": "ModMed Technologies India Private Limited",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "Front endjQueryXMLSocial mediaMySQLJavascriptAgileHealthcare",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-1-2-modmed-hyderabad-1-to-3-years-150526505206",
+      "found_on": "2026-05-15",
+      "found_at": "2026-05-15 15:09",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
