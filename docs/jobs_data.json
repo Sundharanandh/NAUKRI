@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-15 15:09",
+  "last_updated": "2026-05-19 10:55",
   "total_applied": 14,
-  "total_manual": 55,
+  "total_manual": 56,
   "applied_jobs": [
     {
       "id": 1,
@@ -1089,6 +1089,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-1-2-modmed-hyderabad-1-to-3-years-150526505206",
       "found_on": "2026-05-15",
       "found_at": "2026-05-15 15:09",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 56,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Software EngineerRoot Cause AnalysisJavaComplianceApisDebuggingSql ServerProgramming",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-190526921433",
+      "found_on": "2026-05-19",
+      "found_at": "2026-05-19 10:55",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
