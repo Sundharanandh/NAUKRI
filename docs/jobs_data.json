@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-20 10:45",
+  "last_updated": "2026-05-20 16:16",
   "total_applied": 14,
-  "total_manual": 59,
+  "total_manual": 60,
   "applied_jobs": [
     {
       "id": 1,
@@ -1153,6 +1153,22 @@
       "url": "https://www.naukri.com/job-listings-junior-web-application-engineer-imcdigital-life-hyderabad-0-to-2-years-200526500580",
       "found_on": "2026-05-20",
       "found_at": "2026-05-20 10:45",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 60,
+      "title": "Software Development, AMTS Professional",
+      "company": "athenahealth",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "software developmentrestfulapi gatewayvpcjavascriptredismicroservicesrestful apis",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-development-amts-professional-athenahealth-technology-private-limited-bengaluru-0-to-2-years-200526941049",
+      "found_on": "2026-05-20",
+      "found_at": "2026-05-20 16:16",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
