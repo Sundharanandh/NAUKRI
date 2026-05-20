@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-19 16:06",
+  "last_updated": "2026-05-20 10:45",
   "total_applied": 14,
-  "total_manual": 57,
+  "total_manual": 59,
   "applied_jobs": [
     {
       "id": 1,
@@ -1121,6 +1121,38 @@
       "url": "https://www.naukri.com/job-listings-consultant-software-engineer-nodejs-react-and-gcp-hca-healthcare-hyderabad-1-to-4-years-190526503742",
       "found_on": "2026-05-19",
       "found_at": "2026-05-19 16:06",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 58,
+      "title": "Software Development Engineer- Frontend",
+      "company": "Treebo Hotels",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "csshibernatejquerysqlspringreact.jsjavagit",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-development-engineer-frontend-treebohotels-bengaluru-0-to-5-years-200526500151",
+      "found_on": "2026-05-20",
+      "found_at": "2026-05-20 10:43",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 59,
+      "title": "Junior - Web Application Engineer",
+      "company": "Imcdigital Life",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "jQueryIllustratorWeb applicationMySQLTool designJavascriptPHPWeb designing",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-junior-web-application-engineer-imcdigital-life-hyderabad-0-to-2-years-200526500580",
+      "found_on": "2026-05-20",
+      "found_at": "2026-05-20 10:45",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
