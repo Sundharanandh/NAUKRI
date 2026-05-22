@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-20 16:16",
+  "last_updated": "2026-05-22 06:48",
   "total_applied": 14,
-  "total_manual": 60,
+  "total_manual": 63,
   "applied_jobs": [
     {
       "id": 1,
@@ -1169,6 +1169,54 @@
       "url": "https://www.naukri.com/job-listings-software-development-amts-professional-athenahealth-technology-private-limited-bengaluru-0-to-2-years-200526941049",
       "found_on": "2026-05-20",
       "found_at": "2026-05-20 16:16",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 61,
+      "title": "Junior software developer",
+      "company": "Ipropal",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "cssc++api integrationbootstrapajaxjquerysqlreact.js",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-junior-software-developer-ipropal-allps-hyderabad-0-to-2-years-210526505400",
+      "found_on": "2026-05-22",
+      "found_at": "2026-05-22 06:47",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 62,
+      "title": "UI Developer - Html / css / JavaScript / AngularJS",
+      "company": "Mspring Infotech",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "serverdomanalyticalsoftwarehtml5jspdevelopingHTML",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-ui-developer-html-css-javascript-angularjs-mspring-infotech-chennai-1-to-3-years-210526506840",
+      "found_on": "2026-05-22",
+      "found_at": "2026-05-22 06:48",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 63,
+      "title": "UI Developer - Html / css / JavaScript / AngularJS",
+      "company": "Mspring Infotech",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "serverdomanalyticalsoftwarehtml5jspdevelopingHTML",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-ui-developer-html-css-javascript-angularjs-mspring-infotech-hyderabad-1-to-3-years-210526506841",
+      "found_on": "2026-05-22",
+      "found_at": "2026-05-22 06:48",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
