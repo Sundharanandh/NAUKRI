@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-22 06:48",
+  "last_updated": "2026-05-22 15:45",
   "total_applied": 14,
-  "total_manual": 63,
+  "total_manual": 64,
   "applied_jobs": [
     {
       "id": 1,
@@ -1217,6 +1217,22 @@
       "url": "https://www.naukri.com/job-listings-ui-developer-html-css-javascript-angularjs-mspring-infotech-hyderabad-1-to-3-years-210526506841",
       "found_on": "2026-05-22",
       "found_at": "2026-05-22 06:48",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 64,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Software EngineerRoot Cause AnalysisJavaComplianceApisDebuggingSql ServerProgramming",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-220526929417",
+      "found_on": "2026-05-22",
+      "found_at": "2026-05-22 15:45",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
