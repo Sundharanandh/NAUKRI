@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-25 11:43",
+  "last_updated": "2026-05-25 15:44",
   "total_applied": 14,
-  "total_manual": 66,
+  "total_manual": 67,
   "applied_jobs": [
     {
       "id": 1,
@@ -1265,6 +1265,22 @@
       "url": "https://www.naukri.com/job-listings-engineer-c-net-angular-siemens-healthcare-bengaluru-0-to-10-years-250526501562",
       "found_on": "2026-05-25",
       "found_at": "2026-05-25 11:43",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 67,
+      "title": "Java Developer",
+      "company": "Telious Technologies",
+      "location": "Chennai, Kochi, Kakinada",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "Computer sciencespring bootHibernateBackendArchitectureJavascriptPLSQLJSF",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-telious-technologies-pvt-kochi-kakinada-chennai-1-to-6-years-250526501926",
+      "found_on": "2026-05-25",
+      "found_at": "2026-05-25 15:44",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
