@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-22 15:45",
+  "last_updated": "2026-05-25 11:43",
   "total_applied": 14,
-  "total_manual": 64,
+  "total_manual": 66,
   "applied_jobs": [
     {
       "id": 1,
@@ -1233,6 +1233,38 @@
       "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-220526929417",
       "found_on": "2026-05-22",
       "found_at": "2026-05-22 15:45",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 65,
+      "title": "Software Developer",
+      "company": "Perfect Digital Media Resources",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavascriptNode.JsReact.JsLaravelPythonMySQLHTMLSoftware",
+      "score": 80,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-developer-perfect-digital-media-resources-chennai-0-to-1-years-250526011594",
+      "found_on": "2026-05-25",
+      "found_at": "2026-05-25 11:42",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 66,
+      "title": "Engineer - C#,.net,Angular",
+      "company": "Siemens Healthcare",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-10 Yrs",
+      "skills": "Object oriented designSoftware designMedical devicesGITCTDDdevopsJavascript",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-engineer-c-net-angular-siemens-healthcare-bengaluru-0-to-10-years-250526501562",
+      "found_on": "2026-05-25",
+      "found_at": "2026-05-25 11:43",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
