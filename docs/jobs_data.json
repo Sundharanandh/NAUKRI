@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-04 10:53",
+  "last_updated": "2026-06-04 16:01",
   "total_applied": 14,
-  "total_manual": 79,
+  "total_manual": 80,
   "applied_jobs": [
     {
       "id": 1,
@@ -1473,6 +1473,22 @@
       "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-040626919492",
       "found_on": "2026-06-04",
       "found_at": "2026-06-04 10:53",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 80,
+      "title": "Software Engineer I",
+      "company": "Jones Lang LaSalle (JLL)",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "Content managementPostgresqlMySQLWordpressDebuggingJavascriptHTMLHTTP",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-i-jones-lang-lasalle-bengaluru-0-to-2-years-040626503372",
+      "found_on": "2026-06-04",
+      "found_at": "2026-06-04 16:01",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
