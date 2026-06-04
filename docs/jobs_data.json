@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-03 12:26",
+  "last_updated": "2026-06-04 10:53",
   "total_applied": 14,
-  "total_manual": 77,
+  "total_manual": 79,
   "applied_jobs": [
     {
       "id": 1,
@@ -1441,6 +1441,38 @@
       "url": "https://www.naukri.com/job-listings-staff-software-engineer-frontend-terarecon-bengaluru-1-to-5-years-030626502182",
       "found_on": "2026-06-03",
       "found_at": "2026-06-03 12:26",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 78,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "ComplianceRoot Cause AnalysisJavaApisDebuggingSql ServerProgrammingFull Stack",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-040626919549",
+      "found_on": "2026-06-04",
+      "found_at": "2026-06-04 10:53",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 79,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "ComplianceRoot Cause AnalysisJavaApisDebuggingSql ServerProgrammingJson",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-040626919492",
+      "found_on": "2026-06-04",
+      "found_at": "2026-06-04 10:53",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
