@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-09 15:41",
+  "last_updated": "2026-06-10 16:23",
   "total_applied": 14,
-  "total_manual": 89,
+  "total_manual": 91,
   "applied_jobs": [
     {
       "id": 1,
@@ -1633,6 +1633,38 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-angularjs-happiest-minds-technologies-pvt-ltd-bengaluru-1-to-6-years-090626501541",
       "found_on": "2026-06-09",
       "found_at": "2026-06-09 15:41",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 90,
+      "title": "Software Engineer",
+      "company": "Influencer Labs",
+      "location": "Bengaluru, Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "AutomationLMSNoSQLArchitectureCloudManager TechnologyJavascriptAWS",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-influencer-labs-hyderabad-bengaluru-1-to-4-years-100626503006",
+      "found_on": "2026-06-10",
+      "found_at": "2026-06-10 16:23",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 91,
+      "title": "HIH - Software Engineering Associate Analyst",
+      "company": "Cigna Medical Group",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "Associate AnalystGITSoftware Engineer AssociateJavascriptAgileScrumInformation managementOracle",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-hih-software-engineering-associate-analyst-cigna-medical-group-hyderabad-0-to-2-years-100626505515",
+      "found_on": "2026-06-10",
+      "found_at": "2026-06-10 16:23",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
