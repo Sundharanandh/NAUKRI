@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-11 16:39",
+  "last_updated": "2026-06-12 15:53",
   "total_applied": 14,
-  "total_manual": 93,
+  "total_manual": 94,
   "applied_jobs": [
     {
       "id": 1,
@@ -1697,6 +1697,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-angularjs-happiest-minds-technologies-pvt-ltd-bengaluru-1-to-3-years-110626503886",
       "found_on": "2026-06-11",
       "found_at": "2026-06-11 16:39",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 94,
+      "title": "Java Developer",
+      "company": "Transunion",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "kubernetesjava developmentmicroservicesdockeransiblejavagitcomputer science",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-transunion-chennai-1-to-2-years-120626503872",
+      "found_on": "2026-06-12",
+      "found_at": "2026-06-12 15:53",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
