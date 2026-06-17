@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-17 12:10",
+  "last_updated": "2026-06-17 16:17",
   "total_applied": 14,
-  "total_manual": 101,
+  "total_manual": 102,
   "applied_jobs": [
     {
       "id": 1,
@@ -1825,6 +1825,22 @@
       "url": "https://www.naukri.com/job-listings-angular-full-stack-developer-plus-max-group-of-companies-madurai-tiruppur-salem-chennai-tiruchirapalli-coimbatore-1-to-6-years-170626502732",
       "found_on": "2026-06-17",
       "found_at": "2026-06-17 12:10",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 102,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "ComplianceRoot Cause AnalysisJavaApisDebuggingSql ServerProgrammingFull Stack",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-170626931241",
+      "found_on": "2026-06-17",
+      "found_at": "2026-06-17 16:17",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
