@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-17 08:37",
+  "last_updated": "2026-06-17 12:10",
   "total_applied": 14,
-  "total_manual": 100,
+  "total_manual": 101,
   "applied_jobs": [
     {
       "id": 1,
@@ -1809,6 +1809,22 @@
       "url": "https://www.naukri.com/job-listings-frontend-developer-freshers-react-js-next-js-angular-typescript-artmac-soft-hyderabad-0-to-1-years-170626502707",
       "found_on": "2026-06-17",
       "found_at": "2026-06-17 08:37",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 101,
+      "title": "Angular Full Stack Developer",
+      "company": "Plus Max Group Of Companies",
+      "location": "Chennai, Madurai, Tiruppur, Salem, Tiruchirapalli, Coimbatore",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "c#cssweb applicationajaxjavascriptjquerysql serverangular",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-angular-full-stack-developer-plus-max-group-of-companies-madurai-tiruppur-salem-chennai-tiruchirapalli-coimbatore-1-to-6-years-170626502732",
+      "found_on": "2026-06-17",
+      "found_at": "2026-06-17 12:10",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
