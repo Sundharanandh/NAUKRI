@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-16 17:39",
+  "last_updated": "2026-06-17 08:37",
   "total_applied": 14,
-  "total_manual": 98,
+  "total_manual": 100,
   "applied_jobs": [
     {
       "id": 1,
@@ -1777,6 +1777,38 @@
       "url": "https://www.naukri.com/job-listings-consultant-software-engineer-nodejs-react-and-gcp-hca-healthcare-hyderabad-1-to-4-years-160626504586",
       "found_on": "2026-06-16",
       "found_at": "2026-06-16 17:39",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 99,
+      "title": "React Developer",
+      "company": "Expleo",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "Computer scienceBackendVersion controlGITFront endAgile scrumDebuggingJavascript",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-react-developer-expleo-group-chennai-1-to-5-years-170626501963",
+      "found_on": "2026-06-17",
+      "found_at": "2026-06-17 08:37",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 100,
+      "title": "Frontend Developer Freshers (React.js/Next.js/Angular/TypeScript)",
+      "company": "Artmac Soft",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "BasicBackendFront endWeb technologiesTechnology consultingCodingJavascriptTechnology solutions",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-frontend-developer-freshers-react-js-next-js-angular-typescript-artmac-soft-hyderabad-0-to-1-years-170626502707",
+      "found_on": "2026-06-17",
+      "found_at": "2026-06-17 08:37",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
