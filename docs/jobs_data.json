@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-22 09:02",
+  "last_updated": "2026-06-22 13:17",
   "total_applied": 14,
-  "total_manual": 110,
+  "total_manual": 111,
   "applied_jobs": [
     {
       "id": 1,
@@ -1969,6 +1969,22 @@
       "url": "https://www.naukri.com/job-listings-java-developer-paxcom-india-bengaluru-1-to-3-years-220626007977",
       "found_on": "2026-06-22",
       "found_at": "2026-06-22 09:02",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 111,
+      "title": "Software Developer Trainee",
+      "company": "CRIMSONLOGIC INDIA PRIVATE LIMITED",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "c++cssjquerysqlspringsoftware development life cyclejavagit",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-developer-trainee-crimsonlogic-india-private-limited-bengaluru-1-to-2-years-220626505512",
+      "found_on": "2026-06-22",
+      "found_at": "2026-06-22 13:17",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
