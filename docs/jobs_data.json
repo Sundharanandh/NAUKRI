@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-22 13:17",
+  "last_updated": "2026-06-23 15:36",
   "total_applied": 14,
-  "total_manual": 111,
+  "total_manual": 112,
   "applied_jobs": [
     {
       "id": 1,
@@ -1985,6 +1985,22 @@
       "url": "https://www.naukri.com/job-listings-software-developer-trainee-crimsonlogic-india-private-limited-bengaluru-1-to-2-years-220626505512",
       "found_on": "2026-06-22",
       "found_at": "2026-06-22 13:17",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 112,
+      "title": "Custom Software Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "ComplianceRoot Cause AnalysisJavaApisDebuggingSql ServerProgrammingFull Stack",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-230626936565",
+      "found_on": "2026-06-23",
+      "found_at": "2026-06-23 15:36",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
