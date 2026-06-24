@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-23 15:36",
+  "last_updated": "2026-06-24 06:49",
   "total_applied": 14,
-  "total_manual": 112,
+  "total_manual": 113,
   "applied_jobs": [
     {
       "id": 1,
@@ -2001,6 +2001,22 @@
       "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-2-years-230626936565",
       "found_on": "2026-06-23",
       "found_at": "2026-06-23 15:36",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 113,
+      "title": "Junior Web Developer",
+      "company": "Moneybloom",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "QABackendCSSGITPDFWeb technologiesMySQLJavascript",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-junior-web-developer-moneybloom-hyderabad-1-to-3-years-230626502012",
+      "found_on": "2026-06-24",
+      "found_at": "2026-06-24 06:49",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
