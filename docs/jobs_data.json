@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-24 06:49",
+  "last_updated": "2026-06-25 10:31",
   "total_applied": 14,
-  "total_manual": 113,
+  "total_manual": 114,
   "applied_jobs": [
     {
       "id": 1,
@@ -2017,6 +2017,22 @@
       "url": "https://www.naukri.com/job-listings-junior-web-developer-moneybloom-hyderabad-1-to-3-years-230626502012",
       "found_on": "2026-06-24",
       "found_at": "2026-06-24 06:49",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 114,
+      "title": "Java Developer",
+      "company": "Mobily Infotech (MIT)",
+      "location": "Hybrid - Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "JavaJavascriptPLSQLSpring BootDevelopmentBootJava DevelopmentJavas",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-mobily-infotech-mit-bengaluru-1-to-3-years-250626022325",
+      "found_on": "2026-06-25",
+      "found_at": "2026-06-25 10:31",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
