@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-25 10:31",
+  "last_updated": "2026-06-26 15:18",
   "total_applied": 14,
-  "total_manual": 114,
+  "total_manual": 115,
   "applied_jobs": [
     {
       "id": 1,
@@ -2033,6 +2033,22 @@
       "url": "https://www.naukri.com/job-listings-java-developer-mobily-infotech-mit-bengaluru-1-to-3-years-250626022325",
       "found_on": "2026-06-25",
       "found_at": "2026-06-25 10:31",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 115,
+      "title": "Full Stack Developer",
+      "company": "Kerdos Infrasoft",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "BackendNoSQLFront endWeb technologiesHP data protectorAgile developmentCloudJavascript",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-kerdos-infrasoft-bengaluru-1-to-6-years-260626505625",
+      "found_on": "2026-06-26",
+      "found_at": "2026-06-26 15:18",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
