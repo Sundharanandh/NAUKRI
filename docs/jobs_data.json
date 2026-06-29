@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-26 15:18",
+  "last_updated": "2026-06-29 07:36",
   "total_applied": 14,
-  "total_manual": 115,
+  "total_manual": 116,
   "applied_jobs": [
     {
       "id": 1,
@@ -2049,6 +2049,22 @@
       "url": "https://www.naukri.com/job-listings-full-stack-developer-kerdos-infrasoft-bengaluru-1-to-6-years-260626505625",
       "found_on": "2026-06-26",
       "found_at": "2026-06-26 15:18",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 116,
+      "title": "Full Stack Java Developer",
+      "company": "BMW Techworks India",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "cssjspjdbchibernatejquerymicroservicesspringreact.js",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-java-developer-bmw-techworks-india-private-limited-chennai-0-to-1-years-290626501322",
+      "found_on": "2026-06-29",
+      "found_at": "2026-06-29 07:36",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
