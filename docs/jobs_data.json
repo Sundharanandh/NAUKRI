@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-29 07:36",
+  "last_updated": "2026-06-29 16:26",
   "total_applied": 14,
-  "total_manual": 116,
+  "total_manual": 118,
   "applied_jobs": [
     {
       "id": 1,
@@ -2065,6 +2065,38 @@
       "url": "https://www.naukri.com/job-listings-full-stack-java-developer-bmw-techworks-india-private-limited-chennai-0-to-1-years-290626501322",
       "found_on": "2026-06-29",
       "found_at": "2026-06-29 07:36",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 117,
+      "title": "Full Stack Engineer",
+      "company": "Qagate Technologies",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "cssweb applicationhibernatespringreact.jsgitjavapostgresql",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-engineer-qagate-technologies-pvt-ltd-bengaluru-0-to-5-years-290626505299",
+      "found_on": "2026-06-29",
+      "found_at": "2026-06-29 16:25",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 118,
+      "title": "Java Developer (Entry Level)",
+      "company": "Advaitha Information Technology Services Private L",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "cssweb servicesjspjava developmentjdbchibernatemicroservicessql",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-entry-level-advaitha-information-technology-services-private-limited-hyderabad-0-to-5-years-290626505273",
+      "found_on": "2026-06-29",
+      "found_at": "2026-06-29 16:26",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
