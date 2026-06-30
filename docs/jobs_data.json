@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-30 07:02",
+  "last_updated": "2026-06-30 10:51",
   "total_applied": 14,
-  "total_manual": 123,
+  "total_manual": 125,
   "applied_jobs": [
     {
       "id": 1,
@@ -2177,6 +2177,38 @@
       "url": "https://www.naukri.com/job-listings-technology-support-engineer-accenture-solutions-pvt-ltd-bengaluru-1-to-4-years-300626902924",
       "found_on": "2026-06-30",
       "found_at": "2026-06-30 07:02",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 124,
+      "title": "Fullstack Developer",
+      "company": "Nxtwave Disruptive Technologies (Hiring for a client)",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "ExpressFull StackNode.JsReact.JsPostgresqlRest ApisCi/CdAngular",
+      "score": 75,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-fullstack-developer-nxtwave-disruptive-technologies-hiring-for-a-client-hyderabad-1-to-5-years-300626016905",
+      "found_on": "2026-06-30",
+      "found_at": "2026-06-30 10:49",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 125,
+      "title": "Software Engineer",
+      "company": "Akamai",
+      "location": "Bengaluru, New Delhi",
+      "salary": "Not disclosed",
+      "experience": "0-4 Yrs",
+      "skills": "Computer scienceFront endGITCodingSocial mediaCloudJavascriptPerformance testing",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-akamai-technologies-new-delhi-bengaluru-0-to-4-years-300626501122",
+      "found_on": "2026-06-30",
+      "found_at": "2026-06-30 10:51",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
