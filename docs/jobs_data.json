@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-06-30 10:51",
+  "last_updated": "2026-07-01 10:59",
   "total_applied": 14,
-  "total_manual": 125,
+  "total_manual": 126,
   "applied_jobs": [
     {
       "id": 1,
@@ -2209,6 +2209,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-akamai-technologies-new-delhi-bengaluru-0-to-4-years-300626501122",
       "found_on": "2026-06-30",
       "found_at": "2026-06-30 10:51",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 126,
+      "title": "Software Engineer",
+      "company": "Akamai",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-4 Yrs",
+      "skills": "Computer scienceFront endGITCodingSocial mediaCloudJavascriptPerformance testing",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-akamai-technologies-bengaluru-0-to-4-years-010726500184",
+      "found_on": "2026-07-01",
+      "found_at": "2026-07-01 10:59",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
