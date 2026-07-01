@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-01 10:59",
+  "last_updated": "2026-07-01 15:25",
   "total_applied": 14,
-  "total_manual": 126,
+  "total_manual": 128,
   "applied_jobs": [
     {
       "id": 1,
@@ -2225,6 +2225,38 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-akamai-technologies-bengaluru-0-to-4-years-010726500184",
       "found_on": "2026-07-01",
       "found_at": "2026-07-01 10:59",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 127,
+      "title": "SDE 1 React",
+      "company": "Niyo Solutions",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "algorithmscssc++microservicesspringreact.jsjavagit",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-sde-1-react-niyo-solutions-bengaluru-1-to-3-years-010726501361",
+      "found_on": "2026-07-01",
+      "found_at": "2026-07-01 15:25",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 128,
+      "title": "Angular Full Stack Developer",
+      "company": "Plus Max Group Of Companies",
+      "location": "Chennai, Madurai, Tiruppur, Salem, Tiruchirapalli, Coimbatore",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "fullstack developmentcssdomajaxjquerysalesforcereact.jsjava",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-angular-full-stack-developer-plus-max-group-of-companies-madurai-tiruppur-salem-chennai-tiruchirapalli-coimbatore-1-to-6-years-010726503911",
+      "found_on": "2026-07-01",
+      "found_at": "2026-07-01 15:25",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
