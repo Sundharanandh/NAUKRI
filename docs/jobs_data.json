@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-01 15:25",
+  "last_updated": "2026-07-03 10:20",
   "total_applied": 14,
-  "total_manual": 128,
+  "total_manual": 129,
   "applied_jobs": [
     {
       "id": 1,
@@ -2257,6 +2257,22 @@
       "url": "https://www.naukri.com/job-listings-angular-full-stack-developer-plus-max-group-of-companies-madurai-tiruppur-salem-chennai-tiruchirapalli-coimbatore-1-to-6-years-010726503911",
       "found_on": "2026-07-01",
       "found_at": "2026-07-01 15:25",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 129,
+      "title": "MERN Full Stack Developer",
+      "company": "Firesky Media Technologies",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "Automation testingCSSGIThtml5JavascriptData structuresMongoDBManagement",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-mern-full-stack-developer-firesky-media-technologies-chennai-1-to-6-years-030726501857",
+      "found_on": "2026-07-03",
+      "found_at": "2026-07-03 10:20",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
