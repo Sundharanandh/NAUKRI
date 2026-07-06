@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-06 07:14",
+  "last_updated": "2026-07-06 11:54",
   "total_applied": 14,
-  "total_manual": 132,
+  "total_manual": 133,
   "applied_jobs": [
     {
       "id": 1,
@@ -2321,6 +2321,22 @@
       "url": "https://www.naukri.com/job-listings-sde-1-3-hack-and-grow-consultancy-bengaluru-1-to-5-years-060726002731",
       "found_on": "2026-07-06",
       "found_at": "2026-07-06 07:14",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 133,
+      "title": "Software Engineer - Cloud Native & Microservices (AWS)",
+      "company": "Experian",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "Computer scienceSystem architectureNUnitGITNoSQLArchitectureTDDAgile",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-cloud-native-microservices-aws-experian-plc-hyderabad-1-to-4-years-060726501830",
+      "found_on": "2026-07-06",
+      "found_at": "2026-07-06 11:54",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
