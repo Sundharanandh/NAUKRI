@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-03 14:45",
+  "last_updated": "2026-07-06 07:14",
   "total_applied": 14,
-  "total_manual": 131,
+  "total_manual": 132,
   "applied_jobs": [
     {
       "id": 1,
@@ -2305,6 +2305,22 @@
       "url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-0-to-1-years-030726926094",
       "found_on": "2026-07-03",
       "found_at": "2026-07-03 14:45",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 132,
+      "title": "SDE (1-3)",
+      "company": "Hack And Grow Consultancy",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "System DesignPostgresqlSpring BootMicroservicesJavaDSADockerKafka",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-sde-1-3-hack-and-grow-consultancy-bengaluru-1-to-5-years-060726002731",
+      "found_on": "2026-07-06",
+      "found_at": "2026-07-06 07:14",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
