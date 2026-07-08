@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-07 15:31",
+  "last_updated": "2026-07-08 09:51",
   "total_applied": 14,
-  "total_manual": 137,
+  "total_manual": 139,
   "applied_jobs": [
     {
       "id": 1,
@@ -2401,6 +2401,38 @@
       "url": "https://www.naukri.com/job-listings-full-stack-developer-mern-stack-winspire-tech-bengaluru-1-to-6-years-070726501857",
       "found_on": "2026-07-07",
       "found_at": "2026-07-07 15:31",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 138,
+      "title": "Full Stack Developer (Java & Angular)",
+      "company": "IBS Software Services",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "RetailgithubFront endAgile developmentjenkinsJavascriptE-commerceData analytics",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-java-angular-ibs-software-chennai-1-to-3-years-080726500456",
+      "found_on": "2026-07-08",
+      "found_at": "2026-07-08 09:50",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 139,
+      "title": "Java Developer",
+      "company": "Newgen",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "JavaJavascriptJava Spring BootSpring BootJ2EEMicroservicesJavasJava Development",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-newgen-bengaluru-1-to-4-years-080726015348",
+      "found_on": "2026-07-08",
+      "found_at": "2026-07-08 09:51",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
