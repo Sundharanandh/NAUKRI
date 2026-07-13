@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-10 15:21",
+  "last_updated": "2026-07-13 10:45",
   "total_applied": 14,
-  "total_manual": 143,
+  "total_manual": 146,
   "applied_jobs": [
     {
       "id": 1,
@@ -2497,6 +2497,54 @@
       "url": "https://www.naukri.com/job-listings-java-testing-api-professionals-align-techne-bengaluru-1-to-4-years-100726509338",
       "found_on": "2026-07-10",
       "found_at": "2026-07-10 15:21",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 144,
+      "title": "Software Developer (Java)",
+      "company": "ABC Fitness Solutions",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "Computer scienceBackendVersion controlGITEnterprise applicationsJavascriptPLSQLApplication development",
+      "score": 75,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-developer-java-abc-fitness-solutions-hyderabad-1-to-6-years-130726501719",
+      "found_on": "2026-07-13",
+      "found_at": "2026-07-13 10:44",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 145,
+      "title": "Microservices Developer",
+      "company": "Iflow",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "csslaravelwordpressmavencore phpbootstrapajaxjavascript",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-microservices-developer-iflow-bengaluru-1-to-4-years-130726500431",
+      "found_on": "2026-07-13",
+      "found_at": "2026-07-13 10:45",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 146,
+      "title": "PHP Developer",
+      "company": "Limish",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "CSSFront endGITWeb technologiesCodingMySQLDebuggingJavascript",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-php-developer-limish-chennai-0-to-1-years-130726501185",
+      "found_on": "2026-07-13",
+      "found_at": "2026-07-13 10:45",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
