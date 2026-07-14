@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-13 10:45",
+  "last_updated": "2026-07-14 05:31",
   "total_applied": 14,
-  "total_manual": 146,
+  "total_manual": 148,
   "applied_jobs": [
     {
       "id": 1,
@@ -2545,6 +2545,38 @@
       "url": "https://www.naukri.com/job-listings-php-developer-limish-chennai-0-to-1-years-130726501185",
       "found_on": "2026-07-13",
       "found_at": "2026-07-13 10:45",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 147,
+      "title": "Java Developer",
+      "company": "Nokia",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "Java DevelopmentJavaCdPostgresqlSql ServerKafkaFull StackCi/Cd",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-nokia-solutions-and-networks-india-p-ltd-chennai-0-to-5-years-130726935899",
+      "found_on": "2026-07-14",
+      "found_at": "2026-07-14 05:31",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 148,
+      "title": "Software Development Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "microservicesrestrest api designnosqlspring bootcsshibernatecloud technologies",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-development-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-4-years-130726930094",
+      "found_on": "2026-07-14",
+      "found_at": "2026-07-14 05:31",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
