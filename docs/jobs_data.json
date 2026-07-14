@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-14 05:31",
+  "last_updated": "2026-07-14 14:29",
   "total_applied": 14,
-  "total_manual": 148,
+  "total_manual": 150,
   "applied_jobs": [
     {
       "id": 1,
@@ -2577,6 +2577,38 @@
       "url": "https://www.naukri.com/job-listings-software-development-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-4-years-130726930094",
       "found_on": "2026-07-14",
       "found_at": "2026-07-14 05:31",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 149,
+      "title": "Sr Engineer, Software Engineer - (Angular)",
+      "company": "Nationwide Insurance",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "insurancecadministrationenterprise applicationsfinancial servicesjavascriptcloudangular",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-sr-engineer-software-engineer-angular-nationwide-mutual-insurance-company-hyderabad-1-to-5-years-140726503449",
+      "found_on": "2026-07-14",
+      "found_at": "2026-07-14 14:28",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 150,
+      "title": "Specialist, Software Engineer - (Mainframe)",
+      "company": "Nationwide Insurance",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "insurancegithubcbatch processingfinancial servicesjavascriptcloudjcl",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-specialist-software-engineer-mainframe-nationwide-mutual-insurance-company-hyderabad-1-to-5-years-140726502806",
+      "found_on": "2026-07-14",
+      "found_at": "2026-07-14 14:29",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
