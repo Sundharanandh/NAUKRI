@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-14 14:29",
+  "last_updated": "2026-07-16 14:36",
   "total_applied": 14,
-  "total_manual": 150,
+  "total_manual": 152,
   "applied_jobs": [
     {
       "id": 1,
@@ -2609,6 +2609,38 @@
       "url": "https://www.naukri.com/job-listings-specialist-software-engineer-mainframe-nationwide-mutual-insurance-company-hyderabad-1-to-5-years-140726502806",
       "found_on": "2026-07-14",
       "found_at": "2026-07-14 14:29",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 151,
+      "title": "Full Stack Developer (Java + React/Angular)",
+      "company": "Einnel Technologies",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "frontend developmentversion controlfull stack developerreactagile developmentcode qualityangularjava",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-java-react-angular-einnel-technologies-chennai-1-to-4-years-160726504436",
+      "found_on": "2026-07-16",
+      "found_at": "2026-07-16 14:36",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 152,
+      "title": "Automotive Accessory Fitter",
+      "company": "Labournet Services India",
+      "location": "Bangalore Rural",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "c#algorithmsrestproductionentity frameworkassemblinghibernatejavascript",
+      "score": 70,
+      "reason": "Keyword match: 2 skills matched",
+      "url": "https://www.naukri.com/job-listings-automotive-accessory-fitter-labournet-services-india-pvt-ltd-bangalore-rural-0-to-2-years-160726505280",
+      "found_on": "2026-07-16",
+      "found_at": "2026-07-16 14:36",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
