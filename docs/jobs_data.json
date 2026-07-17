@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-16 14:36",
+  "last_updated": "2026-07-17 14:19",
   "total_applied": 14,
-  "total_manual": 152,
+  "total_manual": 153,
   "applied_jobs": [
     {
       "id": 1,
@@ -2641,6 +2641,22 @@
       "url": "https://www.naukri.com/job-listings-automotive-accessory-fitter-labournet-services-india-pvt-ltd-bangalore-rural-0-to-2-years-160726505280",
       "found_on": "2026-07-16",
       "found_at": "2026-07-16 14:36",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 153,
+      "title": "Java Software Developer",
+      "company": "moglix",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavaSpring Boot FrameworkMicroservicesJ2EEAWSSQLFrameworkSoftware",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-software-developer-moglix-hyderabad-0-to-1-years-170726014237",
+      "found_on": "2026-07-17",
+      "found_at": "2026-07-17 14:19",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
