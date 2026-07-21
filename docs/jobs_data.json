@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-20 14:45",
+  "last_updated": "2026-07-21 10:06",
   "total_applied": 14,
-  "total_manual": 157,
+  "total_manual": 158,
   "applied_jobs": [
     {
       "id": 1,
@@ -2721,6 +2721,22 @@
       "url": "https://www.naukri.com/job-listings-dot-net-full-stack-developer-azure-deloitte-vrinda-international-hyderabad-1-to-6-years-200726503634",
       "found_on": "2026-07-20",
       "found_at": "2026-07-20 14:45",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 158,
+      "title": "Backend Engineer",
+      "company": "1pharmacy Network",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "insuranceapi developmentgithubpythonhealth insuranceretailmicroservicesnosql",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-backend-engineer-1pharmacy-network-bengaluru-0-to-2-years-210726500102",
+      "found_on": "2026-07-21",
+      "found_at": "2026-07-21 10:06",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
