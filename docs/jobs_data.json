@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-07-24 14:28",
+  "last_updated": "2026-07-27 15:29",
   "total_applied": 14,
-  "total_manual": 163,
+  "total_manual": 165,
   "applied_jobs": [
     {
       "id": 1,
@@ -2817,6 +2817,38 @@
       "url": "https://www.naukri.com/job-listings-staff-engineer-product-platform-java-api-altimetrik-corp-bengaluru-0-to-5-years-240726504338",
       "found_on": "2026-07-24",
       "found_at": "2026-07-24 14:28",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 164,
+      "title": "Java Developer",
+      "company": "Nokia",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "Java DevelopmentJavaCdPostgresqlSql ServerKafkaFull StackCi/Cd",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-nokia-solutions-and-networks-india-p-ltd-chennai-0-to-5-years-270726925424",
+      "found_on": "2026-07-27",
+      "found_at": "2026-07-27 15:28",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 165,
+      "title": "Django Backend Developer",
+      "company": "Ninos It Solution",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "BackendManager Quality AssuranceLinuxCodingMySQLJavascriptSMSWorkflow",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-django-backend-developer-ninos-it-solution-chennai-1-to-6-years-270726506067",
+      "found_on": "2026-07-27",
+      "found_at": "2026-07-27 15:29",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
