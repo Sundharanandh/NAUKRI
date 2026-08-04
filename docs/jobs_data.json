@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-03 15:31",
+  "last_updated": "2026-08-04 10:13",
   "total_applied": 14,
-  "total_manual": 173,
+  "total_manual": 174,
   "applied_jobs": [
     {
       "id": 1,
@@ -2977,6 +2977,22 @@
       "url": "https://www.naukri.com/job-listings-backend-engineer-1pharmacy-network-hyderabad-lucknow-bengaluru-0-to-5-years-030826502457",
       "found_on": "2026-08-03",
       "found_at": "2026-08-03 15:31",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 174,
+      "title": "Software Engineer",
+      "company": "Ethos Watch",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "BackendArchitecturePostgresqlIntegration testingBankingJavascriptData structuresDistribution system",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-ethos-life-technologies-bengaluru-0-to-2-years-040826501455",
+      "found_on": "2026-08-04",
+      "found_at": "2026-08-04 10:13",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
