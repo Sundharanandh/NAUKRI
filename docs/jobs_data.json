@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-04 10:13",
+  "last_updated": "2026-08-05 10:10",
   "total_applied": 14,
-  "total_manual": 174,
+  "total_manual": 175,
   "applied_jobs": [
     {
       "id": 1,
@@ -2993,6 +2993,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-ethos-life-technologies-bengaluru-0-to-2-years-040826501455",
       "found_on": "2026-08-04",
       "found_at": "2026-08-04 10:13",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 175,
+      "title": "Lead Full Stack Engineer - Java and React",
+      "company": "Optum",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "AiJavaAutomationAzureAngular UiAutomatingDebuggingDeployment",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-lead-full-stack-engineer-java-and-react-optum-global-solutions-india-private-limited-chennai-0-to-1-years-050826910064",
+      "found_on": "2026-08-05",
+      "found_at": "2026-08-05 10:10",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
