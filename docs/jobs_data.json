@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-07 08:43",
+  "last_updated": "2026-08-07 13:52",
   "total_applied": 14,
-  "total_manual": 177,
+  "total_manual": 178,
   "applied_jobs": [
     {
       "id": 1,
@@ -3041,6 +3041,22 @@
       "url": "https://www.naukri.com/job-listings-application-support-engineer-accenture-solutions-pvt-ltd-bengaluru-1-to-4-years-060826929651",
       "found_on": "2026-08-07",
       "found_at": "2026-08-07 08:43",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 178,
+      "title": "Software Engineer - Java Full Stack, Angular, Kafka, CI/CD",
+      "company": "Optum",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "AiJavaRestful ServicesGithubAi DevelopmentApisKafkaFull Stack",
+      "score": 80,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-java-full-stack-angular-kafka-ci-cd-optum-global-solutions-india-private-limited-hyderabad-0-to-3-years-070826930423",
+      "found_on": "2026-08-07",
+      "found_at": "2026-08-07 13:52",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
