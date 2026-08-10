@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-07 13:52",
+  "last_updated": "2026-08-10 09:02",
   "total_applied": 14,
-  "total_manual": 178,
+  "total_manual": 179,
   "applied_jobs": [
     {
       "id": 1,
@@ -3057,6 +3057,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-java-full-stack-angular-kafka-ci-cd-optum-global-solutions-india-private-limited-hyderabad-0-to-3-years-070826930423",
       "found_on": "2026-08-07",
       "found_at": "2026-08-07 13:52",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 179,
+      "title": "PHP Intern (AI-Augmented Development)",
+      "company": "Times World Information Technology",
+      "location": "Bengaluru, Chennai, Kolkata, Mumbai, New Delhi, Hyderabad, Pune",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "rest laravel frameworkcsslaravelversion controlmysql git aijavascriptPHP",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-php-intern-ai-augmented-development-times-world-information-technology-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-2-years-100826500605",
+      "found_on": "2026-08-10",
+      "found_at": "2026-08-10 09:02",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
