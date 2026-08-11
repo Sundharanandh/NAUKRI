@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-10 14:00",
+  "last_updated": "2026-08-11 08:35",
   "total_applied": 14,
-  "total_manual": 183,
+  "total_manual": 184,
   "applied_jobs": [
     {
       "id": 1,
@@ -3137,6 +3137,22 @@
       "url": "https://www.naukri.com/job-listings-react-native-developer-acmasoft-web-solutions-hyderabad-1-to-4-years-100826501129",
       "found_on": "2026-08-10",
       "found_at": "2026-08-10 14:00",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 184,
+      "title": "Vue JS Developer",
+      "company": "Krazy Mantra It",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "Mavenspring bootgithubCSSJavascriptsplunkSQLCs",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-vue-js-developer-krazy-mantra-group-of-companies-chennai-1-to-4-years-110826502114",
+      "found_on": "2026-08-11",
+      "found_at": "2026-08-11 08:35",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
