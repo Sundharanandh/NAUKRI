@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-18 03:47",
+  "last_updated": "2026-08-18 08:10",
   "total_applied": 14,
-  "total_manual": 197,
+  "total_manual": 198,
   "applied_jobs": [
     {
       "id": 1,
@@ -3361,6 +3361,22 @@
       "url": "https://www.naukri.com/job-listings-software-development-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-4-years-170826926015",
       "found_on": "2026-08-18",
       "found_at": "2026-08-18 03:47",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 198,
+      "title": "Software Engineer 1",
+      "company": "CME Group",
+      "location": "Hybrid - Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "ReactAngularjavacssbackend developmenthibernatefintechtechnology solutions",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-1-cme-group-bengaluru-1-to-3-years-180826013507",
+      "found_on": "2026-08-18",
+      "found_at": "2026-08-18 08:10",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
