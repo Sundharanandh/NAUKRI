@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-13 14:04",
+  "last_updated": "2026-08-18 03:47",
   "total_applied": 14,
-  "total_manual": 196,
+  "total_manual": 197,
   "applied_jobs": [
     {
       "id": 1,
@@ -3345,6 +3345,22 @@
       "url": "https://www.naukri.com/job-listings-junior-full-stack-developer-artmac-soft-hyderabad-0-to-2-years-130826503505",
       "found_on": "2026-08-13",
       "found_at": "2026-08-13 14:04",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 197,
+      "title": "Software Development Engineer",
+      "company": "Accenture",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "microservicesrestrest api designnosqlspring bootcsshibernatecloud technologies",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-development-engineer-accenture-solutions-pvt-ltd-hyderabad-1-to-4-years-170826926015",
+      "found_on": "2026-08-18",
+      "found_at": "2026-08-18 03:47",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
