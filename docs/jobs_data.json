@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-20 13:36",
+  "last_updated": "2026-08-25 03:49",
   "total_applied": 14,
-  "total_manual": 200,
+  "total_manual": 201,
   "applied_jobs": [
     {
       "id": 1,
@@ -3409,6 +3409,22 @@
       "url": "https://www.naukri.com/job-listings-react-developer-pinus-software-chennai-1-to-3-years-200826500649",
       "found_on": "2026-08-20",
       "found_at": "2026-08-20 13:36",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 201,
+      "title": "Software Engineer",
+      "company": "Visa Consolidated Support Services India",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-6 Yrs",
+      "skills": "software engineerkubernetesapi developmentdata pipelineshibernatesqldockerjava",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-visa-consolidated-support-services-india-pvt-ltd-bengaluru-1-to-6-years-240826930862",
+      "found_on": "2026-08-25",
+      "found_at": "2026-08-25 03:49",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
