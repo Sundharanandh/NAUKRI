@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-25 03:49",
+  "last_updated": "2026-08-25 08:14",
   "total_applied": 14,
-  "total_manual": 201,
+  "total_manual": 202,
   "applied_jobs": [
     {
       "id": 1,
@@ -3425,6 +3425,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-visa-consolidated-support-services-india-pvt-ltd-bengaluru-1-to-6-years-240826930862",
       "found_on": "2026-08-25",
       "found_at": "2026-08-25 03:49",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 202,
+      "title": "Software Engineer 1",
+      "company": "CME Group",
+      "location": "Hybrid - Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-3 Yrs",
+      "skills": "ReactAngularjavahtmlcssJava Fullstackbackend developmenthibernate",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-1-cme-group-bengaluru-1-to-3-years-250826013221",
+      "found_on": "2026-08-25",
+      "found_at": "2026-08-25 08:14",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
