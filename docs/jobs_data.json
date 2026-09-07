@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-07 13:42",
+  "last_updated": "2026-09-07 17:54",
   "total_applied": 14,
-  "total_manual": 217,
+  "total_manual": 218,
   "applied_jobs": [
     {
       "id": 1,
@@ -3681,6 +3681,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-associate-infor-bengaluru-1-to-6-years-070926501957",
       "found_on": "2026-09-07",
       "found_at": "2026-09-07 13:42",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 218,
+      "title": "Full Stack Mobile Developer",
+      "company": "Softinnovation",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "ASP.NET CoreRest APIsReact NativeSQL ServerReact.jsGIT RepositoryJavascriptHtml/Css",
+      "score": 85,
+      "reason": "Keyword match: 7 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-mobile-developer-softinnovation-chennai-1-to-2-years-070926033105",
+      "found_on": "2026-09-07",
+      "found_at": "2026-09-07 17:54",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
