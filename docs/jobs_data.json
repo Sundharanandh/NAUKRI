@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-07 17:54",
+  "last_updated": "2026-09-08 12:21",
   "total_applied": 14,
-  "total_manual": 218,
+  "total_manual": 219,
   "applied_jobs": [
     {
       "id": 1,
@@ -3697,6 +3697,22 @@
       "url": "https://www.naukri.com/job-listings-full-stack-mobile-developer-softinnovation-chennai-1-to-2-years-070926033105",
       "found_on": "2026-09-07",
       "found_at": "2026-09-07 17:54",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 219,
+      "title": "Software Engineer - Backend Engineer (Python)",
+      "company": "Infinity learn",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "AWS LambdaPostgreSQLFast APIPythonSQLDistribution SystemREST APIEvent-driven architecture",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-backend-engineer-python-infinity-learn-hyderabad-1-to-2-years-080926030168",
+      "found_on": "2026-09-08",
+      "found_at": "2026-09-08 12:21",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
