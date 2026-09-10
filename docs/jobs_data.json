@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-10 12:27",
+  "last_updated": "2026-09-10 16:40",
   "total_applied": 14,
-  "total_manual": 223,
+  "total_manual": 224,
   "applied_jobs": [
     {
       "id": 1,
@@ -3777,6 +3777,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-java-python-sql-ai-ml-optum-global-solutions-india-private-limited-bengaluru-1-to-6-years-100926926599",
       "found_on": "2026-09-10",
       "found_at": "2026-09-10 12:27",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 224,
+      "title": "Application Support Engineer",
+      "company": "Accenture",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "javafull stack developmentversion controlhibernatejavascriptdatabase managementgitpostgresql",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-application-support-engineer-accenture-solutions-pvt-ltd-bengaluru-1-to-4-years-100926933340",
+      "found_on": "2026-09-10",
+      "found_at": "2026-09-10 16:40",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
