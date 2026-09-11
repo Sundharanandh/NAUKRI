@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-10 16:40",
+  "last_updated": "2026-09-11 12:28",
   "total_applied": 14,
-  "total_manual": 224,
+  "total_manual": 227,
   "applied_jobs": [
     {
       "id": 1,
@@ -3793,6 +3793,54 @@
       "url": "https://www.naukri.com/job-listings-application-support-engineer-accenture-solutions-pvt-ltd-bengaluru-1-to-4-years-100926933340",
       "found_on": "2026-09-10",
       "found_at": "2026-09-10 16:40",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 225,
+      "title": "Developer I - Software Engineering",
+      "company": "UST",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "cssoraclemavenreactjavascriptmicroservicessqlgradle",
+      "score": 80,
+      "reason": "Keyword match: 5 skills matched",
+      "url": "https://www.naukri.com/job-listings-developer-i-software-engineering-ust-bengaluru-0-to-2-years-110926500905",
+      "found_on": "2026-09-11",
+      "found_at": "2026-09-11 12:25",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 226,
+      "title": "Web Developer",
+      "company": "Global Trendz",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-3 Yrs",
+      "skills": "pythonversion controlreactprogramming languagesweb applicationscode qualityjavascriptangular",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-web-developer-global-trendz-chennai-0-to-3-years-110926501223",
+      "found_on": "2026-09-11",
+      "found_at": "2026-09-11 12:28",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 227,
+      "title": "ReactJS Developer",
+      "company": "Bitcot Technologies",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "cursorcssapi integrationandroidaijscase studiesjavascript",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-reactjs-developer-bitcot-technologies-chennai-1-to-2-years-110926502149",
+      "found_on": "2026-09-11",
+      "found_at": "2026-09-11 12:28",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
