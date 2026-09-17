@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-17 08:29",
+  "last_updated": "2026-09-17 12:47",
   "total_applied": 14,
-  "total_manual": 229,
+  "total_manual": 231,
   "applied_jobs": [
     {
       "id": 1,
@@ -3873,6 +3873,38 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-qbrik-information-technologies-chennai-0-to-5-years-150926028179",
       "found_on": "2026-09-17",
       "found_at": "2026-09-17 08:29",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 230,
+      "title": "AI Native Java Engineer Graduate Trainee 2026 Passouts",
+      "company": "Zycus Infotech",
+      "location": "Hybrid - Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "Spring BootJava FullstackJavaReact.jsAngularNativeArtificial IntelligenceBoot",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-ai-native-java-engineer-graduate-trainee-2026-passouts-zycus-infotech-bengaluru-0-to-1-years-170926030944",
+      "found_on": "2026-09-17",
+      "found_at": "2026-09-17 12:47",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 231,
+      "title": "Software Engineer",
+      "company": "Infinite",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-5 Yrs",
+      "skills": "SQL queriesFront endCodingJavascriptASP.NetHTMLMVCStored procedures",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-infinite-computer-solutions-india-pvt-ltd-bengaluru-1-to-5-years-170926502277",
+      "found_on": "2026-09-17",
+      "found_at": "2026-09-17 12:47",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
