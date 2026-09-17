@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-11 12:28",
+  "last_updated": "2026-09-17 08:29",
   "total_applied": 14,
-  "total_manual": 227,
+  "total_manual": 229,
   "applied_jobs": [
     {
       "id": 1,
@@ -3841,6 +3841,38 @@
       "url": "https://www.naukri.com/job-listings-reactjs-developer-bitcot-technologies-chennai-1-to-2-years-110926502149",
       "found_on": "2026-09-11",
       "found_at": "2026-09-11 12:28",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 228,
+      "title": "Backend Java Developer",
+      "company": "Yoga Neram Healthtech",
+      "location": "Chennai(Velachery)",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Springboot JavaJavajava 8Azure DevOpsMicroservicesAi SolutionsSpring BootJava Coding",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-backend-java-developer-yoga-neram-healthtech-chennai-1-to-2-years-170926018105",
+      "found_on": "2026-09-17",
+      "found_at": "2026-09-17 08:26",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 229,
+      "title": "Software Engineer",
+      "company": "Qbrik Information Technologies",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "PHPMySQLYiiJavascriptCakePHPLaravelCodeigniterHtml/Css",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-software-engineer-qbrik-information-technologies-chennai-0-to-5-years-150926028179",
+      "found_on": "2026-09-17",
+      "found_at": "2026-09-17 08:29",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
