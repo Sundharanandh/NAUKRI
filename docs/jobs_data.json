@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-17 12:47",
+  "last_updated": "2026-09-18 16:42",
   "total_applied": 14,
-  "total_manual": 231,
+  "total_manual": 232,
   "applied_jobs": [
     {
       "id": 1,
@@ -3905,6 +3905,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-infinite-computer-solutions-india-pvt-ltd-bengaluru-1-to-5-years-170926502277",
       "found_on": "2026-09-17",
       "found_at": "2026-09-17 12:47",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 232,
+      "title": "Junior Golang Developer with React",
+      "company": "NCR Voyix",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Computer scienceCodingDatabase designPostgresqlMySQLJavascriptData structuresSQL",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-junior-golang-developer-with-react-ncr-voyix-chennai-1-to-2-years-180926503037",
+      "found_on": "2026-09-18",
+      "found_at": "2026-09-18 16:42",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
