@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-23 17:28",
+  "last_updated": "2026-09-24 12:56",
   "total_applied": 14,
-  "total_manual": 236,
+  "total_manual": 237,
   "applied_jobs": [
     {
       "id": 1,
@@ -3985,6 +3985,22 @@
       "url": "https://www.naukri.com/job-listings-software-engineer-newgen-noida-hyderabad-1-to-3-years-040926020888",
       "found_on": "2026-09-23",
       "found_at": "2026-09-23 17:28",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 237,
+      "title": "Full Stack Developer (Django - DRF & Angular)",
+      "company": "KBC Global",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-5 Yrs",
+      "skills": "html5employee referralfull stack developerdigital twinbootstrapidecybersecurityartificial intelligence",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-django-drf-angular-kbc-global-bengaluru-0-to-5-years-240926502026",
+      "found_on": "2026-09-24",
+      "found_at": "2026-09-24 12:56",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
