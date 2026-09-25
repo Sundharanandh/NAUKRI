@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-24 12:56",
+  "last_updated": "2026-09-25 08:40",
   "total_applied": 14,
-  "total_manual": 237,
+  "total_manual": 238,
   "applied_jobs": [
     {
       "id": 1,
@@ -4001,6 +4001,22 @@
       "url": "https://www.naukri.com/job-listings-full-stack-developer-django-drf-angular-kbc-global-bengaluru-0-to-5-years-240926502026",
       "found_on": "2026-09-24",
       "found_at": "2026-09-24 12:56",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 238,
+      "title": "Java Full Stack Developer",
+      "company": "Onward Technologies",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "JavaSpring BootAngularFull StackDevelopmentStackSpringBoot",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-full-stack-developer-onward-technologies-chennai-0-to-1-years-120326019878",
+      "found_on": "2026-09-25",
+      "found_at": "2026-09-25 08:40",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
