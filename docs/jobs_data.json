@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-09-25 08:40",
+  "last_updated": "2026-09-30 14:09",
   "total_applied": 14,
-  "total_manual": 238,
+  "total_manual": 239,
   "applied_jobs": [
     {
       "id": 1,
@@ -4017,6 +4017,22 @@
       "url": "https://www.naukri.com/job-listings-java-full-stack-developer-onward-technologies-chennai-0-to-1-years-120326019878",
       "found_on": "2026-09-25",
       "found_at": "2026-09-25 08:40",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 239,
+      "title": "Full Stack Engineer",
+      "company": "Rapid Acceleration Partners",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-2 Yrs",
+      "skills": "Computer scienceAutomationCodingPostgresqlJavascriptData structuresWorkflowApplication security",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-engineer-rapid-acceleration-partners-chennai-1-to-2-years-300926502643",
+      "found_on": "2026-09-30",
+      "found_at": "2026-09-30 14:09",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
