@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-01 14:47",
+  "last_updated": "2026-10-05 16:24",
   "total_applied": 14,
-  "total_manual": 240,
+  "total_manual": 241,
   "applied_jobs": [
     {
       "id": 1,
@@ -4049,6 +4049,22 @@
       "url": "https://www.naukri.com/job-listings-web-developer-mediamax-chennai-1-to-3-years-011026500519",
       "found_on": "2026-10-01",
       "found_at": "2026-10-01 14:47",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 241,
+      "title": "UI Developers - HTML, CSS, Java Script, Angular JS, OOJS, Bootstrap",
+      "company": "Aparajitha Corporate Services",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "1-7 Yrs",
+      "skills": "cssdebugit servicesjsbootstrapcommunication and interpersonal skillsuser experienceweb applications",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-ui-developers-html-css-java-script-angular-js-oojs-bootstrap-aparajita-consultancy-services-it-services-company-chennai-1-to-7-years-051026500799",
+      "found_on": "2026-10-05",
+      "found_at": "2026-10-05 16:24",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
