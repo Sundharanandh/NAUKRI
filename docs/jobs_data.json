@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-06 09:57",
+  "last_updated": "2026-10-12 10:15",
   "total_applied": 14,
-  "total_manual": 243,
+  "total_manual": 244,
   "applied_jobs": [
     {
       "id": 1,
@@ -4097,6 +4097,22 @@
       "url": "https://www.naukri.com/job-listings-java-selenium-test-associate-fresher-hcltech-bengaluru-0-to-2-years-051026042262",
       "found_on": "2026-10-06",
       "found_at": "2026-10-06 09:57",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 244,
+      "title": "JAVA Developer Fresher",
+      "company": "TECH TALENT",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "Spring BootJavaOOPSSQLDevelopmentSpringBoot",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-java-developer-fresher-tech-talent-chennai-0-to-1-years-121026007036",
+      "found_on": "2026-10-12",
+      "found_at": "2026-10-12 10:15",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
