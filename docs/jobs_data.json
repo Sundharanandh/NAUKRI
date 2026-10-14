@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-12 10:15",
+  "last_updated": "2026-10-14 08:26",
   "total_applied": 14,
-  "total_manual": 244,
+  "total_manual": 245,
   "applied_jobs": [
     {
       "id": 1,
@@ -4113,6 +4113,22 @@
       "url": "https://www.naukri.com/job-listings-java-developer-fresher-tech-talent-chennai-0-to-1-years-121026007036",
       "found_on": "2026-10-12",
       "found_at": "2026-10-12 10:15",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 245,
+      "title": "Application Support Engineer",
+      "company": "Accenture",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "javafull stack developmentversion controlhibernatejavascriptdatabase managementgitpostgresql",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-application-support-engineer-accenture-solutions-pvt-ltd-bengaluru-1-to-4-years-131026942256",
+      "found_on": "2026-10-14",
+      "found_at": "2026-10-14 08:26",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
