@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-14 13:08",
+  "last_updated": "2026-10-15 12:53",
   "total_applied": 14,
-  "total_manual": 249,
+  "total_manual": 250,
   "applied_jobs": [
     {
       "id": 1,
@@ -4193,6 +4193,22 @@
       "url": "https://www.naukri.com/job-listings-associate-qa-automation-engineer-fresher-inspired-infotech-llc-usa-hyderabad-0-to-1-years-141026504137",
       "found_on": "2026-10-14",
       "found_at": "2026-10-14 13:08",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 250,
+      "title": "Web and Data Engineer",
+      "company": "Revenuemantra Digital Media",
+      "location": "Hyderabad",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "pythoncssoracledata warehousingmachine learningdata engineeringjavascriptsql",
+      "score": 70,
+      "reason": "Keyword match: 4 skills matched",
+      "url": "https://www.naukri.com/job-listings-web-and-data-engineer-revenuemantra-digital-media-hyderabad-1-to-4-years-151026505104",
+      "found_on": "2026-10-15",
+      "found_at": "2026-10-15 12:53",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
