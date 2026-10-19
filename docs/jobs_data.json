@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-15 12:53",
+  "last_updated": "2026-10-19 14:55",
   "total_applied": 14,
-  "total_manual": 250,
+  "total_manual": 251,
   "applied_jobs": [
     {
       "id": 1,
@@ -4209,6 +4209,22 @@
       "url": "https://www.naukri.com/job-listings-web-and-data-engineer-revenuemantra-digital-media-hyderabad-1-to-4-years-151026505104",
       "found_on": "2026-10-15",
       "found_at": "2026-10-15 12:53",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 251,
+      "title": "WhatsApp - Software Engineer - Android",
+      "company": "Meta Platforms",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "1-4 Yrs",
+      "skills": "APIAgileLanguagesCode QualityGITSoftware engineeringProgrammingJava",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-whatsapp-software-engineer-android-meta-bengaluru-1-to-4-years-191026500339",
+      "found_on": "2026-10-19",
+      "found_at": "2026-10-19 14:55",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
