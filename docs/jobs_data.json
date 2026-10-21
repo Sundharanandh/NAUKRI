@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-19 14:55",
+  "last_updated": "2026-10-21 13:11",
   "total_applied": 14,
-  "total_manual": 251,
+  "total_manual": 253,
   "applied_jobs": [
     {
       "id": 1,
@@ -4225,6 +4225,38 @@
       "url": "https://www.naukri.com/job-listings-whatsapp-software-engineer-android-meta-bengaluru-1-to-4-years-191026500339",
       "found_on": "2026-10-19",
       "found_at": "2026-10-19 14:55",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 252,
+      "title": "Associate Software Engineer",
+      "company": "Lowe's",
+      "location": "Bengaluru",
+      "salary": "Not disclosed",
+      "experience": "0-2 Yrs",
+      "skills": "SQLC#BootCsJavascriptSpring BootCSSC++",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-associate-software-engineer-lowes-services-india-private-limited-bengaluru-0-to-2-years-211026502090",
+      "found_on": "2026-10-21",
+      "found_at": "2026-10-21 13:10",
+      "status": "Manual Apply Needed",
+      "note": "This job redirects to company portal — apply manually"
+    },
+    {
+      "id": 253,
+      "title": "Full Stack developer (Java, microservices)",
+      "company": "Bahwan CyberTek",
+      "location": "Chennai",
+      "salary": "Not disclosed",
+      "experience": "0-1 Yrs",
+      "skills": "PostgresqlSoftware testingFull StackDataJavaMySQLMavenSQL",
+      "score": 70,
+      "reason": "Keyword match: 3 skills matched",
+      "url": "https://www.naukri.com/job-listings-full-stack-developer-java-microservices-bahwan-cybertek-chennai-0-to-1-years-211026501987",
+      "found_on": "2026-10-21",
+      "found_at": "2026-10-21 13:11",
       "status": "Manual Apply Needed",
       "note": "This job redirects to company portal — apply manually"
     }
