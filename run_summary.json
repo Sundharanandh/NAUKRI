@@ -1,12 +1,12 @@
 {
-  "run_utc": "2026-11-11T16:38:10.662538+00:00",
+  "run_utc": "2026-11-11T16:39:35.503060+00:00",
   "alert_links": 0,
   "pages_checked": 0,
   "new_matches_for_email": 0,
   "tracker_totals": {
     "Excluded": 264
   },
-  "preview": true,
+  "preview": false,
   "email_alert_links": 0,
   "company_board_jobs": 0,
   "links_by_source": {},
