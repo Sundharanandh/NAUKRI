@@ -1,4 +1,4 @@
-﻿config.json
+config.json
 resume_base64.txt
 *.zip
 *.txt
@@ -6,3 +6,8 @@ logs/
 __pycache__/
 *.pyc
 .env
+
+# Digest runtime files stay on the state branch, not the code branch.
+local_state/
+.venv/
+.pytest_cache/

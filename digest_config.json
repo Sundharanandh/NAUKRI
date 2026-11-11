@@ -1,0 +1,40 @@
+{
+  "mailbox": "JobAlerts",
+  "experience": 2.5,
+  "max_age_days": 7,
+  "cities": [
+    "Bengaluru",
+    "Bangalore",
+    "Chennai",
+    "Hyderabad",
+    "Secunderabad",
+    "Mumbai"
+  ],
+  "required_skills": {
+    "Java": "\\bjava\\b",
+    "Spring Boot": "\\bspring\\s*boot\\b",
+    "Microservices": "\\bmicroservices?\\b",
+    "Angular": "\\bangular\\b",
+    "AWS": "\\baws\\b|amazon web services"
+  },
+  "max_per_email": 10,
+  "max_messages": 150,
+  "max_pages_per_run": 75,
+  "company_domains": [],
+  "expected_lpa": 10,
+  "notice_period_days": 15,
+  "profile_note": "Currently employed; serving notice not confirmed. Salary is negotiable, not a hard filter.",
+  "enabled_platforms": [
+    "LinkedIn",
+    "Naukri",
+    "Indeed",
+    "Foundit",
+    "Instahyre",
+    "Hirist",
+    "Cutshort",
+    "Wellfound"
+  ],
+  "email_alerts_enabled": true,
+  "company_boards": [],
+  "max_company_jobs_per_board": 300
+}
