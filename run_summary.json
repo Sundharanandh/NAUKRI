@@ -1,5 +1,5 @@
 {
-  "run_utc": "2026-11-11T16:11:11.384648+00:00",
+  "run_utc": "2026-11-11T16:16:38.039799+00:00",
   "alert_links": 0,
   "pages_checked": 0,
   "new_matches_for_email": 0,
@@ -13,8 +13,8 @@
   "source_status": [
     {
       "source": "Gmail alerts",
-      "status": "error",
-      "error": "RuntimeError"
+      "status": "ok",
+      "postings_read": 0
     }
   ]
 }
