@@ -1,100 +1,89 @@
-name: Naukri Daily Agent 🤖
+name: Job links and Excel digest
 
 on:
   schedule:
-    - cron: "0 3 * * *"     # 9:00 AM IST
-    - cron: "30 7 * * *"    # 1:00 PM IST
-    - cron: "30 12 * * *"   # 6:00 PM IST
-
-  # Manual trigger from GitHub website OR dashboard button
+    # UTC -> 09:00, 14:00 and 19:00 Asia/Kolkata.
+    # GitHub scheduled jobs may be delayed; these are target times.
+    - cron: '30 3,8,13 * * *'
   workflow_dispatch:
     inputs:
       reason:
-        description: 'Why are you running manually?'
+        description: 'Optional run note (kept for compatibility with the dashboard)'
         required: false
-        default: 'Manual trigger from dashboard'
+        default: 'Manual review'
+      delivery:
+        description: 'Preview builds Excel without emailing or reserving links'
+        type: choice
+        options:
+          - preview
+          - send
+        default: preview
 
 permissions:
   contents: write
 
-jobs:
-  run-naukri-agent:
-    runs-on: ubuntu-latest
+concurrency:
+  group: job-digest-history
+  cancel-in-progress: false
 
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      JOB_MAILER_STATE_DIR: ${{ runner.temp }}/job-digest-state
+      JOB_MAILER_CONFIG: ${{ github.workspace }}/digest_config.json
+      JOB_MAILER_CHECKPOINT: '1'
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+      DIGEST_EMAIL_TO: ${{ vars.DIGEST_EMAIL_TO }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      JOB_ALERT_LABEL: ${{ vars.JOB_ALERT_LABEL || 'JobAlerts' }}
     steps:
-      - name: 📥 Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
 
-      - name: 🐍 Setup Python 3.11
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
+          cache: pip
 
-      - name: 🌐 Install Google Chrome
+      - name: Install digest dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run offline regression tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Restore persistent email history
+        id: restore
+        run: python persist_digest_state.py restore
+
+      - name: Collect jobs, update Excel and prepare or send digest
+        env:
+          DELIVERY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.delivery || 'send' }}
         run: |
-          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-          sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-          sudo apt-get update -q
-          sudo apt-get install -y google-chrome-stable
-          google-chrome --version
-
-      - name: 📦 Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: 🔐 Create config.json
-        run: |
-          cat > config.json << 'CONFIGEOF'
-          {
-            "naukri_email":    "${{ secrets.NAUKRI_EMAIL }}",
-            "naukri_password": "${{ secrets.NAUKRI_PASSWORD }}",
-            "agent_start_date": "${{ secrets.AGENT_START_DATE }}",
-            "profile": {
-              "current_role":        "Software Developer",
-              "experience_years":    2,
-              "current_location":    "Bangalore",
-              "preferred_locations": ["Bangalore", "Chennai", "Hyderabad", "Remote"],
-              "expected_salary_lpa": 6,
-              "notice_period_days":  30
-            },
-            "job_search": {
-              "keywords":   ["Java Developer", "Software Developer", "Microservices Developer", "Software Engineer", "Backend Developer","Backend Developer","Full Stack Developer", "Java"],
-              "skills":     ["Java", "SpringBoot", "Microservices", "REST API", "API", "Kafka", "JavaScript", "SQL", "Git", "React", "Angular"],
-              "experience_min": 1,
-              "experience_max": 3,
-              "max_applications_per_day": 20
-            },
-            "resume_path": "resume.pdf",
-            "notifications": {
-              "email":              "${{ secrets.NOTIFY_EMAIL }}",
-              "gmail_app_password": "${{ secrets.GMAIL_APP_PASSWORD }}"
-            },
-            "schedule_time": "09:00",
-            "log_file": "logs/agent_log.txt"
-          }
-          CONFIGEOF
-
-      - name: 📄 Check resume PDF
-        run: |
-          if [ -f "resume.pdf" ]; then
-            echo "✅ resume.pdf found"
+          if [ "$DELIVERY_MODE" = 'preview' ]; then
+            python digest_agent.py --preview
           else
-            echo "❌ resume.pdf not found!"
-            exit 1
+            python digest_agent.py
           fi
 
-      - name: 🚀 Run Naukri Agent
-        env:
-          GEMINI_API_KEY:   ${{ secrets.GEMINI_API_KEY }}
-          TEST_ALL_PHASES:  ${{ secrets.TEST_ALL_PHASES }}
-          AGENT_START_DATE: ${{ secrets.AGENT_START_DATE }}
-        run: python agent_cloud.py
+      - name: Save state even if delivery failed
+        if: always() && steps.restore.outcome == 'success'
+        run: python persist_digest_state.py save
 
-      - name: 📋 Upload logs
+      - name: Attach Excel and diagnostics to this run
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: naukri-logs-${{ github.run_number }}
-          path: logs/
+          name: job-tracker-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            ${{ env.JOB_MAILER_STATE_DIR }}/Job_Tracker*.xlsx
+            ${{ env.JOB_MAILER_STATE_DIR }}/run_summary.json
+            ${{ env.JOB_MAILER_STATE_DIR }}/Email_Preview.txt
+            ${{ env.JOB_MAILER_STATE_DIR }}/job_mailer.log
           retention-days: 30
+          if-no-files-found: warn
