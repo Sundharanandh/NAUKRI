@@ -67,6 +67,14 @@ class MatchingTests(unittest.TestCase):
         self.job['jobLocation']['address']['addressLocality'] = 'Delhi'
         self.assertEqual(self.result(), 'Review')
 
+    def test_foreign_hyderabad_is_not_india(self):
+        self.job['jobLocation']['address'] = {'addressLocality': 'Hyderabad', 'addressCountry': 'PK'}
+        self.assertEqual(self.result(), 'Excluded')
+
+    def test_country_object_supported(self):
+        self.job['jobLocation']['address']['addressCountry'] = {'name': 'India'}
+        self.assertEqual(self.result(), 'Matched')
+
     def test_mumbai_is_supported(self):
         self.job['jobLocation']['address']['addressLocality'] = 'Mumbai'
         self.assertEqual(self.result(), 'Matched')
@@ -131,6 +139,12 @@ class DeliveryTests(unittest.TestCase):
                    'datePosted': datetime.now(timezone.utc).isoformat(),
                    'hiringOrganization': {'name': 'Example'},
                    'jobLocation': {'address': {'addressLocality': 'Bangalore'}}}
+            connections = []
+            original_connect = m.connect
+            def tracked_connect():
+                connection = original_connect()
+                connections.append(connection)
+                return connection
             smtp = MagicMock()
             smtp.__enter__.return_value = smtp
             smtp.send_message.return_value = {}
@@ -140,6 +154,7 @@ class DeliveryTests(unittest.TestCase):
                 smtp.login.side_effect = OSError('login failed')
             with patch.dict(os.environ, {'GMAIL_APP_PASSWORD': 'fake', 'JOB_MAILER_CHECKPOINT': '0'}), \
                  patch.object(m, 'load_config', return_value=cfg), \
+                 patch.object(m, 'connect', side_effect=tracked_connect), \
                  patch.object(m, 'seed_legacy_history'), \
                  patch.object(m, 'read_alert_urls', return_value=['https://www.linkedin.com/jobs/view/123']), \
                  patch.object(m, 'fetch_job', return_value=job), \
@@ -167,6 +182,9 @@ class DeliveryTests(unittest.TestCase):
                     smtp.send_message.side_effect = None
                     m.run(args)
                     self.assertIn('0 new matches', smtp.send_message.call_args.args[0]['Subject'])
+                for connection in connections:
+                    with self.assertRaises(sqlite3.ProgrammingError):
+                        connection.execute('SELECT 1')
                 gc.collect()
 
     def test_preview_does_not_consume_links(self):

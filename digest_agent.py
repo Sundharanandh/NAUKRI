@@ -132,6 +132,16 @@ def classify(j,cfg,now):
     for name,pattern in cfg['required_skills'].items():
         if not re.search(pattern,desc+' '+title,re.I): review.append('Skill not confirmed: '+name)
     if not any(re.search(r'\b'+re.escape(c)+r'\b',loc,re.I) for c in cfg['cities']): review.append('Preferred city not confirmed; remote eligibility requires review')
+    entries = j.get('jobLocation', [])
+    entries = [entries] if isinstance(entries, dict) else entries
+    countries = []
+    for entry in entries:
+        address = entry.get('address', {}) if isinstance(entry, dict) else {}
+        country = address.get('addressCountry', '') if isinstance(address, dict) else ''
+        if isinstance(country, dict): country = country.get('name', country.get('identifier', ''))
+        if country: countries.append(str(country).strip().lower())
+    if countries and not any(c in ('in', 'ind', 'india', 'bharat') for c in countries):
+        rejected.append('Explicit job country is outside India')
     if not posted: review.append('Posting date unavailable')
     elif posted<now-timedelta(days=cfg['max_age_days']) or posted>now+timedelta(days=1): rejected.append('Posting outside recent window')
     if expires and expires<now: rejected.append('Posting expired')
@@ -266,7 +276,13 @@ def run(args):
     password = os.environ.get('GMAIL_APP_PASSWORD', '').replace(' ', '')
     if not password and not getattr(args, 'input', None):
         raise RuntimeError('Set GMAIL_APP_PASSWORD as a GitHub Actions secret, never in source code.')
-    db=connect(); seed_legacy_history(db); now=datetime.now(UTC); fetched=0
+    from contextlib import closing
+    with closing(connect()) as db:
+        _run_with_db(args, cfg, password, db)
+
+
+def _run_with_db(args, cfg, password, db):
+    seed_legacy_history(db); now=datetime.now(UTC); fetched=0
     input_jobs = json.loads(Path(args.input).read_text(encoding='utf-8')) if getattr(args, 'input', None) else None
     by_url = {canonical(j['url']): j for j in input_jobs} if input_jobs is not None else None
     if by_url is not None and None in by_url: raise ValueError('Input contains an invalid HTTPS job URL')
@@ -327,7 +343,7 @@ def run(args):
         except Exception:
             db.execute('UPDATE deliveries SET state=? WHERE id=?',('Uncertain — check Gmail Sent before retrying',ident)); db.commit(); export(db); raise RuntimeError('Delivery uncertain. Attempted links held to prevent duplicates; check Gmail Sent and Excel Delivery log.') from None
         db.execute('UPDATE deliveries SET state=? WHERE id=?',('Accepted by Gmail SMTP',ident)); db.commit()
-    export(db); checkpoint(); db.close(); print(f'Gmail accepted digest with {len(jobs)} new jobs. Excel updated.')
+    export(db); checkpoint(); print(f'Gmail accepted digest with {len(jobs)} new jobs. Excel updated.')
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(); parser.add_argument('--preview',action='store_true'); parser.add_argument('--input',help='Optional structured JobPosting JSON file for offline preview'); args=parser.parse_args()
