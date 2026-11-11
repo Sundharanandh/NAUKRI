@@ -31,7 +31,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      JOB_MAILER_STATE_DIR: ${{ runner.temp }}/job-digest-state
       JOB_MAILER_CONFIG: ${{ github.workspace }}/digest_config.json
       JOB_MAILER_CHECKPOINT: '1'
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,6 +43,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: false
+
+      - name: Configure runtime state directory
+        shell: bash
+        run: echo "JOB_MAILER_STATE_DIR=$RUNNER_TEMP/job-digest-state" >> "$GITHUB_ENV"
 
       - name: Set up Python
         uses: actions/setup-python@v5
