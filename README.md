@@ -13,17 +13,51 @@ This replaces the previous phase-based Naukri agent. Historical code and dashboa
 - Email-link reservations are pushed before SMTP delivery. If saving history fails, email is not sent. An ambiguous SMTP result holds the links instead of automatically resending them.
 - The target schedule is **09:00, 14:00, 19:00 Asia/Kolkata**. GitHub schedules can be delayed or skipped; these are not guaranteed delivery times.
 
-No Gemini, paid AI subscription, Chrome, Naukri password, LinkedIn password or Indeed password is needed for this workflow. GitHub Actions usage is subject to the account's included allowances and settings.
+No Gemini, paid AI subscription, Chrome or job-platform password is needed for this workflow. Public company-board feeds do not require ATS credentials. GitHub Actions usage is subject to the account's included allowances and settings.
 
 ## Inputs and coverage
 
-The input is **official job-alert emails** labelled `JobAlerts` in your Gmail account. The script extracts direct job links from LinkedIn, Naukri and Indeed, plus explicitly allowlisted company-career domains. It reads public `JobPosting` structured data when the page permits access.
+| Source | Input method | Configuration |
+| --- | --- | --- |
+| LinkedIn, Naukri, Indeed | Direct job links in labelled job-alert emails | Enabled by default |
+| Foundit, Instahyre, Hirist | Direct job links in labelled job-alert emails | Enabled by default |
+| Cutshort, Wellfound | Direct job links in labelled job-alert emails | Enabled by default |
+| Greenhouse | Public job-board JSON feed, checked on each run | Add specific companies to `company_boards` |
+| Lever (global or EU) | Public Postings API, checked on each run | Add specific companies to `company_boards` |
+| Ashby | Public Job Postings API, checked on each run | Add specific companies to `company_boards` |
+| Other company career sites | Direct links in labelled emails, public JobPosting details | Add the company's job-page host to `company_domains` |
 
-Enable the platform alerts yourself. Existing Naukri credentials do not automatically create those alerts. Forward LinkedIn alerts from your other email account or change alert delivery where supported, so they arrive in the mailbox being read. Forwarding may require your confirmation. Use Gmail filters to apply `JobAlerts` to genuine job-alert messages; do not label unrelated mail.
+### Platform alerts
 
-Some platforms block automated requests, use redirects the parser cannot safely unwrap, or omit public structured details. Blocked/incomplete pages go into the workbook for review. The workflow does not bypass login checks or CAPTCHAs. It cannot guarantee ten suitable openings daily. Running three times does not cause sources to issue new alert emails three times.
+The email input is **official job-alert emails** labelled `JobAlerts` in your Gmail account. It is not a search crawler or login bot for the eight platforms. Enable their alerts or recommendations yourself where offered, then use Gmail filters to label genuine job-alert emails. If a platform does not offer suitable emails, use its supported company feed or add selected job links for manual review instead; this code does not create alerts on its behalf. Forward alerts from your other email account or change delivery where supported. Forwarding may require your confirmation.
 
-Company careers: put the actual job-page hostnames into `company_domains` in `digest_config.json`, enable the company's email alerts, and label those messages too. No company domains are preselected. For ATS platforms, prefer a company's own hostname rather than allowlisting every tenant of a shared ATS domain.
+`enabled_platforms` can contain any of `LinkedIn`, `Naukri`, `Indeed`, `Foundit`, `Instahyre`, `Hirist`, `Cutshort`, `Wellfound`. Remove an entry to stop importing that platform. Homepage/search links and lookalike domains are rejected. Known tracking parameters and common URL aliases are normalized before deduplication. Cutshort short job links are recognized, but cross-host redirect or login-only pages still require manual review.
+
+Some platforms block automated requests or omit public structured details. Blocked/incomplete pages go into **Needs review**, not the confirmed-match email list. Tracking links that cannot be safely unwrapped may not be imported. The workflow does not bypass login checks or CAPTCHAs. Running three times does not make a daily source alert arrive three times, and ten suitable openings daily cannot be guaranteed.
+
+### Company career feeds
+
+`company_boards` is empty by default: there is no preselected employer list. These connectors perform direct read-only feed checks, independently of incoming mail. Copy relevant entries from `company_boards.example.json`, replace the example board/company names, and enable them. You can find a board slug in a company's actual careers URL:
+
+```json
+"company_boards": [
+  {"provider": "greenhouse", "board": "your-greenhouse-token", "company": "Company name"},
+  {"provider": "lever", "board": "your-lever-site", "company": "Company name", "region": "global"},
+  {"provider": "ashby", "board": "YourAshbyBoard", "company": "Company name"}
+]
+```
+
+Examples are placeholders, not working company selections. Greenhouse URLs look like `job-boards.greenhouse.io/BOARD/jobs/ID`; Lever uses `jobs.lever.co/BOARD/ID` or `jobs.eu.lever.co/BOARD/ID` (set `region: "eu"`); Ashby uses `jobs.ashbyhq.com/BOARD/ID`. The same configured tenant links are also accepted from alert emails. Unknown employers on shared ATS hosts are not imported merely because another company uses that host.
+
+The public fields are normalized into the same matching, history, email and Excel pipeline. Greenhouse `first_published` and Ashby `publishedAt` are used when present. **An update timestamp or Lever `createdAt` is not treated as publication.** A Lever listing without an explicit publication date remains in Needs review, even if its other criteria match. This preserves the recent-posting requirement rather than guessing freshness.
+
+Up to 20 company boards and 300 postings per board are read by default; `max_company_jobs_per_board` accepts 1–1000. Lever is paginated. Greenhouse/Ashby returned jobs are ordered by known publication date before applying the cap. The shared processing budget remains `max_pages_per_run`; known newer company posts are prioritized among equally checked candidates. Caps are reported in source diagnostics, not silently treated as complete coverage.
+
+A failed board does not prevent other boards from being checked. Gmail alert failures are also reported while remaining company feed results can still be processed. Email reports, `run_summary.json` and the workbook's **Source status** sheet expose partial failures; an empty result is not evidence that every source succeeded.
+
+For other company careers, add the real job-page hostname to `company_domains`, enable its email alerts, and label those messages. Do not allowlist an entire shared ATS domain to select companies. Set `email_alerts_enabled: false` only if you want company-feed-only collection; Gmail SMTP credentials are still required to send the digest. A company-feed-only **preview** needs no Gmail password.
+
+Provider references: [Greenhouse Job Board API](https://docs.greenhouse.io/job-board), [Lever Postings API](https://github.com/lever/postings-api), [Ashby Job Postings API](https://developers.ashbyhq.com/docs/public-job-posting-api).
 
 ## Setup in this repository
 
@@ -44,7 +78,7 @@ Company careers: put the actual job-page hostnames into `company_domains` in `di
    | `DIGEST_EMAIL_TO` | Same address as `NOTIFY_EMAIL` |
    | `JOB_ALERT_LABEL` | `JobAlerts` |
 
-4. In Gmail, create that label and set up the platform alerts and labelling filters described above. Gmail IMAP must be available for the account.
+4. In Gmail, create that label and set up the platform alerts and labelling filters described above. Gmail IMAP must be available for email-alert collection. Company feeds do not use IMAP.
 5. Permit this workflow's `GITHUB_TOKEN` to write repository contents. The workflow requests `contents: write`; organization policies and branch rules must also allow creating/updating **`job-digest-state`**. No personal GitHub token is needed by the scheduled job.
 6. Open **Actions → Job links and Excel digest → Run workflow**. Choose **preview** first. This reads alerts, creates the tracker and persists discovery history; it sends no email and does not reserve jobs as emailed.
 7. Download the `job-tracker-…` artifact. Check `Job_Tracker.xlsx`, `Email_Preview.txt` and `run_summary.json`.
@@ -79,12 +113,13 @@ Workbook sheets:
 - **Needs review:** missing details or blocked public pages, with a reason.
 - **Excluded:** stale/out-of-scope listings and imported historical dashboard jobs.
 - **Delivery log:** SMTP acceptance, attempts or uncertain outcomes. SMTP acceptance does not prove inbox delivery.
+- **Source status:** company feed/Gmail collection outcomes, caps, malformed records and error types. The JSON summary also breaks discovered links down by platform.
 
 The email attachment is the workbook snapshot immediately before that send. The state branch and Actions artifact contain the final post-send workbook.
 
 Cloud runs update discovery and email status. **Application status remains manual** because the workflow cannot know you applied elsewhere. Your downloaded workbook is a snapshot; local edits do not sync back to GitHub. When run locally, the exporter preserves your existing Application status / Applied date / My notes cells by URL.
 
-State contains job URLs, publicly retrieved posting metadata and delivery timestamps, not raw Gmail messages, credentials or resume content. On a public repository that state is publicly readable. Keep private application notes out of committed files; use a private repository if you want the tracker/history private.
+State contains job URLs, publicly retrieved posting metadata, source health and delivery timestamps, not raw Gmail messages, credentials or resume content. On a public repository that state is publicly readable. Keep private application notes out of committed files; use a private repository if you want the tracker/history private.
 
 URL normalization removes tracking parameters. Matching company/title/location/posting-date fingerprints additionally suppress likely duplicate advertisements. Conservative fingerprint grouping can merge distinct same-day similar vacancies. Existing dashboard history cannot reconstruct every link ever emailed, so a historical email absent from that history may appear once during migration.
 
@@ -111,4 +146,4 @@ py -3 -m venv .venv
 
 For a live local preview, set `NOTIFY_EMAIL` and `GMAIL_APP_PASSWORD` in your process environment without committing them, then run `python digest_agent.py --preview`. Local files default to `local_state/`, which is gitignored. For offline preview, `--input path/to/jobs.json --preview` accepts an array of structured `JobPosting` objects with an extra `url` field. Provide `NOTIFY_EMAIL` for preview formatting; no Gmail connection or app password is required in that offline mode.
 
-Tests cover exact-skill matching, eligibility/date handling, Excel notes, successful/ambiguous delivery deduplication, authentication/persistence failures and restoring history through a real local Git remote. They do not certify live Gmail, third-party site availability or GitHub scheduling. Validate preview then send after configuring your account.
+Tests cover exact-skill matching, eligibility/date handling, all new platform URL rules and mail ingestion, company feed normalization/pagination/caps/failure isolation, combined feed/email deduplication, Excel notes/source status, successful/ambiguous delivery deduplication, authentication/persistence failures and restoring history through a real local Git remote. They do not certify live Gmail, third-party site availability or GitHub scheduling. Validate preview then send after configuring your account.

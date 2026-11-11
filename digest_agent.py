@@ -7,6 +7,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 from urllib.request import Request
+from job_sources import (PLATFORMS, allowed_alert_url, collect_company_jobs, configured_boards, source_name)
 
 CODE_DIR = Path(__file__).resolve().parent
 ROOT = Path(os.environ.get('JOB_MAILER_STATE_DIR', str(CODE_DIR / 'local_state')))
@@ -19,7 +20,8 @@ DEFAULT = {'gmail': '', 'recipient': '',
  'Microservices': r'\bmicroservices?\b', 'Angular': r'\bangular\b',
  'AWS': r'\baws\b|amazon web services'}, 'max_per_email': 10,
  'max_messages': 150, 'max_pages_per_run': 75,
- 'company_domains': [], 'expected_lpa': 10}
+ 'company_domains': [], 'company_boards': [], 'max_company_jobs_per_board': 300,
+ 'email_alerts_enabled': True, 'enabled_platforms': list(PLATFORMS), 'expected_lpa': 10}
 
 class Page(HTMLParser):
     def __init__(self):
@@ -45,6 +47,10 @@ def canonical(url):
     if p.port not in (None,443): return None
     q=parse_qs(p.query)
     path = p.path.rstrip('/')
+    if host in ('boards.greenhouse.io', 'job-boards.greenhouse.io'):
+        host = 'job-boards.greenhouse.io'
+    for domain, official in [('foundit.in', 'www.foundit.in'), ('instahyre.com', 'www.instahyre.com'), ('hirist.tech', 'www.hirist.tech'), ('cutshort.io', 'cutshort.io'), ('wellfound.com', 'wellfound.com')]:
+        if host in (domain, 'www.' + domain): host = official
     if host == 'linkedin.com' or host.endswith('.linkedin.com'):
         identity = re.search(r'/jobs/view/(?:[^/]*-)?(\d+)(?:/|$)', path)
         if identity:
@@ -56,13 +62,7 @@ def canonical(url):
     return urlunparse(('https',host,path,'',urlencode(keep),''))
 
 def allowed(url,cfg):
-    p=urlparse(url); host=(p.hostname or '').lower(); path=p.path.lower()
-    def hostis(domain): return host==domain or host.endswith('.'+domain)
-    if hostis('linkedin.com'): return bool(re.search(r'/jobs/view/[^/]+',path))
-    if hostis('naukri.com'): return '/job-listings-' in path
-    if hostis('indeed.com') or hostis('indeed.co.in'):
-        return 'jk=' in p.query or 'vjk=' in p.query
-    return any(hostis(d.lower().strip()) for d in cfg['company_domains'] if d.strip())
+    return allowed_alert_url(url, cfg)
 
 def jobs_in(value):
     if isinstance(value,list):
@@ -219,17 +219,30 @@ def export(db):
         ws.column_dimensions['A'].width=65; ws.column_dimensions['G'].width=65
     ws=wb.create_sheet('Delivery log'); ws.append(['Digest ID','Created UTC','Delivery status','Job URLs'])
     for row in db.execute('SELECT * FROM deliveries ORDER BY created DESC'): ws.append(list(row))
+    status_path = ROOT / 'run_summary.json'
+    if status_path.exists():
+        summary = json.loads(status_path.read_text(encoding='utf-8'))
+        sheet = wb.create_sheet('Source status')
+        sheet.append(['Source', 'Status', 'Postings / links read', 'Invalid postings', 'Error type', 'Capped'])
+        for row in summary.get('source_status', []):
+            sheet.append([row.get('source'), row.get('status'), row.get('postings_read', 0), row.get('invalid_postings', 0), row.get('error', ''), row.get('capped', False)])
+        sheet.freeze_panes = 'A2'
+        for column in 'ABCDEF': sheet.column_dimensions[column].width = 28
     temp=ROOT/'Job_Tracker.pending.xlsx'; wb.save(temp)
     try: os.replace(temp,path)
     except PermissionError: logging.warning('Close Excel. Updated copy saved as Job_Tracker.pending.xlsx; next run will retry.')
 
-def digest(jobs,cfg):
+def digest(jobs,cfg,source_status=None):
     msg=EmailMessage(); msg['From']=cfg['gmail']; msg['To']=cfg['recipient']
     msg['Subject']=f'Java jobs: {len(jobs)} new matches — '+datetime.now(IST).strftime('%d %b %Y %I:%M %p IST')
     lines=['New, previously unemailed jobs, newest posting first.','Automated text checks only: review the complete posting before applying.','Salary is negotiable and not a hard filter. No applications were submitted.','']
     for url,title,org,loc,posted,salary in jobs:
-        lines.extend([f'{title} | {org}',f'{loc} | Posted: {posted}',f'Salary: {salary}',url,''])
+        lines.extend([f'{title} | {org}',f'Source: {source_name(url, cfg)}',f'{loc} | Posted: {posted}',f'Salary: {salary}',url,''])
     if not jobs: lines.append('No new confirmed matches this run. Check the Excel Needs review sheet. Older links will not be repeated.')
+    failures = [item for item in (source_status or []) if item['status'] != 'ok']
+    if failures:
+        lines.append('Some sources were incomplete or unavailable. See the Excel Source status sheet:')
+        lines.extend(item['source'] + ': ' + item['status'] + (' (' + item['error'] + ')' if item.get('error') else '') for item in failures)
     lines.append('The current Excel tracker is attached. Keep your editable local workbook for application notes.')
     msg.set_content('\n'.join(lines))
     return msg
@@ -242,6 +255,9 @@ def load_config():
     cfg['mailbox'] = os.environ.get('JOB_ALERT_LABEL', cfg.get('mailbox', 'JobAlerts'))
     if not cfg['gmail'] or not cfg['recipient']:
         raise RuntimeError('Set NOTIFY_EMAIL and optionally DIGEST_EMAIL_TO in Actions secrets/variables.')
+    list(configured_boards(cfg))  # Reject invalid tenant configuration before reading mail.
+    unknown = set(cfg.get('enabled_platforms', PLATFORMS)) - set(PLATFORMS)
+    if unknown: raise ValueError('Unknown enabled_platforms name')
     if not 1 <= cfg['max_per_email'] <= 50:
         raise ValueError('max_per_email must be 1-50')
     return cfg
@@ -274,7 +290,7 @@ def run(args):
     ROOT.mkdir(parents=True, exist_ok=True)
     cfg = load_config()
     password = os.environ.get('GMAIL_APP_PASSWORD', '').replace(' ', '')
-    if not password and not getattr(args, 'input', None):
+    if not password and not getattr(args, 'input', None) and (not args.preview or cfg.get('email_alerts_enabled', True)):
         raise RuntimeError('Set GMAIL_APP_PASSWORD as a GitHub Actions secret, never in source code.')
     from contextlib import closing
     with closing(connect()) as db:
@@ -284,11 +300,28 @@ def run(args):
 def _run_with_db(args, cfg, password, db):
     seed_legacy_history(db); now=datetime.now(UTC); fetched=0
     input_jobs = json.loads(Path(args.input).read_text(encoding='utf-8')) if getattr(args, 'input', None) else None
-    by_url = {canonical(j['url']): j for j in input_jobs} if input_jobs is not None else None
-    if by_url is not None and None in by_url: raise ValueError('Input contains an invalid HTTPS job URL')
-    alert_urls=list(by_url) if by_url is not None else read_alert_urls(cfg,password)
+    source_status = []
+    if input_jobs is not None:
+        by_url = {canonical(j['url']): j for j in input_jobs}
+        if None in by_url: raise ValueError('Input contains an invalid HTTPS job URL')
+        alert_urls = list(by_url)
+        email_urls = []
+    else:
+        board_jobs, source_status = collect_company_jobs(cfg)
+        by_url = {canonical(j['url']): j for j in board_jobs}
+        email_urls = []
+        if cfg.get('email_alerts_enabled', True):
+            try:
+                email_urls = read_alert_urls(cfg, password)
+                source_status.append({'source': 'Gmail alerts', 'status': 'ok', 'postings_read': len(email_urls)})
+            except Exception as exc:
+                source_status.append({'source': 'Gmail alerts', 'status': 'error', 'error': type(exc).__name__})
+        alert_urls = sorted(set(email_urls) | set(by_url))
     checked=dict(db.execute('SELECT url,checked FROM checks'))
-    alert_urls.sort(key=lambda u: checked.get(u,''))
+    def candidate_priority(url):
+        posted = dateparse(by_url.get(url, {}).get('datePosted'))
+        return (checked.get(url, ''), -posted.timestamp() if posted else float('inf'))
+    alert_urls.sort(key=candidate_priority)
     refreshed=set()
     for url in alert_urls:
         old=db.execute('SELECT state,mailed FROM jobs WHERE url=?',(url,)).fetchone()
@@ -298,7 +331,7 @@ def _run_with_db(args, cfg, password, db):
         refreshed.add(url)
         db.execute('INSERT INTO checks VALUES(?,?) ON CONFLICT(url) DO UPDATE SET checked=excluded.checked',(url,now.isoformat()))
         try:
-            j=by_url[url] if by_url is not None else fetch_job(url); state,reason,title,loc,posted,salary=classify(j,cfg,now); org=company(j)
+            j=by_url[url] if url in by_url else fetch_job(url); state,reason,title,loc,posted,salary=classify(j,cfg,now); org=company(j)
             stamp=posted.isoformat() if posted else ''
             fp=hashlib.sha256('|'.join([org.casefold(),title.casefold(),loc.casefold(),stamp[:10]]).encode()).hexdigest() if org and title else url
         except Exception as e:
@@ -317,10 +350,13 @@ def _run_with_db(args, cfg, password, db):
     counts = dict(db.execute('SELECT state,COUNT(*) FROM jobs GROUP BY state'))
     summary = {'run_utc': now.isoformat(), 'alert_links': len(alert_urls),
                'pages_checked': fetched, 'new_matches_for_email': len(jobs),
-               'tracker_totals': counts, 'preview': bool(args.preview)}
+               'tracker_totals': counts, 'preview': bool(args.preview),
+               'email_alert_links': len(email_urls), 'company_board_jobs': len(by_url) if input_jobs is None else 0,
+               'links_by_source': {name: sum(source_name(url, cfg) == name for url in alert_urls) for name in sorted({source_name(url, cfg) for url in alert_urls})},
+               'source_status': source_status}
     (ROOT / 'run_summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     print(json.dumps(summary))
-    export(db); msg=digest(jobs,cfg)
+    export(db); msg=digest(jobs,cfg,source_status)
     if args.preview:
         (ROOT/'Email_Preview.txt').write_text(msg.get_content(),encoding='utf-8'); print('Preview and Excel updated. No email sent; no jobs marked emailed.'); return
     path=ROOT/'Job_Tracker.pending.xlsx'

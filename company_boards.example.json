@@ -1,0 +1,23 @@
+{
+  "company_boards": [
+    {
+      "provider": "greenhouse",
+      "board": "your-greenhouse-token",
+      "company": "Company name",
+      "enabled": false
+    },
+    {
+      "provider": "lever",
+      "board": "your-lever-site",
+      "company": "Company name",
+      "region": "global",
+      "enabled": false
+    },
+    {
+      "provider": "ashby",
+      "board": "YourAshbyBoard",
+      "company": "Company name",
+      "enabled": false
+    }
+  ]
+}

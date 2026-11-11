@@ -23,5 +23,18 @@
   "company_domains": [],
   "expected_lpa": 10,
   "notice_period_days": 15,
-  "profile_note": "Currently employed; serving notice not confirmed. Salary is negotiable, not a hard filter."
+  "profile_note": "Currently employed; serving notice not confirmed. Salary is negotiable, not a hard filter.",
+  "enabled_platforms": [
+    "LinkedIn",
+    "Naukri",
+    "Indeed",
+    "Foundit",
+    "Instahyre",
+    "Hirist",
+    "Cutshort",
+    "Wellfound"
+  ],
+  "email_alerts_enabled": true,
+  "company_boards": [],
+  "max_company_jobs_per_board": 300
 }
