@@ -1,0 +1,2767 @@
+{
+  "source": "User-supplied company career workbook",
+  "imported_main_rows": 200,
+  "unique_main_career_urls": 179,
+  "duplicate_main_rows": 21,
+  "additional_unique_names": 3,
+  "companies": [
+    {
+      "company": "Microsoft",
+      "careers_url": "https://careers.microsoft.com/v2/global/en/locations/india.html",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:05Z",
+        "final_url": "https://careers.microsoft.com/v2/global/en/locations/india.html"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Google",
+      "careers_url": "https://www.google.com/about/careers/applications/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:05Z",
+        "final_url": "https://www.google.com/about/careers/applications/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Amazon",
+      "careers_url": "https://www.amazon.jobs/en/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:05Z",
+        "final_url": "https://www.amazon.jobs/en/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Apple",
+      "careers_url": "https://jobs.apple.com/en-in/search",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:05Z",
+        "final_url": "https://jobs.apple.com/en-in/search?location=india-INDC"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Meta",
+      "careers_url": "https://www.metacareers.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:05Z",
+        "final_url": "https://www.metacareers.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Workday links detected; Workday adapter not implemented."
+    },
+    {
+      "company": "Adobe",
+      "careers_url": "https://careers.adobe.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:05Z",
+        "final_url": "https://careers.adobe.com/us/en"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Salesforce",
+      "careers_url": "https://careers.salesforce.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:05Z",
+        "final_url": "https://www.salesforce.com/company/careers/?bc=OTH"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Oracle",
+      "careers_url": "https://www.oracle.com/in/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:05Z",
+        "final_url": "https://www.oracle.com/in/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "SAP",
+      "careers_url": "https://jobs.sap.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:06Z",
+        "final_url": "https://jobs.sap.com/en/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "NVIDIA",
+      "careers_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:06Z",
+        "final_url": "https://www.nvidia.com/en-us/about-nvidia/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Intel",
+      "careers_url": "https://jobs.intel.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:06Z",
+        "final_url": "https://intel.wd1.myworkdayjobs.com/External/page/6042070b79e01001f04fa9b468070000"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Workday links detected; Workday adapter not implemented."
+    },
+    {
+      "company": "Cisco",
+      "careers_url": "https://jobs.cisco.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:06Z",
+        "final_url": "https://careers.cisco.com/global/en"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Qualcomm",
+      "careers_url": "https://careers.qualcomm.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:06Z",
+        "final_url": "https://careers.qualcomm.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "AMD",
+      "careers_url": "https://careers.amd.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 403,
+        "checked_at": "2026-11-12T12:22:06Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 403 during audit; no direct feed verified."
+    },
+    {
+      "company": "IBM",
+      "careers_url": "https://www.ibm.com/careers",
+      "category": "Product-based",
+      "aliases": [
+        "IBM Consulting"
+      ],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:06Z",
+        "final_url": "https://www.ibm.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "ServiceNow",
+      "careers_url": "https://careers.servicenow.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:07Z",
+        "final_url": "https://careers.servicenow.com/"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "company": "ServiceNow",
+        "provider": "smartrecruiters",
+        "board": "ServiceNow",
+        "country": "in"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 84
+    },
+    {
+      "company": "Atlassian",
+      "careers_url": "https://www.atlassian.com/company/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:07Z",
+        "final_url": "https://www.atlassian.com/company/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Intuit",
+      "careers_url": "https://www.intuit.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:07Z",
+        "final_url": "https://www.intuit.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "PayPal",
+      "careers_url": "https://www.paypal.com/us/webapps/mpp/jobs",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:07Z",
+        "final_url": "https://careers.pypl.com/home/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Netflix",
+      "careers_url": "https://jobs.netflix.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:07Z",
+        "final_url": "https://jobs.netflix.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Uber",
+      "careers_url": "https://www.uber.com/us/en/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "oracle_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:07Z",
+        "final_url": "https://jobs.uber.com/en/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Oracle career-site links detected; site-specific adapter not implemented."
+    },
+    {
+      "company": "Airbnb",
+      "careers_url": "https://careers.airbnb.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:07Z",
+        "final_url": "https://careers.airbnb.com/"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "airbnb",
+        "company": "Airbnb"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 208
+    },
+    {
+      "company": "LinkedIn",
+      "careers_url": "https://careers.linkedin.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://careers.linkedin.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Stripe",
+      "careers_url": "https://stripe.com/jobs",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://stripe.com/careers"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "stripe",
+        "company": "Stripe"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 300
+    },
+    {
+      "company": "Zoom",
+      "careers_url": "https://careers.zoom.us/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://www.careers.zoom.us/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Dropbox",
+      "careers_url": "https://jobs.dropbox.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://www.dropbox.jobs/en/"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "dropbox",
+        "company": "Dropbox"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 38
+    },
+    {
+      "company": "Workday",
+      "careers_url": "https://www.workday.com/en-us/company/careers.html",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "unavailable",
+        "checked_at": "2026-11-12T12:22:08Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page could not be read during audit; no direct feed verified."
+    },
+    {
+      "company": "Autodesk",
+      "careers_url": "https://www.autodesk.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://www.autodesk.com/careers/overview"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Dell Technologies",
+      "careers_url": "https://jobs.dell.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "HP",
+      "careers_url": "https://jobs.hp.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://jobs.hp.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Samsung",
+      "careers_url": "https://www.samsung.com/in/about-us/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://www.samsung.com/in/about-us/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Workday links detected; Workday adapter not implemented."
+    },
+    {
+      "company": "Sony",
+      "careers_url": "https://www.sonyjobs.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:08Z",
+        "final_url": "https://www.sonyjobs.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Qualtrics",
+      "careers_url": "https://www.qualtrics.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://www.qualtrics.com/careers/us/en"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "qualtrics",
+        "company": "Qualtrics"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 114
+    },
+    {
+      "company": "VMware by Broadcom",
+      "careers_url": "https://careers.broadcom.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "unavailable",
+        "checked_at": "2026-11-12T12:22:09Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page could not be read during audit; no direct feed verified."
+    },
+    {
+      "company": "Red Hat",
+      "careers_url": "https://www.redhat.com/en/jobs",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://www.redhat.com/en/jobs"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "redhat",
+        "company": "Red Hat",
+        "host": "redhat.wd5.myworkdayjobs.com",
+        "site": "jobs"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 35
+    },
+    {
+      "company": "NetApp",
+      "careers_url": "https://careers.netapp.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://careers.netapp.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Nutanix",
+      "careers_url": "https://www.nutanix.com/company/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://careers.nutanix.com/en/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Commvault",
+      "careers_url": "https://careers.commvault.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://www.commvault.com/"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "commvault",
+        "company": "Commvault"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 57
+    },
+    {
+      "company": "Elastic",
+      "careers_url": "https://www.elastic.co/about/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://www.elastic.co/careers"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "elastic",
+        "company": "Elastic"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 300
+    },
+    {
+      "company": "MongoDB",
+      "careers_url": "https://www.mongodb.com/company/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://www.mongodb.com/company/careers"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "mongodb",
+        "company": "MongoDB"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 300
+    },
+    {
+      "company": "Confluent",
+      "careers_url": "https://www.confluent.io/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://www.ibm.com/careers/search?q=confluent"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Cloudflare",
+      "careers_url": "https://www.cloudflare.com/careers/jobs/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://www.cloudflare.com/careers/jobs/"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "cloudflare",
+        "company": "Cloudflare"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 300
+    },
+    {
+      "company": "Datadog",
+      "careers_url": "https://careers.datadoghq.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://careers.datadoghq.com/"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "datadog",
+        "company": "Datadog"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 300
+    },
+    {
+      "company": "Snowflake",
+      "careers_url": "https://careers.snowflake.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://careers.snowflake.com/us/en"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Twilio",
+      "careers_url": "https://www.twilio.com/en-us/company/jobs",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://jobs.twilio.com/careers"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "twilio",
+        "company": "Twilio"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 122
+    },
+    {
+      "company": "GitLab",
+      "careers_url": "https://about.gitlab.com/jobs/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:09Z",
+        "final_url": "https://about.gitlab.com/jobs/"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "gitlab",
+        "company": "GitLab"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 259
+    },
+    {
+      "company": "GitHub",
+      "careers_url": "https://www.github.careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 403,
+        "checked_at": "2026-11-12T12:22:09Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 403 during audit; no direct feed verified."
+    },
+    {
+      "company": "Palo Alto Networks",
+      "careers_url": "https://jobs.paloaltonetworks.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://jobs.paloaltonetworks.com/en"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "paloaltonetworks",
+        "company": "Palo Alto Networks",
+        "host": "paloaltonetworks.wd5.myworkdayjobs.com",
+        "site": "panwexternalcareers"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 147
+    },
+    {
+      "company": "Fortinet",
+      "careers_url": "https://www.fortinet.com/corporate/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "oracle_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://www.fortinet.com/corporate/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Oracle career-site links detected; site-specific adapter not implemented."
+    },
+    {
+      "company": "Synopsys",
+      "careers_url": "https://careers.synopsys.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://careers.synopsys.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Cadence Design Systems",
+      "careers_url": "https://www.cadence.com/en_US/home/company/careers.html",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://www.cadence.com/en_US/home/company/life-at-cadence/careers.html"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "cadence",
+        "company": "Cadence Design Systems",
+        "host": "cadence.wd1.myworkdayjobs.com",
+        "site": "External_Careers"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 16
+    },
+    {
+      "company": "Zoho",
+      "careers_url": "https://www.zoho.com/careers.html",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://www.zoho.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Freshworks",
+      "careers_url": "https://www.freshworks.com/company/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "board_discovered",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://www.freshworks.com/company/careers/"
+      },
+      "feed": {
+        "provider": "smartrecruiters",
+        "board": "Freshworks",
+        "company": "Freshworks",
+        "country": "in"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 31
+    },
+    {
+      "company": "BrowserStack",
+      "careers_url": "https://www.browserstack.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://www.browserstack.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Workday links detected; Workday adapter not implemented."
+    },
+    {
+      "company": "Postman",
+      "careers_url": "https://www.postman.com/company/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://www.postman.com/company/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Razorpay",
+      "careers_url": "https://razorpay.com/jobs/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "board_discovered",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://razorpay.com/careers/"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "razorpaysoftwareprivatelimited",
+        "company": "Razorpay"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 25
+    },
+    {
+      "company": "PhonePe",
+      "careers_url": "https://www.phonepe.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:10Z",
+        "final_url": "https://www.phonepe.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Paytm",
+      "careers_url": "https://paytm.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "board_discovered",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:11Z",
+        "final_url": "https://paytm.com/careers/"
+      },
+      "feed": {
+        "provider": "lever",
+        "board": "paytm",
+        "company": "Paytm"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 202
+    },
+    {
+      "company": "Flipkart",
+      "careers_url": "https://www.flipkartcareers.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:11Z",
+        "final_url": "https://www.flipkartcareers.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Meesho",
+      "careers_url": "https://www.meesho.io/jobs",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:11Z",
+        "final_url": "https://www.meesho.io/jobs"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Swiggy",
+      "careers_url": "https://careers.swiggy.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:11Z",
+        "final_url": "https://careers.swiggy.in:443/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Zomato / Eternal",
+      "careers_url": "https://www.eternal.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:11Z",
+        "final_url": "https://www.eternal.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Groww",
+      "careers_url": "https://groww.in/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:11Z",
+        "final_url": "https://groww.in/careers"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "groww",
+        "company": "Groww"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 9
+    },
+    {
+      "company": "Zerodha",
+      "careers_url": "https://zerodha.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:12Z",
+        "final_url": "https://careers.zerodha.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "CRED",
+      "careers_url": "https://careers.cred.club/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:12Z",
+        "final_url": "https://careers.cred.club/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Dream11",
+      "careers_url": "https://www.dream11.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:12Z",
+        "final_url": "https://www.dream11.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "MakeMyTrip",
+      "careers_url": "https://careers.makemytrip.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:12Z",
+        "final_url": "https://careers.makemytrip.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Ola",
+      "careers_url": "https://www.olacabs.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 403,
+        "checked_at": "2026-11-12T12:22:12Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 403 during audit; no direct feed verified."
+    },
+    {
+      "company": "Ather Energy",
+      "careers_url": "https://www.atherenergy.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:12Z",
+        "final_url": "https://careers.atherenergy.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "InMobi",
+      "careers_url": "https://www.inmobi.com/company/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:12Z",
+        "final_url": "https://www.inmobi.com/company/careers"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "inmobi",
+        "company": "InMobi"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 75
+    },
+    {
+      "company": "ShareChat",
+      "careers_url": "https://sharechat.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:12Z",
+        "final_url": "https://sharechat.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Juspay",
+      "careers_url": "https://juspay.io/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:12Z",
+        "final_url": "https://juspay.io/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Delhivery",
+      "careers_url": "https://www.delhivery.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:13Z",
+        "final_url": "https://www.delhivery.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Urban Company",
+      "careers_url": "https://www.urbancompany.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 404,
+        "checked_at": "2026-11-12T12:22:13Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 404 during audit; no direct feed verified."
+    },
+    {
+      "company": "Policybazaar",
+      "careers_url": "https://www.policybazaar.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:13Z",
+        "final_url": "https://www.policybazaar.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Tata Elxsi",
+      "careers_url": "https://www.tataelxsi.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:13Z",
+        "final_url": "https://www.tataelxsi.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Tata Technologies",
+      "careers_url": "https://www.tatatechnologies.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 403,
+        "checked_at": "2026-11-12T12:22:13Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 403 during audit; no direct feed verified."
+    },
+    {
+      "company": "L&T Technology Services",
+      "careers_url": "https://www.ltts.com/careers",
+      "category": "Product-based",
+      "aliases": [
+        "LTTS"
+      ],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:13Z",
+        "final_url": "https://www.ltts.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "KPIT Technologies",
+      "careers_url": "https://www.kpit.com/careers/",
+      "category": "Product-based",
+      "aliases": [
+        "KPIT Engineering"
+      ],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:13Z",
+        "final_url": "https://www.kpit.com/careers-overview/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Persistent Systems",
+      "careers_url": "https://www.persistent.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:14Z",
+        "final_url": "https://careers.persistent.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Mphasis",
+      "careers_url": "https://careers.mphasis.com/",
+      "category": "Product-based",
+      "aliases": [
+        "Mphasis Digital Risk"
+      ],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:14Z",
+        "final_url": "https://careers.mphasis.com/home.html"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Hexaware",
+      "careers_url": "https://hexaware.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "oracle_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:14Z",
+        "final_url": "https://jobs.hexaware.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Oracle career-site links detected; site-specific adapter not implemented."
+    },
+    {
+      "company": "Coforge",
+      "careers_url": "https://www.coforge.com/careers",
+      "category": "Product-based",
+      "aliases": [
+        "Coforge Engineering"
+      ],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:14Z",
+        "final_url": "https://careers.coforge.com/coforge/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Birlasoft",
+      "careers_url": "https://www.birlasoft.com/careers",
+      "category": "Product-based",
+      "aliases": [
+        "Birlasoft Digital"
+      ],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:14Z",
+        "final_url": "https://www.birlasoft.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Zensar Technologies",
+      "careers_url": "https://www.zensar.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "oracle_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:14Z",
+        "final_url": "https://www.zensar.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Oracle career-site links detected; site-specific adapter not implemented."
+    },
+    {
+      "company": "Amdocs",
+      "careers_url": "https://www.amdocs.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:14Z",
+        "final_url": "https://www.amdocs.com/careers/home"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "SAS",
+      "careers_url": "https://www.sas.com/en_us/careers.html",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:14Z",
+        "final_url": "https://www.sas.com/en_us/careers.html"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "MathWorks",
+      "careers_url": "https://www.mathworks.com/company/jobs.html",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:15Z",
+        "final_url": "https://www.mathworks.com/company/jobs/opportunities.html"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Dassault Systèmes",
+      "careers_url": "https://www.3ds.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:15Z",
+        "final_url": "https://www.3ds.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Figma",
+      "careers_url": "https://www.figma.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "unavailable",
+        "checked_at": "2026-11-12T12:22:15Z"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "figma",
+        "company": "Figma"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 141
+    },
+    {
+      "company": "Canva",
+      "careers_url": "https://www.canva.com/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:15Z",
+        "final_url": "https://www.lifeatcanva.com/en/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Epic Games",
+      "careers_url": "https://www.epicgames.com/site/en-US/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:15Z",
+        "final_url": "https://www.epicgames.com/site/careers?lang=en-US"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "epicgames",
+        "company": "Epic Games"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 134
+    },
+    {
+      "company": "Unity",
+      "careers_url": "https://careers.unity.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:15Z",
+        "final_url": "https://unity.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Electronic Arts",
+      "careers_url": "https://www.ea.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://www.ea.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Take-Two Interactive",
+      "careers_url": "https://www.take2games.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://careers.take2games.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Booking.com",
+      "careers_url": "https://careers.booking.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://careers.booking.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Expedia Group",
+      "careers_url": "https://careers.expediagroup.com/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://careers.expediagroup.com/"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "expedia",
+        "company": "Expedia Group",
+        "host": "expedia.wd108.myworkdayjobs.com",
+        "site": "search"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 16
+    },
+    {
+      "company": "Indeed",
+      "careers_url": "https://www.indeed.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://www.indeed.com/careers"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "indeed",
+        "company": "Indeed"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 0
+    },
+    {
+      "company": "Tesla",
+      "careers_url": "https://www.tesla.com/careers",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://www.tesla.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Bosch",
+      "careers_url": "https://www.bosch.in/careers/",
+      "category": "Product-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://www.bosch.in/careers/"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "company": "Bosch",
+        "provider": "smartrecruiters",
+        "board": "BoschGroup",
+        "country": "in"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 300
+    },
+    {
+      "company": "Tata Consultancy Services (TCS)",
+      "careers_url": "https://www.tcs.com/careers/india",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://www.tcs.com/careers/india"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Infosys",
+      "careers_url": "https://www.infosys.com/careers.html",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://www.infosys.com/careers.html"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Accenture",
+      "careers_url": "https://www.accenture.com/in-en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://www.accenture.com/in-en/careers"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "accenture",
+        "company": "Accenture",
+        "host": "accenture.wd103.myworkdayjobs.com",
+        "site": "AccentureCareers"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 300
+    },
+    {
+      "company": "HCLTech",
+      "careers_url": "https://www.hcltech.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://careers.hcltech.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Wipro",
+      "careers_url": "https://careers.wipro.com/",
+      "category": "Service-based",
+      "aliases": [
+        "Wipro Engineering Edge"
+      ],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:16Z",
+        "final_url": "https://careers.wipro.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Cognizant",
+      "careers_url": "https://careers.cognizant.com/global/en",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:17Z",
+        "final_url": "https://careers.cognizant.com/global-en/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Capgemini",
+      "careers_url": "https://www.capgemini.com/careers/",
+      "category": "Service-based",
+      "aliases": [
+        "Capgemini Engineering"
+      ],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:17Z",
+        "final_url": "https://www.capgemini.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Tech Mahindra",
+      "careers_url": "https://careers.techmahindra.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:17Z",
+        "final_url": "https://careers.techmahindra.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "LTIMindtree",
+      "careers_url": "https://www.ltimindtree.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "unavailable",
+        "checked_at": "2026-11-12T12:22:17Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page could not be read during audit; no direct feed verified."
+    },
+    {
+      "company": "Deloitte",
+      "careers_url": "https://www.deloitte.com/global/en/careers.html",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:17Z",
+        "final_url": "https://www.deloitte.com/global/en/careers.html"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "DXC Technology",
+      "careers_url": "https://careers.dxc.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:17Z",
+        "final_url": "https://careers.dxc.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Workday links detected; Workday adapter not implemented."
+    },
+    {
+      "company": "NTT DATA",
+      "careers_url": "https://careers.nttdata.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:17Z",
+        "final_url": "https://careers.nttdata.com/global/en"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Workday links detected; Workday adapter not implemented."
+    },
+    {
+      "company": "CGI",
+      "careers_url": "https://www.cgi.com/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:17Z",
+        "final_url": "https://www.cgi.com/en/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Kyndryl",
+      "careers_url": "https://www.kyndryl.com/us/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:18Z",
+        "final_url": "https://www.kyndryl.com/us/en/careers"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "kyndryl",
+        "company": "Kyndryl",
+        "host": "kyndryl.wd5.myworkdayjobs.com",
+        "site": "KyndrylEarlyCareers"
+      },
+      "additional_feeds": [
+        {
+          "provider": "workday",
+          "board": "kyndryl",
+          "company": "Kyndryl",
+          "host": "kyndryl.wd5.myworkdayjobs.com",
+          "site": "KyndrylProfessionalCareers"
+        }
+      ],
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 133
+    },
+    {
+      "company": "Atos",
+      "careers_url": "https://atos.net/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:18Z",
+        "final_url": "https://www.atos.ai/en/careers?utm_source=atos.net&utm_medium=301"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Fujitsu",
+      "careers_url": "https://global.fujitsu/en/about/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 404,
+        "checked_at": "2026-11-12T12:22:18Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 404 during audit; no direct feed verified."
+    },
+    {
+      "company": "UST",
+      "careers_url": "https://www.ust.com/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:18Z",
+        "final_url": "https://www.ust.com/en/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Sopra Steria",
+      "careers_url": "https://www.soprasteria.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "board_discovered",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:18Z",
+        "final_url": "https://careers.soprasteria.com/"
+      },
+      "feed": {
+        "provider": "smartrecruiters",
+        "board": "SopraSteria1",
+        "company": "Sopra Steria",
+        "country": "in"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 64
+    },
+    {
+      "company": "Virtusa",
+      "careers_url": "https://www.virtusa.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:18Z",
+        "final_url": "https://www.virtusa.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Mastek",
+      "careers_url": "https://www.mastek.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:18Z",
+        "final_url": "https://www.mastek.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Happiest Minds",
+      "careers_url": "https://www.happiestminds.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:19Z",
+        "final_url": "https://www.happiestminds.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Cigniti Technologies",
+      "careers_url": "https://www.cigniti.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 404,
+        "checked_at": "2026-11-12T12:22:19Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 404 during audit; no direct feed verified."
+    },
+    {
+      "company": "Expleo",
+      "careers_url": "https://expleo.com/global/en/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://careers.expleo.com/en/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "EPAM Systems",
+      "careers_url": "https://www.epam.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://www.epam.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Thoughtworks",
+      "careers_url": "https://www.thoughtworks.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://www.thoughtworks.com/careers"
+      },
+      "feed": {
+        "provider": "greenhouse",
+        "board": "thoughtworks",
+        "company": "Thoughtworks"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 46
+    },
+    {
+      "company": "Globant",
+      "careers_url": "https://www.globant.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 403,
+        "checked_at": "2026-11-12T12:22:20Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 403 during audit; no direct feed verified."
+    },
+    {
+      "company": "Publicis Sapient",
+      "careers_url": "https://www.publicissapient.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://careers.publicissapient.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Slalom",
+      "careers_url": "https://www.slalom.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://www.slalom.com/us/en/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Guidehouse",
+      "careers_url": "https://careers.guidehouse.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://guidehouse.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Workday links detected; Workday adapter not implemented."
+    },
+    {
+      "company": "Booz Allen Hamilton",
+      "careers_url": "https://www.boozallen.com/careers.html",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://www.boozallen.com/careers.html"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "bah",
+        "company": "Booz Allen Hamilton",
+        "host": "bah.wd1.myworkdayjobs.com",
+        "site": "BAH_Jobs"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 300
+    },
+    {
+      "company": "McKinsey & Company",
+      "careers_url": "https://www.mckinsey.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://www.mckinsey.com/careers/home"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Boston Consulting Group (BCG)",
+      "careers_url": "https://careers.bcg.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:20Z",
+        "final_url": "https://careers.bcg.com/global/en/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Bain & Company",
+      "careers_url": "https://www.bain.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:21Z",
+        "final_url": "https://www.bain.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "EY",
+      "careers_url": "https://www.ey.com/en_in/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:21Z",
+        "final_url": "https://www.ey.com/en_in/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "KPMG",
+      "careers_url": "https://kpmg.com/in/en/home/careers.html",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "oracle_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:21Z",
+        "final_url": "https://kpmg.com/in/en/careers.html"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Oracle career-site links detected; site-specific adapter not implemented."
+    },
+    {
+      "company": "PwC",
+      "careers_url": "https://www.pwc.in/careers.html",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:21Z",
+        "final_url": "https://www.pwc.in/careers.html"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Grant Thornton Bharat",
+      "careers_url": "https://www.grantthornton.in/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:21Z",
+        "final_url": "https://www.grantthornton.in/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Protiviti",
+      "careers_url": "https://www.protiviti.com/in-en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:21Z",
+        "final_url": "https://www.protiviti.com/in-en/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Alight",
+      "careers_url": "https://careers.alight.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:21Z",
+        "final_url": "https://careers.alight.com/us/en"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Concentrix",
+      "careers_url": "https://jobs.concentrix.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://jobs.concentrix.com/"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "cnx",
+        "company": "Concentrix",
+        "host": "cnx.wd1.myworkdayjobs.com",
+        "site": "external_global"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 11
+    },
+    {
+      "company": "Teleperformance",
+      "careers_url": "https://www.tp.com/en-us/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://www.tp.com/en-us/careers/job-opportunities/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Genpact",
+      "careers_url": "https://www.genpact.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "workday_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://www.genpact.com/careers"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "provider": "workday",
+        "board": "genpact",
+        "company": "Genpact",
+        "host": "genpact.wd108.myworkdayjobs.com",
+        "site": "External_Careers"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 164
+    },
+    {
+      "company": "EXL",
+      "careers_url": "https://www.exlservice.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "oracle_adapter_needed",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://www.exlservice.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Oracle career-site links detected; site-specific adapter not implemented."
+    },
+    {
+      "company": "WNS",
+      "careers_url": "https://www.wns.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://www.wns.com/about-us/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Sutherland",
+      "careers_url": "https://www.sutherlandglobal.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://www.jobs.sutherlandglobal.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Foundever",
+      "careers_url": "https://foundever.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://jobs.foundever.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "TaskUs",
+      "careers_url": "https://www.taskus.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://www.taskus.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Wipro PARI",
+      "careers_url": "https://www.wipropari.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://wipropari.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Cyient",
+      "careers_url": "https://www.cyient.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:22Z",
+        "final_url": "https://www.cyient.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Quest Global",
+      "careers_url": "https://www.quest-global.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:23Z",
+        "final_url": "https://careers.quest-global.com/global/en"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "TÜV SÜD",
+      "careers_url": "https://www.tuvsud.com/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:23Z",
+        "final_url": "https://www.tuvsud.com/en/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "SGS",
+      "careers_url": "https://www.sgs.com/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 404,
+        "checked_at": "2026-11-12T12:22:23Z"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "company": "SGS",
+        "provider": "smartrecruiters",
+        "board": "SGS",
+        "country": "in"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 30
+    },
+    {
+      "company": "Bureau Veritas",
+      "careers_url": "https://careers.bureauveritas.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:23Z",
+        "final_url": "https://careers.bureauveritas.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "R Systems",
+      "careers_url": "https://www.rsystems.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 403,
+        "checked_at": "2026-11-12T12:22:23Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 403 during audit; no direct feed verified."
+    },
+    {
+      "company": "Marlabs",
+      "careers_url": "https://marlabs.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:24Z",
+        "final_url": "https://www.marlabs.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Sonata Software",
+      "careers_url": "https://www.sonata-software.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:24Z",
+        "final_url": "https://www.sonata-software.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Nagarro",
+      "careers_url": "https://www.nagarro.com/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:24Z",
+        "final_url": "https://www.nagarro.com/en/careers"
+      },
+      "monitoring_status": "public_feed_verified",
+      "feed": {
+        "company": "Nagarro",
+        "provider": "smartrecruiters",
+        "board": "Nagarro1",
+        "country": "in"
+      },
+      "feed_verified_at": "2026-11-12T12:47:40.581973+00:00",
+      "last_verified_postings": 187
+    },
+    {
+      "company": "GlobalLogic",
+      "careers_url": "https://www.globallogic.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:24Z",
+        "final_url": "https://www.globallogic.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Sasken Technologies",
+      "careers_url": "https://www.sasken.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:24Z",
+        "final_url": "https://careers.sasken.com/tb/saskenjobs/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Maveric Systems",
+      "careers_url": "https://maveric-systems.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:24Z",
+        "final_url": "https://maveric-systems.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Intellect Design Arena",
+      "careers_url": "https://www.intellectdesign.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 503,
+        "checked_at": "2026-11-12T12:22:24Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 503 during audit; no direct feed verified."
+    },
+    {
+      "company": "Alten",
+      "careers_url": "https://www.alten.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:24Z",
+        "final_url": "https://www.alten.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Akkodis",
+      "careers_url": "https://www.akkodis.com/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:24Z",
+        "final_url": "https://www.akkodis.com/en/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Harman",
+      "careers_url": "https://jobs.harman.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 503,
+        "checked_at": "2026-11-12T12:22:25Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 503 during audit; no direct feed verified."
+    },
+    {
+      "company": "Ericsson",
+      "careers_url": "https://www.ericsson.com/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:25Z",
+        "final_url": "https://www.ericsson.com/en/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Nokia",
+      "careers_url": "https://www.nokia.com/about-us/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:25Z",
+        "final_url": "https://www.nokia.com/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Orange Business",
+      "careers_url": "https://www.orange-business.com/en/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:25Z",
+        "final_url": "https://www.orange-business.com/en/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Vodafone Intelligent Solutions (VOIS)",
+      "careers_url": "https://careers.vodafone.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:25Z",
+        "final_url": "https://careers.vodafone.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Tata Communications",
+      "careers_url": "https://www.tatacommunications.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 404,
+        "checked_at": "2026-11-12T12:22:25Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 404 during audit; no direct feed verified."
+    },
+    {
+      "company": "Jio Platforms",
+      "careers_url": "https://careers.jio.com/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:25Z",
+        "final_url": "https://careers.jio.com/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Airtel",
+      "careers_url": "https://www.airtel.in/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 503,
+        "checked_at": "2026-11-12T12:22:25Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 503 during audit; no direct feed verified."
+    },
+    {
+      "company": "Indium Software",
+      "careers_url": "https://www.indium.tech/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:26Z",
+        "final_url": "https://www.indium.tech/careers/"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Ideas2IT",
+      "careers_url": "https://www.ideas2it.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:26Z",
+        "final_url": "https://www.ideas2it.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Calsoft",
+      "careers_url": "https://www.calsoftinc.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:26Z",
+        "final_url": "https://www.calsoftinc.com/career"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Xoriant",
+      "careers_url": "https://www.xoriant.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 403,
+        "checked_at": "2026-11-12T12:22:26Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 403 during audit; no direct feed verified."
+    },
+    {
+      "company": "CitiusTech",
+      "careers_url": "https://www.citiustech.com/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:26Z",
+        "final_url": "https://www.citiustech.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "ITC Infotech",
+      "careers_url": "https://www.itcinfotech.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "http_error",
+        "http_status": 404,
+        "checked_at": "2026-11-12T12:22:27Z"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "Career page returned HTTP 404 during audit; no direct feed verified."
+    },
+    {
+      "company": "Hexagon",
+      "careers_url": "https://hexagon.com/company/careers",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:27Z",
+        "final_url": "https://hexagon.com/about/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "L&T",
+      "careers_url": "https://www.larsentoubro.com/careers/",
+      "category": "Service-based",
+      "aliases": [],
+      "site_audit": {
+        "check_status": "needs_adapter",
+        "http_status": 200,
+        "checked_at": "2026-11-12T12:22:27Z",
+        "final_url": "https://www.larsentoubro.com/careers"
+      },
+      "monitoring_status": "not_monitored",
+      "reason": "No supported public feed verified; a career-site adapter is still needed."
+    },
+    {
+      "company": "Fidelity",
+      "careers_url": null,
+      "category": "Additional name",
+      "monitoring_status": "not_monitored",
+      "reason": "Name only: Fidelity Investments and Fidelity International have different career sites. Exact employer URL needed."
+    },
+    {
+      "company": "Flexiple",
+      "careers_url": "https://flexiple.freshteam.com/jobs",
+      "category": "Additional name",
+      "monitoring_status": "not_monitored",
+      "reason": "Freshteam adapter not implemented; official career URL identified from public search."
+    },
+    {
+      "company": "Chevron",
+      "careers_url": "https://careers.chevron.com/search-jobs",
+      "category": "Additional name",
+      "monitoring_status": "not_monitored",
+      "reason": "Custom career-site adapter not implemented; official career URL identified from public search."
+    }
+  ],
+  "verified_direct_companies": 34,
+  "verified_direct_feeds": 35
+}

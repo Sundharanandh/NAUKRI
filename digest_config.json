@@ -12,10 +12,7 @@
   ],
   "required_skills": {
     "Java": "\\bjava\\b",
-    "Spring Boot": "\\bspring\\s*boot\\b",
-    "Microservices": "\\bmicroservices?\\b",
-    "Angular": "\\bangular\\b",
-    "AWS": "\\baws\\b|amazon web services"
+    "Spring Boot": "\\bspring\\s*boot\\b"
   },
   "max_per_email": 10,
   "max_messages": 150,
@@ -35,6 +32,218 @@
     "Wellfound"
   ],
   "email_alerts_enabled": true,
-  "company_boards": [],
-  "max_company_jobs_per_board": 300
+  "company_boards": [
+    {
+      "provider": "greenhouse",
+      "board": "airbnb",
+      "company": "Airbnb"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "stripe",
+      "company": "Stripe"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "dropbox",
+      "company": "Dropbox"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "qualtrics",
+      "company": "Qualtrics"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "commvault",
+      "company": "Commvault"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "elastic",
+      "company": "Elastic"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "cloudflare",
+      "company": "Cloudflare"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "datadog",
+      "company": "Datadog"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "mongodb",
+      "company": "MongoDB"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "twilio",
+      "company": "Twilio"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "gitlab",
+      "company": "GitLab"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "razorpaysoftwareprivatelimited",
+      "company": "Razorpay"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "groww",
+      "company": "Groww"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "inmobi",
+      "company": "InMobi"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "figma",
+      "company": "Figma"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "epicgames",
+      "company": "Epic Games"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "indeed",
+      "company": "Indeed"
+    },
+    {
+      "provider": "greenhouse",
+      "board": "thoughtworks",
+      "company": "Thoughtworks"
+    },
+    {
+      "provider": "smartrecruiters",
+      "board": "Freshworks",
+      "company": "Freshworks",
+      "country": "in"
+    },
+    {
+      "provider": "lever",
+      "board": "paytm",
+      "company": "Paytm"
+    },
+    {
+      "provider": "smartrecruiters",
+      "board": "SopraSteria1",
+      "company": "Sopra Steria",
+      "country": "in"
+    },
+    {
+      "company": "ServiceNow",
+      "provider": "smartrecruiters",
+      "board": "ServiceNow",
+      "country": "in"
+    },
+    {
+      "company": "Bosch",
+      "provider": "smartrecruiters",
+      "board": "BoschGroup",
+      "country": "in"
+    },
+    {
+      "company": "Nagarro",
+      "provider": "smartrecruiters",
+      "board": "Nagarro1",
+      "country": "in"
+    },
+    {
+      "company": "SGS",
+      "provider": "smartrecruiters",
+      "board": "SGS",
+      "country": "in"
+    },
+    {
+      "provider": "workday",
+      "board": "redhat",
+      "company": "Red Hat",
+      "host": "redhat.wd5.myworkdayjobs.com",
+      "site": "jobs"
+    },
+    {
+      "provider": "workday",
+      "board": "paloaltonetworks",
+      "company": "Palo Alto Networks",
+      "host": "paloaltonetworks.wd5.myworkdayjobs.com",
+      "site": "panwexternalcareers"
+    },
+    {
+      "provider": "workday",
+      "board": "cadence",
+      "company": "Cadence Design Systems",
+      "host": "cadence.wd1.myworkdayjobs.com",
+      "site": "External_Careers"
+    },
+    {
+      "provider": "workday",
+      "board": "expedia",
+      "company": "Expedia Group",
+      "host": "expedia.wd108.myworkdayjobs.com",
+      "site": "search"
+    },
+    {
+      "provider": "workday",
+      "board": "accenture",
+      "company": "Accenture",
+      "host": "accenture.wd103.myworkdayjobs.com",
+      "site": "AccentureCareers"
+    },
+    {
+      "provider": "workday",
+      "board": "kyndryl",
+      "company": "Kyndryl",
+      "host": "kyndryl.wd5.myworkdayjobs.com",
+      "site": "KyndrylEarlyCareers"
+    },
+    {
+      "provider": "workday",
+      "board": "kyndryl",
+      "company": "Kyndryl",
+      "host": "kyndryl.wd5.myworkdayjobs.com",
+      "site": "KyndrylProfessionalCareers"
+    },
+    {
+      "provider": "workday",
+      "board": "bah",
+      "company": "Booz Allen Hamilton",
+      "host": "bah.wd1.myworkdayjobs.com",
+      "site": "BAH_Jobs"
+    },
+    {
+      "provider": "workday",
+      "board": "cnx",
+      "company": "Concentrix",
+      "host": "cnx.wd1.myworkdayjobs.com",
+      "site": "external_global"
+    },
+    {
+      "provider": "workday",
+      "board": "genpact",
+      "company": "Genpact",
+      "host": "genpact.wd108.myworkdayjobs.com",
+      "site": "External_Careers"
+    }
+  ],
+  "max_company_jobs_per_board": 300,
+  "preferred_skills": {
+    "Microservices": "\\bmicroservices?\\b",
+    "Angular": "\\bangular\\b",
+    "AWS": "\\baws\\b|amazon web services"
+  },
+  "company_feed_workers": 4,
+  "max_company_details_per_board": 30,
+  "company_catalog_file": "company_catalog.json",
+  "include_review_candidates": true,
+  "max_review_per_email": 5
 }

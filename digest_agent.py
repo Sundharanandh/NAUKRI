@@ -17,7 +17,7 @@ DEFAULT = {'gmail': '', 'recipient': '',
  'mailbox': 'JobAlerts', 'experience': 2.5, 'max_age_days': 7,
  'cities': ['Bengaluru','Bangalore','Chennai','Hyderabad','Secunderabad','Mumbai'],
  'required_skills': {'Java': r'\bjava\b', 'Spring Boot': r'\bspring\s*boot\b',
- 'Microservices': r'\bmicroservices?\b', 'Angular': r'\bangular\b',
+ }, 'preferred_skills': {'Microservices': r'\bmicroservices?\b', 'Angular': r'\bangular\b',
  'AWS': r'\baws\b|amazon web services'}, 'max_per_email': 10,
  'max_messages': 150, 'max_pages_per_run': 75,
  'company_domains': [], 'company_boards': [], 'max_company_jobs_per_board': 300,
@@ -49,6 +49,8 @@ def canonical(url):
     path = p.path.rstrip('/')
     if host in ('boards.greenhouse.io', 'job-boards.greenhouse.io'):
         host = 'job-boards.greenhouse.io'
+    if host in ('boards.eu.greenhouse.io', 'job-boards.eu.greenhouse.io'):
+        host = 'job-boards.eu.greenhouse.io'
     for domain, official in [('foundit.in', 'www.foundit.in'), ('instahyre.com', 'www.instahyre.com'), ('hirist.tech', 'www.hirist.tech'), ('cutshort.io', 'cutshort.io'), ('wellfound.com', 'wellfound.com')]:
         if host in (domain, 'www.' + domain): host = official
     if host == 'linkedin.com' or host.endswith('.linkedin.com'):
@@ -125,13 +127,13 @@ def classify(j,cfg,now):
     title=plain(j.get('title','')); desc=plain(j.get('description','')); loc=locations(j)
     posted=dateparse(j.get('datePosted')); expires=dateparse(j.get('validThrough'))
     review=[]; rejected=[]
-    if not re.search(r'\b(java|spring\s*boot)\b',title,re.I): rejected.append('Title does not explicitly mention Java or Spring Boot')
-    if not re.search(r'\b(developer|engineer)\b', title, re.I): rejected.append('Not a developer/engineer role')
+    if not re.search(r'\b(developer|engineer|engineering)\b', title, re.I): rejected.append('Not a developer/engineer role')
     if re.search(r'\b(qa|sdet|support|trainer|recruiter|sales|intern(?:ship)?|devops|administrator|test(?:er|ing)?|data\s+engineer)\b',title,re.I): rejected.append('Role outside Java development target')
-    if re.search(r'\b(senior|sr\.?|lead|principal|architect|manager)\b',title,re.I): rejected.append('Seniority outside target')
+    if re.search(r'\b(senior|sr\.?|lead|staff|principal|architect|manager)\b',title,re.I): rejected.append('Seniority outside target')
     for name,pattern in cfg['required_skills'].items():
         if not re.search(pattern,desc+' '+title,re.I): review.append('Skill not confirmed: '+name)
-    if not any(re.search(r'\b'+re.escape(c)+r'\b',loc,re.I) for c in cfg['cities']): review.append('Preferred city not confirmed; remote eligibility requires review')
+    remote_india = cfg.get('allow_remote_india', True) and bool(re.search(r'\bremote\b', loc, re.I) and re.search(r'\bindia\b', loc, re.I))
+    if not remote_india and not any(re.search(r'\b'+re.escape(c)+r'\b',loc,re.I) for c in cfg['cities']): review.append('Preferred city not confirmed; remote eligibility requires review')
     entries = j.get('jobLocation', [])
     entries = [entries] if isinstance(entries, dict) else entries
     countries = []
@@ -147,14 +149,25 @@ def classify(j,cfg,now):
     if expires and expires<now: rejected.append('Posting expired')
     # Conservative explicit year ranges. Single numbers, months and conflicting ranges need review.
     exp=plain(str(j.get('experienceRequirements','')))+' '+desc
-    ranges=re.findall(r'(?<![\d.])(\d+(?:\.\d+)?)\s*(?:-|–|to)\s*(\d+(?:\.\d+)?)\s*(?:years?|yrs?)\b',exp,re.I)
-    if ranges and all(float(a)<=cfg['experience']<=float(b) for a,b in ranges): pass
-    else: review.append('2.5-year eligibility not unambiguously confirmed')
+    ranges=re.findall(r'(?<![\d.])(\d+(?:\.\d+)?)\s*(?:-|–|to)\s*(\d+(?:\.\d+)?)\s*(?:years?|yrs?|year\(s\))\b',exp,re.I)
+    minimums = re.findall(r'(?<![\d.])(\d+(?:\.\d+)?)\s*\+\s*(?:years?|yrs?|year\(s\))\s+(?:of\s+)?(?:relevant\s+|professional\s+|hands-on\s+)?experience', exp, re.I)
+    minimums += re.findall(r'\b(?:at least|minimum(?: of)?|a minimum of)\s+(\d+(?:\.\d+)?)\s*(?:years?|yrs?|year\(s\))', exp, re.I)
+    structured = j.get('experienceRequirements')
+    if isinstance(structured, dict) and isinstance(structured.get('monthsOfExperience'), (int, float)):
+        minimums.append(str(structured['monthsOfExperience'] / 12))
+    eligible_range = ranges and all(float(a)<=cfg['experience']<=float(b) for a,b in ranges)
+    eligible_minimum = minimums and all(float(value)<=cfg['experience'] for value in minimums)
+    if ranges and not eligible_range: rejected.append('Experience range excludes 2.5 years')
+    elif minimums and not eligible_minimum: rejected.append('Minimum experience exceeds 2.5 years')
+    elif not eligible_range and not eligible_minimum: review.append('2.5-year eligibility not unambiguously confirmed')
     if not company(j): review.append('Company unavailable')
     salary=j.get('baseSalary')
     salary_note=json.dumps(salary,ensure_ascii=False) if salary else f"Not disclosed; INR {cfg['expected_lpa']} LPA negotiable, review before applying"
     # Salary is a negotiable preference, not a hard rejection threshold.
-    return ('Excluded' if rejected else 'Review' if review else 'Matched'), '; '.join(rejected+review), title,loc,posted,salary_note
+    preferences = [name for name, pattern in cfg.get('preferred_skills', {}).items() if re.search(pattern, desc+' '+title, re.I)]
+    notes = rejected + review
+    if not notes: notes = ['Required skills confirmed; preferences found: ' + (', '.join(preferences) or 'none specified')]
+    return ('Excluded' if rejected else 'Review' if review else 'Matched'), '; '.join(notes), title,loc,posted,salary_note
 
 def read_alert_urls(cfg,password):
     urls=set(); since=(datetime.now(UTC)-timedelta(days=cfg['max_age_days'])).strftime('%d-%b-%Y')
@@ -193,9 +206,10 @@ def connect():
     db.execute('CREATE TABLE IF NOT EXISTS jobs(url TEXT PRIMARY KEY, title TEXT, company TEXT, location TEXT, posted TEXT, state TEXT, reason TEXT, salary TEXT, first_seen TEXT, mailed TEXT, fingerprint TEXT)')
     db.execute('CREATE TABLE IF NOT EXISTS deliveries(id TEXT PRIMARY KEY, created TEXT, state TEXT, urls TEXT)')
     db.execute('CREATE TABLE IF NOT EXISTS checks(url TEXT PRIMARY KEY, checked TEXT)')
+    db.execute('CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY, value TEXT)')
     return db
 
-def export(db):
+def export(db,cfg=None):
     from openpyxl import Workbook,load_workbook
     from openpyxl.styles import Font
     path=ROOT/'Job_Tracker.xlsx'; notes={}
@@ -228,17 +242,42 @@ def export(db):
             sheet.append([row.get('source'), row.get('status'), row.get('postings_read', 0), row.get('invalid_postings', 0), row.get('error', ''), row.get('capped', False)])
         sheet.freeze_panes = 'A2'
         for column in 'ABCDEF': sheet.column_dimensions[column].width = 28
+    if cfg and cfg.get('company_catalog_file'):
+        catalog_path = (CODE_DIR / cfg['company_catalog_file']).resolve()
+        if CODE_DIR.resolve() not in catalog_path.parents: raise ValueError('Company catalog must be inside the repository')
+        catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
+        enabled = {(b['provider'], b['board'].casefold()): b for b in configured_boards(cfg)}
+        sheet = wb.create_sheet('Company coverage')
+        sheet.append(['Company', 'Careers website', 'Collection', 'Provider', 'Board', 'Details'])
+        for item in catalog['companies']:
+            feed = item.get('feed') or {}
+            active = (feed.get('provider'), str(feed.get('board', '')).casefold()) in enabled
+            state = 'Monitored via public feed' if active else 'Not monitored automatically'
+            feeds = ([feed] if feed else []) + item.get('additional_feeds', [])
+            boards = '; '.join(str(b.get('board', '')) + ('/' + b['site'] if b.get('site') else '') for b in feeds)
+            sheet.append([item['company'], item.get('careers_url'), state, feed.get('provider'), boards, item.get('reason', '')])
+        sheet.freeze_panes = 'A2'; sheet.auto_filter.ref = sheet.dimensions
+        for column in 'ABCDEF': sheet.column_dimensions[column].width = 35
+        sheet.column_dimensions['B'].width = 70; sheet.column_dimensions['F'].width = 90
     temp=ROOT/'Job_Tracker.pending.xlsx'; wb.save(temp)
     try: os.replace(temp,path)
     except PermissionError: logging.warning('Close Excel. Updated copy saved as Job_Tracker.pending.xlsx; next run will retry.')
 
-def digest(jobs,cfg,source_status=None):
+def digest(jobs,cfg,source_status=None,review_jobs=None,review_reasons=None):
+    review_jobs = review_jobs or []
+    review_reasons = review_reasons or {}
     msg=EmailMessage(); msg['From']=cfg['gmail']; msg['To']=cfg['recipient']
     msg['Subject']=f'Java jobs: {len(jobs)} new matches — '+datetime.now(IST).strftime('%d %b %Y %I:%M %p IST')
+    if review_jobs:
+        msg.replace_header('Subject', f'Java jobs: {len(jobs)} confirmed, {len(review_jobs)} to review — ' + datetime.now(IST).strftime('%d %b %Y %I:%M %p IST'))
     lines=['New, previously unemailed jobs, newest posting first.','Automated text checks only: review the complete posting before applying.','Salary is negotiable and not a hard filter. No applications were submitted.','']
     for url,title,org,loc,posted,salary in jobs:
         lines.extend([f'{title} | {org}',f'Source: {source_name(url, cfg)}',f'{loc} | Posted: {posted}',f'Salary: {salary}',url,''])
     if not jobs: lines.append('No new confirmed matches this run. Check the Excel Needs review sheet. Older links will not be repeated.')
+    if review_jobs:
+        lines += ['', 'NEEDS REVIEW — these are not confirmed matches.', 'Java/Spring Boot and a preferred city were found. Check the missing date or experience details before applying.', '']
+        for url,title,org,loc,posted,salary in review_jobs:
+            lines.extend([f'{title} | {org}', f'{loc} | Posted: {posted or "Not confirmed"}', 'Check: ' + review_reasons.get(url, 'Eligibility requires review'), url, ''])
     failures = [item for item in (source_status or []) if item['status'] != 'ok']
     if failures:
         lines.append('Some sources were incomplete or unavailable. See the Excel Source status sheet:')
@@ -255,6 +294,8 @@ def load_config():
     cfg['mailbox'] = os.environ.get('JOB_ALERT_LABEL', cfg.get('mailbox', 'JobAlerts'))
     if not cfg['gmail'] or not cfg['recipient']:
         raise RuntimeError('Set NOTIFY_EMAIL and optionally DIGEST_EMAIL_TO in Actions secrets/variables.')
+    review_cap = cfg.get('max_review_per_email', 5)
+    if not isinstance(review_cap, int) or not 0 <= review_cap <= 50: raise ValueError('max_review_per_email must be 0-50')
     list(configured_boards(cfg))  # Reject invalid tenant configuration before reading mail.
     unknown = set(cfg.get('enabled_platforms', PLATFORMS)) - set(PLATFORMS)
     if unknown: raise ValueError('Unknown enabled_platforms name')
@@ -298,8 +339,15 @@ def run(args):
 
 
 def _run_with_db(args, cfg, password, db):
-    seed_legacy_history(db); now=datetime.now(UTC); fetched=0
+    seed_legacy_history(db); now=datetime.now(UTC); fetched=0; page_requests=0
     input_jobs = json.loads(Path(args.input).read_text(encoding='utf-8')) if getattr(args, 'input', None) else None
+    policy = {key: cfg.get(key) for key in ('required_skills', 'preferred_skills', 'experience', 'cities', 'max_age_days', 'allow_remote_india')}
+    policy['version'] = 3
+    policy_key = hashlib.sha256(json.dumps(policy, sort_keys=True).encode()).hexdigest()
+    prior_policy = db.execute("SELECT value FROM settings WHERE key='matching_policy'").fetchone()
+    reassess_excluded = not prior_policy or prior_policy[0] != policy_key
+    db.execute("INSERT INTO settings VALUES('matching_policy', ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value", (policy_key,))
+    db.commit()
     source_status = []
     if input_jobs is not None:
         by_url = {canonical(j['url']): j for j in input_jobs}
@@ -325,8 +373,10 @@ def _run_with_db(args, cfg, password, db):
     refreshed=set()
     for url in alert_urls:
         old=db.execute('SELECT state,mailed FROM jobs WHERE url=?',(url,)).fetchone()
-        if old and (old[0]=='Excluded' or old[1]): continue
-        if fetched>=cfg['max_pages_per_run']: break
+        if old and (old[1] or old[0]=='Excluded' and not reassess_excluded): continue
+        if url not in by_url:
+            if page_requests >= cfg['max_pages_per_run']: continue
+            page_requests += 1
         fetched+=1
         refreshed.add(url)
         db.execute('INSERT INTO checks VALUES(?,?) ON CONFLICT(url) DO UPDATE SET checked=excluded.checked',(url,now.isoformat()))
@@ -347,16 +397,27 @@ def _run_with_db(args, cfg, password, db):
         if row[6] in fingerprints: continue
         fingerprints.add(row[6]); jobs.append(row[:6])
         if len(jobs)>=cfg['max_per_email']: break
+    review_jobs, review_reasons = [], {}
+    if cfg.get('include_review_candidates', False):
+        cap = min(cfg.get('max_review_per_email', 5), max(0, cfg['max_per_email']-len(jobs)))
+        candidates = db.execute("SELECT url,title,company,location,posted,salary,fingerprint,reason FROM jobs WHERE state='Review' AND mailed='' AND company NOT IN ('', 'Unknown', 'None') AND reason NOT LIKE '%Skill not confirmed%' AND reason NOT LIKE '%Preferred city%' ORDER BY posted DESC").fetchall()
+        for row in candidates:
+            if len(review_jobs) >= cap: break
+            if row[0] not in refreshed or row[6] in fingerprints: continue
+            fingerprints.add(row[6]); review_jobs.append(row[:6]); review_reasons[row[0]] = row[7]
+    all_links = jobs + review_jobs
     counts = dict(db.execute('SELECT state,COUNT(*) FROM jobs GROUP BY state'))
     summary = {'run_utc': now.isoformat(), 'alert_links': len(alert_urls),
-               'pages_checked': fetched, 'new_matches_for_email': len(jobs),
+               'pages_checked': page_requests, 'postings_evaluated': fetched, 'new_matches_for_email': len(jobs),
+               'new_review_candidates_for_email': len(review_jobs),
+               'company_feeds_configured': len(list(configured_boards(cfg))),
                'tracker_totals': counts, 'preview': bool(args.preview),
                'email_alert_links': len(email_urls), 'company_board_jobs': len(by_url) if input_jobs is None else 0,
                'links_by_source': {name: sum(source_name(url, cfg) == name for url in alert_urls) for name in sorted({source_name(url, cfg) for url in alert_urls})},
                'source_status': source_status}
     (ROOT / 'run_summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     print(json.dumps(summary))
-    export(db); msg=digest(jobs,cfg,source_status)
+    export(db,cfg); msg=digest(jobs,cfg,source_status,review_jobs,review_reasons)
     if args.preview:
         (ROOT/'Email_Preview.txt').write_text(msg.get_content(),encoding='utf-8'); print('Preview and Excel updated. No email sent; no jobs marked emailed.'); return
     path=ROOT/'Job_Tracker.pending.xlsx'
@@ -366,20 +427,20 @@ def _run_with_db(args, cfg, password, db):
     # if the connection drops after Gmail accepted a message. Check Delivery log for ambiguity.
     with smtplib.SMTP_SSL('smtp.gmail.com',465,context=ssl.create_default_context(),timeout=30) as smtp:
         smtp.login(cfg['gmail'],password)
-        ident=hashlib.sha256((now.isoformat()+repr(jobs)).encode()).hexdigest()[:16]
+        ident=hashlib.sha256((now.isoformat()+repr(all_links)).encode()).hexdigest()[:16]
         msg['Message-ID']=f'<{ident}@personal-job-mailer.local>'
-        db.execute('INSERT INTO deliveries VALUES(?,?,?,?)',(ident,now.isoformat(),'Attempting',json.dumps([j[0] for j in jobs])))
-        for job in jobs: db.execute('UPDATE jobs SET mailed=? WHERE url=?',(now.isoformat(),job[0]))
+        db.execute('INSERT INTO deliveries VALUES(?,?,?,?)',(ident,now.isoformat(),'Attempting',json.dumps([j[0] for j in all_links])))
+        for job in all_links: db.execute('UPDATE jobs SET mailed=? WHERE url=?',(now.isoformat(),job[0]))
         db.commit()
-        export(db)
+        export(db,cfg)
         checkpoint()
         try:
             refused=smtp.send_message(msg)
             if refused: raise RuntimeError('Recipient refused')
         except Exception:
-            db.execute('UPDATE deliveries SET state=? WHERE id=?',('Uncertain — check Gmail Sent before retrying',ident)); db.commit(); export(db); raise RuntimeError('Delivery uncertain. Attempted links held to prevent duplicates; check Gmail Sent and Excel Delivery log.') from None
+            db.execute('UPDATE deliveries SET state=? WHERE id=?',('Uncertain — check Gmail Sent before retrying',ident)); db.commit(); export(db,cfg); raise RuntimeError('Delivery uncertain. Attempted links held to prevent duplicates; check Gmail Sent and Excel Delivery log.') from None
         db.execute('UPDATE deliveries SET state=? WHERE id=?',('Accepted by Gmail SMTP',ident)); db.commit()
-    export(db); checkpoint(); print(f'Gmail accepted digest with {len(jobs)} new jobs. Excel updated.')
+    export(db,cfg); checkpoint(); print(f'Gmail accepted digest with {len(jobs)} confirmed and {len(review_jobs)} review jobs. Excel updated.')
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(); parser.add_argument('--preview',action='store_true'); parser.add_argument('--input',help='Optional structured JobPosting JSON file for offline preview'); args=parser.parse_args()
