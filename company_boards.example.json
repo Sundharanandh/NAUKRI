@@ -18,6 +18,21 @@
       "board": "YourAshbyBoard",
       "company": "Company name",
       "enabled": false
+    },
+    {
+      "provider": "smartrecruiters",
+      "board": "YourCompany",
+      "company": "Company name",
+      "country": "in",
+      "enabled": false
+    },
+    {
+      "provider": "workday",
+      "board": "yourtenant",
+      "host": "yourtenant.wd5.myworkdayjobs.com",
+      "site": "ExternalCareers",
+      "company": "Company name",
+      "enabled": false
     }
   ]
 }

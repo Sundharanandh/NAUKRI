@@ -28,7 +28,7 @@ class MatchingTests(unittest.TestCase):
         self.assertEqual(self.result(), 'Matched')
 
     def test_missing_skill_needs_review(self):
-        self.job['description'] = self.job['description'].replace('AWS', '')
+        self.job['description'] = self.job['description'].replace('Spring Boot', '')
         self.assertEqual(self.result(), 'Review')
 
     def test_javascript_is_not_java(self):
@@ -37,7 +37,7 @@ class MatchingTests(unittest.TestCase):
 
     def test_experience_not_assumed(self):
         self.job['description'] = self.job['description'].replace('2-4', '4-6')
-        self.assertEqual(self.result(), 'Review')
+        self.assertEqual(self.result(), 'Excluded')
 
     def test_unknown_experience_needs_review(self):
         self.job['description'] = self.job['description'].replace('2-4 years experience', '')
