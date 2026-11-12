@@ -1,8 +1,8 @@
 {
-  "run_utc": "2026-11-12T12:59:10.852848+00:00",
-  "alert_links": 3635,
+  "run_utc": "2026-11-12T13:07:45.229464+00:00",
+  "alert_links": 3633,
   "pages_checked": 0,
-  "postings_evaluated": 3635,
+  "postings_evaluated": 27,
   "new_matches_for_email": 0,
   "new_review_candidates_for_email": 0,
   "company_feeds_configured": 35,
@@ -10,9 +10,9 @@
     "Excluded": 3872,
     "Review": 27
   },
-  "preview": true,
+  "preview": false,
   "email_alert_links": 0,
-  "company_board_jobs": 3635,
+  "company_board_jobs": 3633,
   "links_by_source": {
     "Greenhouse:airbnb": 208,
     "Greenhouse:cloudflare": 300,
@@ -31,7 +31,7 @@
     "Greenhouse:stripe": 300,
     "Greenhouse:thoughtworks": 46,
     "Greenhouse:twilio": 122,
-    "Lever:paytm": 202,
+    "Lever:paytm": 200,
     "Smartrecruiters:BoschGroup": 300,
     "Smartrecruiters:Freshworks": 31,
     "Smartrecruiters:Nagarro1": 187,
@@ -181,10 +181,9 @@
     },
     {
       "source": "Lever:paytm",
-      "status": "ok",
-      "postings_read": 202,
-      "invalid_postings": 0,
-      "capped": false
+      "status": "error",
+      "postings_read": 200,
+      "error": "TimeoutError"
     },
     {
       "source": "Smartrecruiters:SopraSteria1",
