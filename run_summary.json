@@ -1,10 +1,10 @@
 {
-  "run_utc": "2026-11-15T11:23:54.852453+00:00",
+  "run_utc": "2026-11-15T14:08:37.424036+00:00",
   "alert_links": 3671,
   "pages_checked": 0,
-  "postings_evaluated": 28,
+  "postings_evaluated": 3670,
   "new_matches_for_email": 0,
-  "new_review_candidates_for_email": 0,
+  "new_review_candidates_for_email": 3,
   "company_feeds_configured": 35,
   "tracker_totals": {
     "Excluded": 4097,
@@ -239,7 +239,8 @@
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": false
+      "india_filter_applied": false,
+      "detail_errors": []
     },
     {
       "source": "Workday:paloaltonetworks/panwexternalcareers",
@@ -249,7 +250,8 @@
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": false
+      "india_filter_applied": false,
+      "detail_errors": []
     },
     {
       "source": "Workday:cadence/External_Careers",
@@ -259,7 +261,8 @@
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": false
+      "india_filter_applied": false,
+      "detail_errors": []
     },
     {
       "source": "Workday:expedia/search",
@@ -269,7 +272,8 @@
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": false
+      "india_filter_applied": false,
+      "detail_errors": []
     },
     {
       "source": "Workday:accenture/AccentureCareers",
@@ -279,7 +283,8 @@
       "invalid_postings": 0,
       "capped": true,
       "detail_cap_reached": false,
-      "india_filter_applied": true
+      "india_filter_applied": true,
+      "detail_errors": []
     },
     {
       "source": "Workday:kyndryl/KyndrylEarlyCareers",
@@ -289,7 +294,8 @@
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": false
+      "india_filter_applied": false,
+      "detail_errors": []
     },
     {
       "source": "Workday:kyndryl/KyndrylProfessionalCareers",
@@ -299,7 +305,8 @@
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": true
+      "india_filter_applied": true,
+      "detail_errors": []
     },
     {
       "source": "Workday:bah/BAH_Jobs",
@@ -309,7 +316,8 @@
       "invalid_postings": 0,
       "capped": true,
       "detail_cap_reached": false,
-      "india_filter_applied": false
+      "india_filter_applied": false,
+      "detail_errors": []
     },
     {
       "source": "Workday:cnx/external_global",
@@ -319,7 +327,8 @@
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": true
+      "india_filter_applied": true,
+      "detail_errors": []
     },
     {
       "source": "Workday:genpact/External_Careers",
@@ -329,12 +338,37 @@
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": false
+      "india_filter_applied": false,
+      "detail_errors": []
     },
     {
       "source": "Gmail alerts",
       "status": "ok",
       "postings_read": 0
     }
-  ]
+  ],
+  "run_context": {
+    "trigger": "workflow_dispatch",
+    "scheduled_target": "Manual / local run",
+    "runner_started_utc": "2026-11-15T14:08:31Z",
+    "collection_started_utc": "2026-11-15T14:08:37.424036+00:00",
+    "report_generated_utc": "2026-11-15T14:09:20.949312+00:00",
+    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/43722705242"
+  },
+  "current_run": {
+    "unique_collected": 3671,
+    "checked": 3670,
+    "already_emailed": 1,
+    "current_states": {
+      "Excluded": 3646,
+      "Review": 25
+    },
+    "filter_reasons": {
+      "skills": 3653,
+      "location": 3031,
+      "experience": 3524,
+      "role": 3376,
+      "date": 3189
+    }
+  }
 }
