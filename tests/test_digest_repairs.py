@@ -4,6 +4,7 @@ import tempfile
 import sqlite3
 import unittest
 from argparse import Namespace
+from contextlib import closing
 from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch, MagicMock
@@ -44,8 +45,9 @@ class IdentityTests(unittest.TestCase):
                 self.assertEqual(summary['new_review_candidates_for_email'], 2)
                 self.assertEqual(summary['current_run']['checked'], 2)
                 # Migrate old fuzzy fingerprints without repeating an already emailed requisition alias.
-                with sqlite3.connect(Path(directory)/'jobs.sqlite3') as db:
+                with closing(sqlite3.connect(Path(directory)/'jobs.sqlite3')) as db:
                     db.execute("UPDATE jobs SET mailed='previous send', fingerprint='old fuzzy hash' WHERE url=?", (job['url'],))
+                    db.commit()
                 alias = job | {'url': job['url'].replace('/External/', '/OtherBoard/')}
                 feed[:] = [alias, feed[1]]
                 agent.run(Namespace(preview=True, input=None))
