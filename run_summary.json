@@ -1,18 +1,18 @@
 {
-  "run_utc": "2026-11-14T18:48:51.220435+00:00",
-  "alert_links": 3669,
+  "run_utc": "2026-11-15T11:23:54.852453+00:00",
+  "alert_links": 3671,
   "pages_checked": 0,
-  "postings_evaluated": 26,
+  "postings_evaluated": 28,
   "new_matches_for_email": 0,
   "new_review_candidates_for_email": 0,
   "company_feeds_configured": 35,
   "tracker_totals": {
-    "Excluded": 4093,
+    "Excluded": 4097,
     "Review": 29
   },
   "preview": false,
   "email_alert_links": 0,
-  "company_board_jobs": 3669,
+  "company_board_jobs": 3671,
   "links_by_source": {
     "Greenhouse:airbnb": 214,
     "Greenhouse:cloudflare": 300,
@@ -22,7 +22,7 @@
     "Greenhouse:elastic": 300,
     "Greenhouse:epicgames": 142,
     "Greenhouse:figma": 139,
-    "Greenhouse:gitlab": 251,
+    "Greenhouse:gitlab": 254,
     "Greenhouse:groww": 9,
     "Greenhouse:inmobi": 74,
     "Greenhouse:mongodb": 300,
@@ -30,7 +30,7 @@
     "Greenhouse:razorpaysoftwareprivatelimited": 25,
     "Greenhouse:stripe": 300,
     "Greenhouse:thoughtworks": 47,
-    "Greenhouse:twilio": 115,
+    "Greenhouse:twilio": 114,
     "Lever:paytm": 202,
     "Smartrecruiters:BoschGroup": 300,
     "Smartrecruiters:Freshworks": 32,
@@ -110,14 +110,14 @@
     {
       "source": "Greenhouse:twilio",
       "status": "ok",
-      "postings_read": 115,
+      "postings_read": 114,
       "invalid_postings": 0,
       "capped": false
     },
     {
       "source": "Greenhouse:gitlab",
       "status": "ok",
-      "postings_read": 251,
+      "postings_read": 254,
       "invalid_postings": 0,
       "capped": false
     },
