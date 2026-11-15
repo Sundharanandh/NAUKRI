@@ -1,9 +1,8 @@
 """Read-only Workday public career search; never an application endpoint."""
-import json
+from public_http import fetch_json, PublicSourceError, error_info
 import re
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse
-from urllib.request import Request, HTTPRedirectHandler, build_opener
 
 
 def label(board):
@@ -17,16 +16,7 @@ def read_workday(board, path, payload=None):
         raise ValueError('Only the public jobs search accepts POST')
     if path != '/jobs' and (not path.startswith('/job/') or '..' in path or '?' in path or '#' in path):
         raise ValueError('Invalid public job detail path')
-    class NoRedirect(HTTPRedirectHandler):
-        def redirect_request(self, *args, **kwargs):
-            raise ValueError('Unexpected Workday API redirect')
-    data = json.dumps(payload).encode() if payload is not None else None
-    headers = {'Accept': 'application/json', 'Accept-Language': 'en-US', 'User-Agent': 'PersonalJobDigest/1.0'}
-    if data is not None: headers['Content-Type'] = 'application/json'
-    with build_opener(NoRedirect()).open(Request(base+path, data=data, headers=headers), timeout=25) as response:
-        raw = response.read(2_000_001)
-        if len(raw) > 2_000_000: raise ValueError('Workday response too large')
-        return json.loads(raw.decode('utf-8'))
+    return fetch_json(base+path, payload=payload, max_bytes=2_000_000)
 
 
 def relative_days(text):
@@ -84,7 +74,10 @@ def collect_workday(board, cfg, per_board):
     total = data.get('total', 0)
     while len(rows) < per_board:
         page = data.get('jobPostings')
-        if not isinstance(page, list): raise ValueError('Unexpected Workday search schema')
+        if not isinstance(page, list):
+            if data.get('total') == 0 and not any(k in data for k in ('error', 'errorCode', 'errors')):
+                page = []
+            else: raise PublicSourceError('invalid_schema', 'Workday response omitted jobPostings; public search may be unavailable or its schema changed')
         rows.extend(page[:per_board-len(rows)])
         offset += len(page)
         if not page or (total > 0 and offset >= total) or len(rows) >= per_board: break
@@ -92,6 +85,7 @@ def collect_workday(board, cfg, per_board):
         data = read_workday(board, '/jobs', search)
     # Search ordering is relevance-based. Inspect recent metadata before spending detail requests.
     rows.sort(key=lambda r: relative_days(r.get('postedOn')) if relative_days(r.get('postedOn')) is not None else 99999)
+    detail_failures = []
     cap = cfg.get('max_company_details_per_board', 30)
     for row in rows:
         title, location = row.get('title', ''), row.get('locationsText', '')
@@ -108,11 +102,14 @@ def collect_workday(board, cfg, per_board):
         try:
             detail = read_workday(board, path)
             info = detail.get('jobPostingInfo')
-            if not isinstance(info, dict): raise ValueError('Missing jobPostingInfo')
+            if not isinstance(info, dict): raise PublicSourceError('invalid_schema', 'Workday detail omitted jobPostingInfo')
             job = normalize_workday(info, path, board)
             if job: jobs.append(job)
-        except Exception: errors += 1
+        except Exception as exc:
+            errors += 1
+            if len(detail_failures) < 3: detail_failures.append(error_info(exc))
     return jobs, {'source': label(board), 'status': 'partial' if errors else 'ok',
                   'postings_read': len(rows), 'details_read': details, 'invalid_postings': errors,
                   'capped': len(rows) >= per_board, 'detail_cap_reached': details >= cap,
-                  'india_filter_applied': bool(facets)}
+                  'india_filter_applied': bool(facets), 'detail_errors': detail_failures,
+                  **({'error': '; '.join(item['error'] for item in detail_failures)} if detail_failures else {})}

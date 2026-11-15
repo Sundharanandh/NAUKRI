@@ -181,7 +181,7 @@ class DeliveryTests(unittest.TestCase):
                     # Simulates the next Actions process restoring the same persisted DB.
                     smtp.send_message.side_effect = None
                     m.run(args)
-                    self.assertIn('0 new matches', smtp.send_message.call_args.args[0]['Subject'])
+                    self.assertIn('0 confirmed', smtp.send_message.call_args.args[0]['Subject'])
                 for connection in connections:
                     with self.assertRaises(sqlite3.ProgrammingError):
                         connection.execute('SELECT 1')

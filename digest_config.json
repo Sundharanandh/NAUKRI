@@ -12,7 +12,7 @@
   ],
   "required_skills": {
     "Java": "\\bjava\\b",
-    "Spring Boot": "\\bspring\\s*boot\\b"
+    "Spring Boot": "\\bspring[\\s\\-\u2013]*boot\\b"
   },
   "max_per_email": 10,
   "max_messages": 150,

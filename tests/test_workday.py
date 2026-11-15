@@ -115,7 +115,7 @@ class ReviewDigestTests(unittest.TestCase):
                 self.assertEqual(summary['new_review_candidates_for_email'], expected_review)
                 if expected_review:
                     message = smtp.send_message.call_args.args[0]
-                    self.assertIn('1 to review', message['Subject'])
+                    self.assertIn('1 review', message['Subject'])
                     self.assertIn('NEEDS REVIEW', message.get_body(preferencelist=('plain',)).get_content())
                 if repeat:
                     agent.run(Namespace(preview=False, input=None))

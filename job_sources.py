@@ -4,10 +4,9 @@ No job-site login, application submission, private ATS API or API key is used.
 Only explicitly configured tenants are polled on shared company board hosts.
 """
 import html
-import json
+from public_http import fetch_json, error_info
 import re
 from urllib.parse import urlparse
-from urllib.request import Request, HTTPRedirectHandler, build_opener
 
 PLATFORMS = {
     'LinkedIn': (('linkedin.com',), r'/jobs/view/[^/]+'),
@@ -123,19 +122,7 @@ def allowed_alert_url(url, cfg):
 
 
 def read_json(url):
-    class SameHost(HTTPRedirectHandler):
-        def redirect_request(self, req, fp, code, msg, headers, newurl):
-            if urlparse(newurl).scheme != 'https' or urlparse(newurl).hostname != urlparse(url).hostname:
-                raise ValueError('Unexpected API redirect')
-            return super().redirect_request(req, fp, code, msg, headers, newurl)
-    request = Request(url, headers={'Accept': 'application/json', 'User-Agent': 'PersonalJobDigest/1.0'})
-    with build_opener(SameHost()).open(request, timeout=25) as response:
-        body = response.read(10_000_001)
-        if len(body) > 10_000_000:
-            raise ValueError('Company board response too large')
-        if 'json' not in response.headers.get('Content-Type', '').lower():
-            raise ValueError('Company board did not return JSON')
-        return json.loads(body.decode('utf-8'))
+    return fetch_json(url)
 
 
 def endpoint(board):
@@ -290,7 +277,7 @@ def collect_one_board(board, cfg, per_board):
                       'postings_read': count, 'invalid_postings': invalid, 'capped': count+invalid >= per_board}
     except Exception as exc:
         return jobs, {'source': label, 'status': 'error', 'postings_read': count,
-                      'error': type(exc).__name__ + (f' {exc.code}' if isinstance(getattr(exc, 'code', None), int) else '')}
+                      **error_info(exc)}
 
 
 def collect_company_jobs(cfg):

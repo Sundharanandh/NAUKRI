@@ -57,7 +57,7 @@ The public fields are normalized into the same matching, history, email and Exce
 
 Up to 200 company boards can be configured; the current list reads up to 300 postings per board. Four feeds are checked concurrently (`company_feed_workers`, allowed range 1–8); `max_company_jobs_per_board` accepts 1–1000. Lever is paginated. Greenhouse/Ashby returned jobs are ordered by known publication date before applying the cap. All returned feed postings are evaluated without consuming the HTML page budget. `max_pages_per_run` limits separate public HTML lookups from email links. SmartRecruiters paginates listings and fetches descriptions for plausible engineering roles in preferred cities, with a separate `max_company_details_per_board` cap (default 30). Caps are reported in source diagnostics, not silently treated as complete coverage.
 
-A failed board does not prevent other boards from being checked. Gmail alert failures are also reported while remaining company feed results can still be processed. Email reports, `run_summary.json` and the workbook's **Source status** sheet expose partial failures; an empty result is not evidence that every source succeeded.
+A failed board does not prevent other boards from being checked. Gmail alert failures are also reported while remaining company feed results can still be processed. Transient timeouts, 429 and selected 5xx responses receive up to three bounded attempts. Invalid JSON/schema and final HTTP errors expose safe diagnostic codes, without response bodies or credentials. Email reports, `run_summary.json` and the workbook's **Source status** sheet expose partial failures; an empty result is not evidence that every source succeeded.
 
 For other company careers, add the real job-page hostname to `company_domains`, enable its email alerts, and label those messages. Do not allowlist an entire shared ATS domain to select companies. Set `email_alerts_enabled: false` only if you want company-feed-only collection; Gmail SMTP credentials are still required to send the digest. A company-feed-only **preview** needs no Gmail password.
 
@@ -124,6 +124,7 @@ Workbook sheets:
 - **Needs review:** missing details or blocked public pages, with a reason.
 - **Excluded:** stale/out-of-scope listings and imported historical dashboard jobs.
 - **Delivery log:** SMTP acceptance, attempts or uncertain outcomes. SMTP acceptance does not prove inbox delivery.
+- **Run summary:** first sheet; target slot, actual start/report times in IST, current collection/check counts and overlapping filter reasons. Historical job sheets can have different totals.
 - **Source status:** company feed/Gmail collection outcomes, caps, malformed records and error types. The JSON summary also breaks discovered links down by platform.
 - **Company coverage:** every imported company, original careers URL, configured provider/board, and whether it is automatically monitored. This is distinct from Source status, which shows the outcome of actual feed requests in this run.
 
@@ -133,7 +134,7 @@ Cloud runs update discovery and email status. **Application status remains manua
 
 State contains job URLs, publicly retrieved posting metadata, source health and delivery timestamps, not raw Gmail messages, credentials or resume content. On a public repository that state is publicly readable. Keep private application notes out of committed files; use a private repository if you want the tracker/history private.
 
-URL normalization removes tracking parameters. Matching company/title/location/posting-date fingerprints additionally suppress likely duplicate advertisements. Conservative fingerprint grouping can merge distinct same-day similar vacancies. Existing dashboard history cannot reconstruct every link ever emailed, so a historical email absent from that history may appear once during migration.
+URL normalization removes tracking parameters. Known provider requisition IDs suppress duplicate aliases. Different IDs remain separate even when company/title/location/date match. Cross-portal duplicates without a shared ID can still appear. Previously emailed history is retained. Existing dashboard history cannot reconstruct every link ever emailed, so a historical email absent from that history may appear once during migration.
 
 ## Diagnostics
 
@@ -159,3 +160,18 @@ py -3 -m venv .venv
 For a live local preview, set `NOTIFY_EMAIL` and `GMAIL_APP_PASSWORD` in your process environment without committing them, then run `python digest_agent.py --preview`. Local files default to `local_state/`, which is gitignored. For offline preview, `--input path/to/jobs.json --preview` accepts an array of structured `JobPosting` objects with an extra `url` field. Provide `NOTIFY_EMAIL` for preview formatting; no Gmail connection or app password is required in that offline mode.
 
 Tests cover exact-skill matching, eligibility/date handling, all new platform URL rules and mail ingestion, company feed normalization/pagination/caps/failure isolation, SmartRecruiters details and India filters, EU Greenhouse URLs, company coverage, preference matching and policy migration, combined feed/email deduplication, Excel notes/source status, successful/ambiguous delivery deduplication, labelled review delivery deduplication, Workday public search/pagination/date handling, authentication/persistence failures and restoring history through a real local Git remote. They do not certify live Gmail, third-party site availability or GitHub scheduling. Validate preview then send after configuring your account.
+
+### Timing and optional external triggering
+
+The three UTC cron entries are 03:30, 08:30 and 13:30, corresponding to 09:00, 14:00 and 19:00 IST. GitHub schedules run on `main` and may be delayed or skipped. A manual preview sends no email; manual **send** and scheduled runs send a digest. The subject now distinguishes records checked, confirmed links and review links; zero selected links does not mean zero jobs were collected.
+
+If GitHub cron keeps missing slots, an optional free external HTTP scheduler such as cron-job.org can dispatch this same workflow. Nothing external is configured by this change. In your own scheduler account, configure three daily POST requests at the desired IST times (select Asia/Kolkata):
+
+- URL: `https://api.github.com/repos/Sundharanandh/NAUKRI/actions/workflows/naukri_agent.yml/dispatches`
+- Headers: `Accept: application/vnd.github+json`, `Content-Type: application/json`, `Authorization: Bearer YOUR_PRIVATE_TOKEN`, `X-GitHub-Api-Version: 2022-11-28`
+- Body for the morning slot: `{"ref":"main","inputs":{"delivery":"send","slot":"09:00","reason":"External daily schedule"}}`
+- Use `14:00` and `19:00` for the other requests. HTTP 204 means dispatch accepted, not that email was delivered.
+
+Create a fine-grained GitHub token limited to this repository with Actions write permission, store it privately in the external scheduler, and never commit or share it. After testing the external dispatch, set repository Actions **variable** `DIGEST_SCHEDULER=external` to skip built-in cron jobs and avoid two schedules. Remove that variable to restore GitHub cron. External requests still depend on GitHub runner availability and SMTP delivery; exact arrival is not guaranteed. Existing Gmail secrets remain in GitHub.
+
+Fresh company-feed records are re-evaluated even if previously excluded, so newly available descriptions can change eligibility. The last-seven-days and 2.5-year checks remain enforced; unknown eligibility is explicitly labelled for review.
