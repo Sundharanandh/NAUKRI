@@ -4,13 +4,20 @@ on:
   schedule:
     # UTC -> 09:00, 14:00 and 19:00 Asia/Kolkata.
     # GitHub scheduled jobs may be delayed; these are target times.
-    - cron: '30 3,8,13 * * *'
+    - cron: '30 3 * * *'
+    - cron: '30 8 * * *'
+    - cron: '30 13 * * *'
   workflow_dispatch:
     inputs:
       reason:
         description: 'Optional run note (kept for compatibility with the dashboard)'
         required: false
         default: 'Manual review'
+      slot:
+        description: 'Target slot for an optional external scheduler'
+        type: choice
+        options: [manual, '09:00', '14:00', '19:00']
+        default: manual
       delivery:
         description: 'Preview builds Excel without emailing or reserving links'
         type: choice
@@ -28,11 +35,13 @@ concurrency:
 
 jobs:
   digest:
+    if: github.event_name != 'schedule' || vars.DIGEST_SCHEDULER != 'external'
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
       JOB_MAILER_CONFIG: ${{ github.workspace }}/digest_config.json
       JOB_MAILER_CHECKPOINT: '1'
+      DIGEST_SCHEDULE_SLOT: ${{ github.event.schedule || inputs.slot || 'manual' }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
       DIGEST_EMAIL_TO: ${{ vars.DIGEST_EMAIL_TO }}
@@ -46,7 +55,9 @@ jobs:
 
       - name: Configure runtime state directory
         shell: bash
-        run: echo "JOB_MAILER_STATE_DIR=$RUNNER_TEMP/job-digest-state" >> "$GITHUB_ENV"
+        run: |
+          echo "JOB_MAILER_STATE_DIR=$RUNNER_TEMP/job-digest-state" >> "$GITHUB_ENV"
+          echo "DIGEST_RUN_STARTED_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
 
       - name: Set up Python
         uses: actions/setup-python@v5

@@ -7,6 +7,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 from urllib.request import Request
+from job_identity import fingerprint_for_url
+from digest_reporting import run_context, current_counts, summary_lines, add_summary_sheet
 from job_sources import (PLATFORMS, allowed_alert_url, collect_company_jobs, configured_boards, source_name)
 
 CODE_DIR = Path(__file__).resolve().parent
@@ -16,7 +18,7 @@ IST = timezone(timedelta(hours=5, minutes=30))
 DEFAULT = {'gmail': '', 'recipient': '',
  'mailbox': 'JobAlerts', 'experience': 2.5, 'max_age_days': 7,
  'cities': ['Bengaluru','Bangalore','Chennai','Hyderabad','Secunderabad','Mumbai'],
- 'required_skills': {'Java': r'\bjava\b', 'Spring Boot': r'\bspring\s*boot\b',
+ 'required_skills': {'Java': r'\bjava\b', 'Spring Boot': r'\bspring[\s\-–]*boot\b',
  }, 'preferred_skills': {'Microservices': r'\bmicroservices?\b', 'Angular': r'\bangular\b',
  'AWS': r'\baws\b|amazon web services'}, 'max_per_email': 10,
  'max_messages': 150, 'max_pages_per_run': 75,
@@ -259,18 +261,23 @@ def export(db,cfg=None):
         sheet.freeze_panes = 'A2'; sheet.auto_filter.ref = sheet.dimensions
         for column in 'ABCDEF': sheet.column_dimensions[column].width = 35
         sheet.column_dimensions['B'].width = 70; sheet.column_dimensions['F'].width = 90
+    if status_path.exists(): add_summary_sheet(wb, summary)
     temp=ROOT/'Job_Tracker.pending.xlsx'; wb.save(temp)
     try: os.replace(temp,path)
     except PermissionError: logging.warning('Close Excel. Updated copy saved as Job_Tracker.pending.xlsx; next run will retry.')
 
-def digest(jobs,cfg,source_status=None,review_jobs=None,review_reasons=None):
+def digest(jobs,cfg,source_status=None,review_jobs=None,review_reasons=None,summary=None):
     review_jobs = review_jobs or []
     review_reasons = review_reasons or {}
     msg=EmailMessage(); msg['From']=cfg['gmail']; msg['To']=cfg['recipient']
     msg['Subject']=f'Java jobs: {len(jobs)} new matches — '+datetime.now(IST).strftime('%d %b %Y %I:%M %p IST')
     if review_jobs:
         msg.replace_header('Subject', f'Java jobs: {len(jobs)} confirmed, {len(review_jobs)} to review — ' + datetime.now(IST).strftime('%d %b %Y %I:%M %p IST'))
+    if summary is not None:
+        count = summary.get('current_run', {}).get('checked', 0)
+        msg.replace_header('Subject', f'Java jobs: {count:,} checked | {len(jobs)} confirmed | {len(review_jobs)} review')
     lines=['New, previously unemailed jobs, newest posting first.','Automated text checks only: review the complete posting before applying.','Salary is negotiable and not a hard filter. No applications were submitted.','']
+    if summary is not None: lines = summary_lines(summary) + ['', 'JOB LINKS', ''] + lines
     for url,title,org,loc,posted,salary in jobs:
         lines.extend([f'{title} | {org}',f'Source: {source_name(url, cfg)}',f'{loc} | Posted: {posted}',f'Salary: {salary}',url,''])
     if not jobs: lines.append('No new confirmed matches this run. Check the Excel Needs review sheet. Older links will not be repeated.')
@@ -342,7 +349,7 @@ def _run_with_db(args, cfg, password, db):
     seed_legacy_history(db); now=datetime.now(UTC); fetched=0; page_requests=0
     input_jobs = json.loads(Path(args.input).read_text(encoding='utf-8')) if getattr(args, 'input', None) else None
     policy = {key: cfg.get(key) for key in ('required_skills', 'preferred_skills', 'experience', 'cities', 'max_age_days', 'allow_remote_india')}
-    policy['version'] = 3
+    policy['version'] = 4
     policy_key = hashlib.sha256(json.dumps(policy, sort_keys=True).encode()).hexdigest()
     prior_policy = db.execute("SELECT value FROM settings WHERE key='matching_policy'").fetchone()
     reassess_excluded = not prior_policy or prior_policy[0] != policy_key
@@ -373,7 +380,8 @@ def _run_with_db(args, cfg, password, db):
     refreshed=set()
     for url in alert_urls:
         old=db.execute('SELECT state,mailed FROM jobs WHERE url=?',(url,)).fetchone()
-        if old and (old[1] or old[0]=='Excluded' and not reassess_excluded): continue
+        if old and old[1]: continue
+        if old and old[0]=='Excluded' and url not in by_url and not reassess_excluded: continue
         if url not in by_url:
             if page_requests >= cfg['max_pages_per_run']: continue
             page_requests += 1
@@ -383,13 +391,13 @@ def _run_with_db(args, cfg, password, db):
         try:
             j=by_url[url] if url in by_url else fetch_job(url); state,reason,title,loc,posted,salary=classify(j,cfg,now); org=company(j)
             stamp=posted.isoformat() if posted else ''
-            fp=hashlib.sha256('|'.join([org.casefold(),title.casefold(),loc.casefold(),stamp[:10]]).encode()).hexdigest() if org and title else url
+            fp=fingerprint_for_url(url)
         except Exception as e:
             state,reason,title,loc,stamp,salary,org,fp='Review',type(e).__name__+': public page unavailable or structured details missing','','','','','',url
         db.execute('INSERT INTO jobs VALUES(?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(url) DO UPDATE SET title=excluded.title,company=excluded.company,location=excluded.location,posted=excluded.posted,state=excluded.state,reason=excluded.reason,salary=excluded.salary,fingerprint=excluded.fingerprint', (url,title,org,loc,stamp,state,reason,salary,now.isoformat(),'',fp)); db.commit()
     # Refresh age at sending time, including cached postings.
     rows=db.execute("SELECT url,title,company,location,posted,salary,fingerprint FROM jobs WHERE state='Matched' AND mailed='' ORDER BY posted DESC").fetchall()
-    jobs=[]; fingerprints={r[0] for r in db.execute("SELECT fingerprint FROM jobs WHERE mailed<>''")}
+    jobs=[]; fingerprints={fingerprint_for_url(r[0]) for r in db.execute("SELECT url FROM jobs WHERE mailed<>''")}
     for row in rows:
         if row[0] not in refreshed: continue  # Revalidate expiry and page availability on this run.
         posted=dateparse(row[4])
@@ -414,10 +422,11 @@ def _run_with_db(args, cfg, password, db):
                'tracker_totals': counts, 'preview': bool(args.preview),
                'email_alert_links': len(email_urls), 'company_board_jobs': len(by_url) if input_jobs is None else 0,
                'links_by_source': {name: sum(source_name(url, cfg) == name for url in alert_urls) for name in sorted({source_name(url, cfg) for url in alert_urls})},
-               'source_status': source_status}
+               'source_status': source_status,
+               'run_context': run_context(now), 'current_run': current_counts(db, set(alert_urls), refreshed)}
     (ROOT / 'run_summary.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
     print(json.dumps(summary))
-    export(db,cfg); msg=digest(jobs,cfg,source_status,review_jobs,review_reasons)
+    export(db,cfg); msg=digest(jobs,cfg,source_status,review_jobs,review_reasons,summary)
     if args.preview:
         (ROOT/'Email_Preview.txt').write_text(msg.get_content(),encoding='utf-8'); print('Preview and Excel updated. No email sent; no jobs marked emailed.'); return
     path=ROOT/'Job_Tracker.pending.xlsx'
