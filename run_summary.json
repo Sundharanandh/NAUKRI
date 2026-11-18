@@ -1,35 +1,35 @@
 {
-  "run_utc": "2026-11-18T12:03:54.825977+00:00",
-  "alert_links": 3742,
+  "run_utc": "2026-11-18T17:29:13.073028+00:00",
+  "alert_links": 3746,
   "pages_checked": 75,
-  "postings_evaluated": 3709,
+  "postings_evaluated": 3713,
   "new_matches_for_email": 0,
   "new_review_candidates_for_email": 0,
   "company_feeds_configured": 35,
   "tracker_totals": {
-    "Excluded": 4439,
-    "Review": 170
+    "Excluded": 4474,
+    "Review": 176
   },
   "preview": false,
   "email_alert_links": 104,
-  "company_board_jobs": 3638,
+  "company_board_jobs": 3642,
   "links_by_source": {
-    "Greenhouse:airbnb": 199,
+    "Greenhouse:airbnb": 202,
     "Greenhouse:cloudflare": 300,
-    "Greenhouse:commvault": 52,
+    "Greenhouse:commvault": 53,
     "Greenhouse:datadog": 300,
-    "Greenhouse:dropbox": 40,
+    "Greenhouse:dropbox": 41,
     "Greenhouse:elastic": 300,
     "Greenhouse:epicgames": 140,
-    "Greenhouse:figma": 144,
+    "Greenhouse:figma": 143,
     "Greenhouse:gitlab": 250,
     "Greenhouse:groww": 9,
     "Greenhouse:inmobi": 75,
     "Greenhouse:mongodb": 300,
-    "Greenhouse:qualtrics": 155,
-    "Greenhouse:razorpaysoftwareprivatelimited": 27,
+    "Greenhouse:qualtrics": 157,
+    "Greenhouse:razorpaysoftwareprivatelimited": 28,
     "Greenhouse:stripe": 300,
-    "Greenhouse:thoughtworks": 34,
+    "Greenhouse:thoughtworks": 31,
     "Greenhouse:twilio": 110,
     "Indeed": 104,
     "Lever:paytm": 194,
@@ -47,7 +47,7 @@
     {
       "source": "Greenhouse:airbnb",
       "status": "ok",
-      "postings_read": 199,
+      "postings_read": 202,
       "invalid_postings": 0,
       "capped": false
     },
@@ -61,21 +61,21 @@
     {
       "source": "Greenhouse:dropbox",
       "status": "ok",
-      "postings_read": 40,
+      "postings_read": 41,
       "invalid_postings": 0,
       "capped": false
     },
     {
       "source": "Greenhouse:qualtrics",
       "status": "ok",
-      "postings_read": 155,
+      "postings_read": 157,
       "invalid_postings": 0,
       "capped": false
     },
     {
       "source": "Greenhouse:commvault",
       "status": "ok",
-      "postings_read": 52,
+      "postings_read": 53,
       "invalid_postings": 0,
       "capped": false
     },
@@ -124,7 +124,7 @@
     {
       "source": "Greenhouse:razorpaysoftwareprivatelimited",
       "status": "ok",
-      "postings_read": 27,
+      "postings_read": 28,
       "invalid_postings": 0,
       "capped": false
     },
@@ -145,7 +145,7 @@
     {
       "source": "Greenhouse:figma",
       "status": "ok",
-      "postings_read": 144,
+      "postings_read": 143,
       "invalid_postings": 0,
       "capped": false
     },
@@ -166,7 +166,7 @@
     {
       "source": "Greenhouse:thoughtworks",
       "status": "ok",
-      "postings_read": 34,
+      "postings_read": 31,
       "invalid_postings": 0,
       "capped": false
     },
@@ -234,7 +234,7 @@
     {
       "source": "Workday:redhat/jobs",
       "status": "ok",
-      "postings_read": 31,
+      "postings_read": 32,
       "details_read": 0,
       "invalid_postings": 0,
       "capped": false,
@@ -245,7 +245,7 @@
     {
       "source": "Workday:paloaltonetworks/panwexternalcareers",
       "status": "ok",
-      "postings_read": 154,
+      "postings_read": 152,
       "details_read": 0,
       "invalid_postings": 0,
       "capped": false,
@@ -289,7 +289,7 @@
     {
       "source": "Workday:kyndryl/KyndrylEarlyCareers",
       "status": "ok",
-      "postings_read": 14,
+      "postings_read": 13,
       "details_read": 0,
       "invalid_postings": 0,
       "capped": false,
@@ -349,26 +349,26 @@
   ],
   "run_context": {
     "trigger": "schedule",
-    "scheduled_target": "09:00 IST",
-    "runner_started_utc": "2026-11-18T12:03:46Z",
-    "collection_started_utc": "2026-11-18T12:03:54.825977+00:00",
-    "report_generated_utc": "2026-11-18T12:04:56.971468+00:00",
-    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/44300321054"
+    "scheduled_target": "14:00 IST",
+    "runner_started_utc": "2026-11-18T17:29:06Z",
+    "collection_started_utc": "2026-11-18T17:29:13.073028+00:00",
+    "report_generated_utc": "2026-11-18T17:30:06.456446+00:00",
+    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/44359161006"
   },
   "current_run": {
-    "unique_collected": 3742,
-    "checked": 3709,
+    "unique_collected": 3746,
+    "checked": 3713,
     "already_emailed": 4,
     "current_states": {
-      "Excluded": 3585,
-      "Review": 157
+      "Excluded": 3583,
+      "Review": 163
     },
     "filter_reasons": {
-      "skills": 3625,
-      "location": 2994,
-      "experience": 3488,
-      "role": 3324,
-      "date": 3106
+      "skills": 3629,
+      "location": 2996,
+      "experience": 3493,
+      "role": 3323,
+      "date": 3115
     }
   }
 }
