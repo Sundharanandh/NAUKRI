@@ -1,5 +1,5 @@
 {
-  "run_utc": "2026-11-21T16:20:54.394735+00:00",
+  "run_utc": "2026-11-21T20:12:12.345525+00:00",
   "alert_links": 3756,
   "pages_checked": 73,
   "postings_evaluated": 3752,
@@ -7,7 +7,7 @@
   "new_review_candidates_for_email": 0,
   "company_feeds_configured": 35,
   "tracker_totals": {
-    "Excluded": 4813,
+    "Excluded": 4814,
     "Review": 197
   },
   "preview": false,
@@ -334,7 +334,7 @@
     {
       "source": "Workday:genpact/External_Careers",
       "status": "ok",
-      "postings_read": 160,
+      "postings_read": 159,
       "details_read": 1,
       "invalid_postings": 0,
       "capped": false,
@@ -350,11 +350,11 @@
   ],
   "run_context": {
     "trigger": "schedule",
-    "scheduled_target": "14:00 IST",
-    "runner_started_utc": "2026-11-21T16:20:49Z",
-    "collection_started_utc": "2026-11-21T16:20:54.394735+00:00",
-    "report_generated_utc": "2026-11-21T16:21:45.897580+00:00",
-    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/44924064788"
+    "scheduled_target": "19:00 IST",
+    "runner_started_utc": "2026-11-21T20:12:04Z",
+    "collection_started_utc": "2026-11-21T20:12:12.345525+00:00",
+    "report_generated_utc": "2026-11-21T20:12:57.494082+00:00",
+    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/44944988246"
   },
   "current_run": {
     "unique_collected": 3756,
@@ -368,7 +368,7 @@
       "skills": 3670,
       "location": 3038,
       "experience": 3529,
-      "date": 3078,
+      "date": 3077,
       "role": 3365
     }
   }
