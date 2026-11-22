@@ -1,5 +1,5 @@
 {
-  "run_utc": "2026-11-22T11:49:10.110794+00:00",
+  "run_utc": "2026-11-22T16:34:42.060053+00:00",
   "alert_links": 3743,
   "pages_checked": 60,
   "postings_evaluated": 3739,
@@ -350,11 +350,11 @@
   ],
   "run_context": {
     "trigger": "schedule",
-    "scheduled_target": "09:00 IST",
-    "runner_started_utc": "2026-11-22T11:49:00Z",
-    "collection_started_utc": "2026-11-22T11:49:10.110794+00:00",
-    "report_generated_utc": "2026-11-22T11:50:01.798503+00:00",
-    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/45019151912"
+    "scheduled_target": "14:00 IST",
+    "runner_started_utc": "2026-11-22T16:34:36Z",
+    "collection_started_utc": "2026-11-22T16:34:42.060053+00:00",
+    "report_generated_utc": "2026-11-22T16:35:40.640630+00:00",
+    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/45044599878"
   },
   "current_run": {
     "unique_collected": 3743,
@@ -368,7 +368,7 @@
       "skills": 3670,
       "location": 3039,
       "experience": 3529,
-      "date": 3078,
+      "date": 3080,
       "role": 3364
     }
   }
