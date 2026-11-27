@@ -1,18 +1,18 @@
 {
-  "run_utc": "2026-11-27T18:24:37.406665+00:00",
-  "alert_links": 3611,
+  "run_utc": "2026-11-27T22:13:35.661878+00:00",
+  "alert_links": 3612,
   "pages_checked": 0,
-  "postings_evaluated": 3611,
+  "postings_evaluated": 3612,
   "new_matches_for_email": 0,
   "new_review_candidates_for_email": 0,
   "company_feeds_configured": 35,
   "tracker_totals": {
-    "Excluded": 5284,
+    "Excluded": 5291,
     "Review": 187
   },
   "preview": false,
   "email_alert_links": 0,
-  "company_board_jobs": 3611,
+  "company_board_jobs": 3612,
   "links_by_source": {
     "Greenhouse:airbnb": 200,
     "Greenhouse:cloudflare": 300,
@@ -26,7 +26,7 @@
     "Greenhouse:groww": 9,
     "Greenhouse:inmobi": 63,
     "Greenhouse:mongodb": 300,
-    "Greenhouse:qualtrics": 175,
+    "Greenhouse:qualtrics": 177,
     "Greenhouse:razorpaysoftwareprivatelimited": 23,
     "Greenhouse:stripe": 300,
     "Greenhouse:twilio": 114,
@@ -37,7 +37,7 @@
     "Smartrecruiters:SGS": 10,
     "Smartrecruiters:ServiceNow": 75,
     "Smartrecruiters:SopraSteria1": 73,
-    "Workday:bah/BAH_Jobs": 5,
+    "Workday:bah/BAH_Jobs": 4,
     "Workday:expedia/search": 1,
     "Workday:genpact/External_Careers": 3
   },
@@ -66,7 +66,7 @@
     {
       "source": "Greenhouse:qualtrics",
       "status": "ok",
-      "postings_read": 175,
+      "postings_read": 177,
       "invalid_postings": 0,
       "capped": false
     },
@@ -311,7 +311,7 @@
       "source": "Workday:bah/BAH_Jobs",
       "status": "ok",
       "postings_read": 300,
-      "details_read": 5,
+      "details_read": 4,
       "invalid_postings": 0,
       "capped": true,
       "detail_cap_reached": false,
@@ -348,26 +348,26 @@
   ],
   "run_context": {
     "trigger": "schedule",
-    "scheduled_target": "14:00 IST",
-    "runner_started_utc": "2026-11-27T18:24:32Z",
-    "collection_started_utc": "2026-11-27T18:24:37.406665+00:00",
-    "report_generated_utc": "2026-11-27T18:25:24.370309+00:00",
-    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/46049228840"
+    "scheduled_target": "19:00 IST",
+    "runner_started_utc": "2026-11-27T22:13:30Z",
+    "collection_started_utc": "2026-11-27T22:13:35.661878+00:00",
+    "report_generated_utc": "2026-11-27T22:14:23.975751+00:00",
+    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/46075287989"
   },
   "current_run": {
-    "unique_collected": 3611,
-    "checked": 3611,
+    "unique_collected": 3612,
+    "checked": 3612,
     "already_emailed": 0,
     "current_states": {
-      "Excluded": 3571,
-      "Review": 40
+      "Excluded": 3574,
+      "Review": 38
     },
     "filter_reasons": {
-      "skills": 3605,
-      "location": 3005,
-      "experience": 3462,
-      "date": 3161,
-      "role": 3297
+      "skills": 3606,
+      "location": 3006,
+      "experience": 3463,
+      "date": 3186,
+      "role": 3298
     }
   }
 }
