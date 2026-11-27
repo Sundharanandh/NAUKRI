@@ -1,52 +1,51 @@
 {
-  "run_utc": "2026-11-26T22:29:41.985757+00:00",
-  "alert_links": 3634,
+  "run_utc": "2026-11-27T12:56:05.310280+00:00",
+  "alert_links": 3612,
   "pages_checked": 0,
-  "postings_evaluated": 3634,
+  "postings_evaluated": 3612,
   "new_matches_for_email": 0,
   "new_review_candidates_for_email": 0,
   "company_feeds_configured": 35,
   "tracker_totals": {
-    "Excluded": 5235,
-    "Review": 181
+    "Excluded": 5280,
+    "Review": 186
   },
   "preview": false,
   "email_alert_links": 0,
-  "company_board_jobs": 3634,
+  "company_board_jobs": 3612,
   "links_by_source": {
-    "Greenhouse:airbnb": 202,
+    "Greenhouse:airbnb": 200,
     "Greenhouse:cloudflare": 300,
-    "Greenhouse:commvault": 59,
+    "Greenhouse:commvault": 58,
     "Greenhouse:datadog": 300,
     "Greenhouse:dropbox": 51,
     "Greenhouse:elastic": 300,
     "Greenhouse:epicgames": 138,
     "Greenhouse:figma": 141,
-    "Greenhouse:gitlab": 241,
+    "Greenhouse:gitlab": 243,
     "Greenhouse:groww": 9,
-    "Greenhouse:inmobi": 64,
+    "Greenhouse:inmobi": 63,
     "Greenhouse:mongodb": 300,
     "Greenhouse:qualtrics": 175,
-    "Greenhouse:razorpaysoftwareprivatelimited": 25,
+    "Greenhouse:razorpaysoftwareprivatelimited": 23,
     "Greenhouse:stripe": 300,
-    "Greenhouse:twilio": 113,
-    "Lever:paytm": 197,
+    "Greenhouse:twilio": 114,
+    "Lever:paytm": 198,
     "Smartrecruiters:BoschGroup": 300,
     "Smartrecruiters:Freshworks": 30,
     "Smartrecruiters:Nagarro1": 202,
-    "Smartrecruiters:SGS": 15,
-    "Smartrecruiters:ServiceNow": 74,
-    "Smartrecruiters:SopraSteria1": 72,
-    "Workday:bah/BAH_Jobs": 6,
-    "Workday:expedia/search": 2,
-    "Workday:genpact/External_Careers": 7,
-    "Workday:kyndryl/KyndrylProfessionalCareers": 11
+    "Smartrecruiters:SGS": 10,
+    "Smartrecruiters:ServiceNow": 75,
+    "Smartrecruiters:SopraSteria1": 73,
+    "Workday:bah/BAH_Jobs": 5,
+    "Workday:expedia/search": 1,
+    "Workday:genpact/External_Careers": 3
   },
   "source_status": [
     {
       "source": "Greenhouse:airbnb",
       "status": "ok",
-      "postings_read": 202,
+      "postings_read": 200,
       "invalid_postings": 0,
       "capped": false
     },
@@ -74,7 +73,7 @@
     {
       "source": "Greenhouse:commvault",
       "status": "ok",
-      "postings_read": 59,
+      "postings_read": 58,
       "invalid_postings": 0,
       "capped": false
     },
@@ -109,21 +108,21 @@
     {
       "source": "Greenhouse:twilio",
       "status": "ok",
-      "postings_read": 113,
+      "postings_read": 114,
       "invalid_postings": 0,
       "capped": false
     },
     {
       "source": "Greenhouse:gitlab",
       "status": "ok",
-      "postings_read": 241,
+      "postings_read": 243,
       "invalid_postings": 0,
       "capped": false
     },
     {
       "source": "Greenhouse:razorpaysoftwareprivatelimited",
       "status": "ok",
-      "postings_read": 25,
+      "postings_read": 23,
       "invalid_postings": 0,
       "capped": false
     },
@@ -137,7 +136,7 @@
     {
       "source": "Greenhouse:inmobi",
       "status": "ok",
-      "postings_read": 64,
+      "postings_read": 63,
       "invalid_postings": 0,
       "capped": false
     },
@@ -182,14 +181,14 @@
     {
       "source": "Lever:paytm",
       "status": "ok",
-      "postings_read": 197,
+      "postings_read": 198,
       "invalid_postings": 0,
       "capped": false
     },
     {
       "source": "Smartrecruiters:SopraSteria1",
       "status": "ok",
-      "postings_read": 72,
+      "postings_read": 73,
       "invalid_postings": 0,
       "details_read": 0,
       "capped": false,
@@ -198,7 +197,7 @@
     {
       "source": "Smartrecruiters:ServiceNow",
       "status": "ok",
-      "postings_read": 74,
+      "postings_read": 75,
       "invalid_postings": 0,
       "details_read": 1,
       "capped": false,
@@ -225,7 +224,7 @@
     {
       "source": "Smartrecruiters:SGS",
       "status": "ok",
-      "postings_read": 15,
+      "postings_read": 10,
       "invalid_postings": 0,
       "details_read": 0,
       "capped": false,
@@ -234,7 +233,7 @@
     {
       "source": "Workday:redhat/jobs",
       "status": "ok",
-      "postings_read": 30,
+      "postings_read": 28,
       "details_read": 0,
       "invalid_postings": 0,
       "capped": false,
@@ -267,8 +266,8 @@
     {
       "source": "Workday:expedia/search",
       "status": "ok",
-      "postings_read": 20,
-      "details_read": 2,
+      "postings_read": 18,
+      "details_read": 1,
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
@@ -289,7 +288,7 @@
     {
       "source": "Workday:kyndryl/KyndrylEarlyCareers",
       "status": "ok",
-      "postings_read": 11,
+      "postings_read": 0,
       "details_read": 0,
       "invalid_postings": 0,
       "capped": false,
@@ -300,19 +299,19 @@
     {
       "source": "Workday:kyndryl/KyndrylProfessionalCareers",
       "status": "ok",
-      "postings_read": 145,
-      "details_read": 11,
+      "postings_read": 0,
+      "details_read": 0,
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
-      "india_filter_applied": true,
+      "india_filter_applied": false,
       "detail_errors": []
     },
     {
       "source": "Workday:bah/BAH_Jobs",
       "status": "ok",
       "postings_read": 300,
-      "details_read": 6,
+      "details_read": 5,
       "invalid_postings": 0,
       "capped": true,
       "detail_cap_reached": false,
@@ -333,8 +332,8 @@
     {
       "source": "Workday:genpact/External_Careers",
       "status": "ok",
-      "postings_read": 157,
-      "details_read": 7,
+      "postings_read": 150,
+      "details_read": 3,
       "invalid_postings": 0,
       "capped": false,
       "detail_cap_reached": false,
@@ -349,26 +348,26 @@
   ],
   "run_context": {
     "trigger": "schedule",
-    "scheduled_target": "19:00 IST",
-    "runner_started_utc": "2026-11-26T22:29:33Z",
-    "collection_started_utc": "2026-11-26T22:29:41.985757+00:00",
-    "report_generated_utc": "2026-11-26T22:30:25.018926+00:00",
-    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/45905099070"
+    "scheduled_target": "09:00 IST",
+    "runner_started_utc": "2026-11-27T12:55:55Z",
+    "collection_started_utc": "2026-11-27T12:56:05.310280+00:00",
+    "report_generated_utc": "2026-11-27T12:57:01.410729+00:00",
+    "run_url": "https://github.com/Sundharanandh/NAUKRI/actions/runs/46002742048"
   },
   "current_run": {
-    "unique_collected": 3634,
-    "checked": 3634,
+    "unique_collected": 3612,
+    "checked": 3612,
     "already_emailed": 0,
     "current_states": {
-      "Excluded": 3594,
-      "Review": 40
+      "Excluded": 3573,
+      "Review": 39
     },
     "filter_reasons": {
-      "skills": 3626,
-      "location": 3008,
-      "experience": 3486,
-      "date": 3117,
-      "role": 3310
+      "skills": 3605,
+      "location": 3005,
+      "experience": 3463,
+      "date": 3127,
+      "role": 3301
     }
   }
 }
